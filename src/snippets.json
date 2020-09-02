@@ -96,7 +96,7 @@
                 "\tcoord ${6:SFNode}",
                 "\tcoordIndex ${7:MFInt32}",
                 "\ttexCoord ${8:SFNode}",
-                "\texCoordIndex ${9:MFInt32}",
+                "\ttexCoordIndex ${9:MFInt32}",
             "}"
         ],
         "description": ""

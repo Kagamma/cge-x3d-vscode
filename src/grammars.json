@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "DEF|USE|ROUTE|TO|TRUE|FALSE|PROTO|PROFILE|IS"
+				},
+				{
+					"name": "strong",
+					"match": "^#X3D V[\\d\\.]+ utf8"
+				},
+				{
+					"name": "comment.line",
+					"match": "#.+$"
+				},
+				{
+					"name": "variable.language",
+					"match": "\\b(appearance|geometry|initializeOnly|MFInt32|SFVec2f|SFVec3f|SFColor|SFNode|MFInt32|MFVec2f|MFVec3f|MFColor)\\b"
+				},
+				{
+					"name": "support.class",
+					"match": "\\b([A-Z,a-z,0-9,_]+)\\s+{"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "\\b[\\d\\.\\-]+\\b"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "\\b(Interchange|Full|Immersion|Interactive|[A-Z,a-z,0-9,_]+)\\b"
+				},
+				{
+					"name": "support.function",
+					"match": "\\b(?<=\\.)(fraction_changed|set_fraction|touchTime|startTime|value_changed|rotation|translation|transparency)\\b"
+				},
+				{
+					"name": "variable.parameter",
+					"match": "^(\\s*)(set_bind|needsDepth|type|url|parts|shaders|bottomUrl|topUrl|isBoundradius|size|bottomRadius|height|bottom|side|radius|top|side|string|fontStyle|length|maxExtent|family|style|spacing|horizontal|leftToRight|topToBottom|justify|language|creaseAngle|ccw|convex|solid|beginCap|endCap|crossSection|scale|orientation|spine|colorPerVertex|normalPerVertex|color|normal|texCoord|xDimension|zDimension|xSpacing|zSpacing|colorIndex|normalIndex|texCoordIndex|coord|coordIndex|point|vector|material|texture|textureTransform|ambientIntensity|diffuseColor|specularColor|shininess|emissiveColor|transparency|url|repeatS|repeatT|translation|direction|intensity|on|ambientIntensity|location|attenuation|beamWidth|cutOffAngle|bboxCenter|bboxSize|scaleOrientation|children|rotation|axisOfRotation|avatarSize|headlight|speed|type|visibilityLimit|skyColor|skyAngle|groundColor|groundAngle|backUrl|frontUrl|leftUrl|rightUrl|topUrlbottomUrl|position|key|keyValue|cycleInterval|enabled|loop|startTime|stopTime|cycleTime|fraction_changed|isActive|time)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.X3D",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.X3D",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.x3d"
+}

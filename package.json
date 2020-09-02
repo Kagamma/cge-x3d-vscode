@@ -1,0 +1,34 @@
+{
+    "name": "cge-x3d-vscode",
+    "displayName": "CGE X3D classic",
+    "description": "Castle Game Engine's scene (in X3D classic format) syntax highligh and snippets",
+    "version": "0.0.1",
+    "publisher": "kagamma",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Kagamma/cge-x3d-vscode"
+    },
+    "engines": {
+        "vscode": "^1.14.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "X3D",
+            "aliases": ["X3D"],
+            "extensions": [".wrl", ".x3dv"],
+            "configuration": "./language-configuration.json"
+        }],
+        "snippets": [{
+            "language": "X3D",
+            "path": "./src/snippets.json"
+        }],
+        "grammars": [{
+            "language": "X3D",
+            "scopeName": "source.x3d",
+            "path": "./src/grammars.json"
+        }]
+    }
+}

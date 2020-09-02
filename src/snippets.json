@@ -1,0 +1,256 @@
+{
+    "X3D": {
+        "prefix": "#X3D",
+        "body": [
+            "#X3D V4.0 utf8"
+        ],
+        "description": "X3D V4.0"
+    },
+    "DEF": {
+        "prefix": "DEF",
+        "body": [
+            "DEF ${1:variable}"
+        ],
+        "description": ""
+    },
+    "PROTO": {
+        "prefix": "PROTO",
+        "body": [
+            "PROTO ${1:name} [",
+                "\tinitializeOnly ${2:SFVec3f param}",
+            "] {",
+                "\t${3:node}",
+            "}"
+        ],
+        "description": ""
+    },
+    "PROFILE": {
+        "prefix": "PROFILE",
+        "body": [
+            "PROFILE ${1:Interchange}"
+        ],
+        "description": ""
+    },
+    "Shape": {
+        "prefix": "Shape",
+        "body": [
+            "Shape {",
+                "\tgeometry ${1:Shape}",
+                "\tappearance ${2:Appearance}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Sphere": {
+        "prefix": "Sphere",
+        "body": [
+            "Sphere {",
+                "\tradius ${1:1}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Box": {
+        "prefix": "Box",
+        "body": [
+            "Box {",
+                "\tsize ${1:1} ${2:1} ${3:1}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Cone": {
+        "prefix": "Cone",
+        "body": [
+            "Cone {",
+                "\tbottomRadius ${1:1}",
+                "\theight ${2:1}",
+                "\tbottom ${3:1}",
+                "\tside ${4:1}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Cylinder": {
+        "prefix": "Cylinder",
+        "body": [
+            "Cylinder {",
+                "\tradius ${1:1}",
+                "\theight ${2:1}",
+                "\tbottom ${3:1}",
+                "\ttop ${4:1}",
+                "\tside ${5:1}",
+            "}"
+        ],
+        "description": ""
+    },
+    "IndexedFaceSet": {
+        "prefix": "IndexedFaceSet",
+        "body": [
+            "IndexedFaceSet {",
+                "\tcreaseAngle ${1:0}",
+                "\tccw ${2:TRUE}",
+                "\tsolid ${3:TRUE}",
+                "\tcolor ${4:SFNode}",
+                "\tcolorIndex ${5:MFInt32}",
+                "\tcoord ${6:SFNode}",
+                "\tcoordIndex ${7:MFInt32}",
+                "\ttexCoord ${8:SFNode}",
+                "\texCoordIndex ${9:MFInt32}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Coordinate": {
+        "prefix": "Coordinate",
+        "body": [
+            "Coordinate {",
+                "\tpoint ${1:[ ... ]}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Normal": {
+        "prefix": "Normal",
+        "body": [
+            "Normal {",
+                "\tvector ${1:[ ... ]}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Color": {
+        "prefix": "Color",
+        "body": [
+            "Color {",
+                "\tcolor ${1:[ ... ]}",
+            "}"
+        ],
+        "description": ""
+    },
+
+    "Appearance": {
+        "prefix": "Appearance",
+        "body": [
+            "Appearance {",
+                "\tmaterial ${1:Material}",
+                "\ttexture ${2:Texture}",
+            "}"
+        ],
+        "description": ""
+    },
+    "UnlitMaterial": {
+        "prefix": "UnlitMaterial",
+        "body": [
+            "UnlitMaterial {",
+                "\temissive ${1:1 1 1}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Material": {
+        "prefix": "Material",
+        "body": [
+            "Material {",
+                "\tambientIntensity ${1:2}",
+                "\tdiffuseColor ${2:1 1 1}",
+                "\tspecularColor ${3:0 0 0}",
+                "\tshininess ${4:2}",
+                "\temissiveColor ${5:0 0 0}",
+                "\ttransparency ${6:0}",
+            "}"
+        ],
+        "description": ""
+    },
+    "ImageTexture": {
+        "prefix": "ImageTexture",
+        "body": [
+            "ImageTexture {",
+                "\turl ${1:\"url\"}",
+                "\trepeatS ${2:TRUE}",
+                "\trepeatT ${3:TRUE}",
+            "}"
+        ],
+        "description": ""
+    },
+    "TextureTransform": {
+        "prefix": "TextureTransform",
+        "body": [
+            "TextureTransform {",
+                "\tcenter ${1:0 0}",
+                "\trotation ${2:0}",
+                "\tscale ${3:1 1}",
+                "\ttranslation ${4:0 0}",
+            "}"
+        ],
+        "description": ""
+    },
+    "Group": {
+        "prefix": "Group",
+        "body": [
+            "Group {",
+                "\tchildren ${1}",
+            "}"
+        ]
+    },
+    "Transform": {
+        "prefix": "Transform",
+        "body": [
+            "Transform {",
+                "\ttranslation ${1:x y z}",
+                "\trotation ${2:x y z r}",
+                "\tscale ${3:x y z}",
+                "\tchildren []",
+            "}"
+        ]
+    },
+    "Background": {
+        "prefix": "Background",
+        "body": [
+            "Background {",
+                "\tset_bind ${1:var}",
+                "\tgroundAngle ${2:var}",
+                "\tgroundColor ${3:var}",
+                "\tbackUrl ${4:var}",
+                "\tbottomUrl ${5:var}",
+                "\tfrontUrl ${6:var}",
+                "\tleftUrl ${7:var}",
+                "\trightUrl ${8:var}",
+                "\ttopUrl ${9:var}",
+                "\tskyAngle ${10:var}",
+                "\tskyColor ${11:var}",
+                "\tisBound ${12:var}",
+            "}"
+        ],
+        "description": ""
+    },
+    "ScreenEffect": {
+        "prefix": "ScreenEffect",
+        "body": [
+            "ScreenEffect {",
+                "\tshaders ${1:ComposeShader}",
+            "}"
+        ],
+        "description": ""
+    },
+    "ComposedShader": {
+        "prefix": "ComposedShader",
+        "body": [
+            "ComposedShader {",
+                "\tlanguage ${1:\"GLSL\"}",
+                "\tparts ${2:ShaderPart}",
+            "}"
+        ],
+        "description": ""
+    },
+    "ShaderPart": {
+        "prefix": "ShaderPart",
+        "body": [
+            "ShaderPart {",
+                "\ttype ${1:\"VERTEX|FRAGMENT\"}",
+                "\turl ${2:\"data:text/plain,\"}",
+            "}"
+        ],
+        "description": ""
+    }
+}

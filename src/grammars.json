@@ -26,7 +26,7 @@
 				},
 				{
 					"name": "variable.language",
-					"match": "\\b(appearance|geometry|initializeOnly|MFInt32|SFVec2f|SFVec3f|SFColor|SFNode|MFInt32|MFVec2f|MFVec3f|MFColor)\\b"
+					"match": "\\b(appearance|geometry|initializeOnly|SFBool|MFBool|SFColor|MFColor|SFColorRGBA|MFColorRGBA|SFDouble|MFDouble|SFFloat|MFFloat|SFImage|MFImage|SFInt32|MFInt32|SFMatrix3d|MFMatrix3d|SFMatrix3f|MFMatrix3f|SFMatrix4d|MFMatrix4d|SFMatrix4f|MFMatrix4f|SFNode|MFNode|SFRotation|MFRotation|SFString|MFString|SFTime|MFTime|SFVec2d|MFVec2d|SFVec2f|MFVec2f|SFVec3d|MFVec3d|SFVec3f|MFVec3f|SFVec4f|MFVec4f)\\b"
 				},
 				{
 					"name": "support.class",

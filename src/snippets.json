@@ -252,5 +252,209 @@
             "}"
         ],
         "description": ""
+    },
+    "appearance": {
+        "prefix": "appearance",
+        "body": ["appearance"]
+    },
+    "geometry": {
+        "prefix": "geometry",
+        "body": ["geometry"]
+    },
+    "initializeOnly": {
+        "prefix": "initializeOnly",
+        "body": ["initializeOnly"]
+    },
+    "SFBool": {
+        "prefix": "SFBool",
+        "body": ["SFBool"]
+    },
+    "MFBool": {
+        "prefix": "MFBool",
+        "body": ["MFBool"]
+    },
+    "SFColor": {
+        "prefix": "SFColor",
+        "body": ["SFColor"]
+    },
+    "MFColor": {
+        "prefix": "MFColor",
+        "body": ["MFColor"]
+    },
+    "SFColorRGBA": {
+        "prefix": "SFColorRGBA",
+        "body": ["SFColorRGBA"]
+    },
+    "MFColorRGBA": {
+        "prefix": "MFColorRGBA",
+        "body": ["MFColorRGBA"]
+    },
+    "SFDouble": {
+        "prefix": "SFDouble",
+        "body": ["SFDouble"]
+    },
+    "MFDouble": {
+        "prefix": "MFDouble",
+        "body": ["MFDouble"]
+    },
+    "SFFloat": {
+        "prefix": "SFFloat",
+        "body": ["SFFloat"]
+    },
+    "MFFloat": {
+        "prefix": "MFFloat",
+        "body": ["MFFloat"]
+    },
+    "SFImage": {
+        "prefix": "SFImage",
+        "body": ["SFImage"]
+    },
+    "MFImage": {
+        "prefix": "MFImage",
+        "body": ["MFImage"]
+    },
+    "SFInt32": {
+        "prefix": "SFInt32",
+        "body": ["SFInt32"]
+    },
+    "MFInt32": {
+        "prefix": "MFInt32",
+        "body": ["MFInt32"]
+    },
+    "SFMatrix3d": {
+        "prefix": "SFMatrix3d",
+        "body": ["SFMatrix3d"]
+    },
+    "MFMatrix3d": {
+        "prefix": "MFMatrix3d",
+        "body": ["MFMatrix3d"]
+    },
+    "SFMatrix3f": {
+        "prefix": "SFMatrix3f",
+        "body": ["SFMatrix3f"]
+    },
+    "MFMatrix3f": {
+        "prefix": "MFMatrix3f",
+        "body": ["MFMatrix3f"]
+    },
+    "SFMatrix4d": {
+        "prefix": "SFMatrix4d",
+        "body": ["SFMatrix4d"]
+    },
+    "MFMatrix4d": {
+        "prefix": "MFMatrix4d",
+        "body": ["MFMatrix4d"]
+    },
+    "SFMatrix4f": {
+        "prefix": "SFMatrix4f",
+        "body": ["SFMatrix4f"]
+    },
+    "MFMatrix4f": {
+        "prefix": "MFMatrix4f",
+        "body": ["MFMatrix4f"]
+    },
+    "SFNode": {
+        "prefix": "SFNode",
+        "body": ["SFNode"]
+    },
+    "MFNode": {
+        "prefix": "MFNode",
+        "body": ["MFNode"]
+    },
+    "SFRotation": {
+        "prefix": "SFRotation",
+        "body": ["SFRotation"]
+    },
+    "MFRotation": {
+        "prefix": "MFRotation",
+        "body": ["MFRotation"]
+    },
+    "SFString": {
+        "prefix": "SFString",
+        "body": ["SFString"]
+    },
+    "MFString": {
+        "prefix": "MFString",
+        "body": ["MFString"]
+    },
+    "SFTime": {
+        "prefix": "SFTime",
+        "body": ["SFTime"]
+    },
+    "MFTime": {
+        "prefix": "MFTime",
+        "body": ["MFTime"]
+    },
+    "SFVec2d": {
+        "prefix": "SFVec2d",
+        "body": ["SFVec2d"]
+    },
+    "MFVec2d": {
+        "prefix": "MFVec2d",
+        "body": ["MFVec2d"]
+    },
+    "SFVec2f": {
+        "prefix": "SFVec2f",
+        "body": ["SFVec2f"]
+    },
+    "MFVec2f": {
+        "prefix": "MFVec2f",
+        "body": ["MFVec2f"]
+    },
+    "SFVec3d": {
+        "prefix": "SFVec3d",
+        "body": ["SFVec3d"]
+    },
+    "MFVec3d": {
+        "prefix": "MFVec3d",
+        "body": ["MFVec3d"]
+    },
+    "SFVec3f": {
+        "prefix": "SFVec3f",
+        "body": ["SFVec3f"]
+    },
+    "MFVec3f": {
+        "prefix": "MFVec3f",
+        "body": ["MFVec3f"]
+    },
+    "SFVec4f": {
+        "prefix": "SFVec4f",
+        "body": ["SFVec4f"]
+    },
+    "MFVec4f": {
+        "prefix": "MFVec4f",
+        "body": ["MFVec4f"]
+    },
+    "fraction_changed": {
+        "prefix": "fraction_changed",
+        "body": ["fraction_changed"]
+    },
+    "set_fraction": {
+        "prefix": "set_fraction",
+        "body": ["set_fraction"]
+    },
+    "touchTime": {
+        "prefix": "touchTime",
+        "body": ["touchTime"]
+    },
+    "startTime": {
+        "prefix": "startTime",
+        "body": ["startTime"]
+    },
+    "value_changed": {
+        "prefix": "value_changed",
+        "body": ["value_changed"]
+    },
+    "rotation": {
+        "prefix": "rotation",
+        "body": ["rotation"]
+    },
+    "translation": {
+        "prefix": "translation",
+        "body": ["translation"]
+    },
+    "transparency": {
+        "prefix": "transparency",
+        "body": ["transparency"]
     }
 }

@@ -1,7 +1,7 @@
 {
     "name": "cge-x3d-vscode",
-    "displayName": "CGE X3D classic",
-    "description": "Castle Game Engine's scene (in X3D classic format) syntax highligh and snippets",
+    "displayName": "X3D classic encoding editing tool",
+    "description": "X3D classic encoding editing tool",
     "version": "0.0.1",
     "publisher": "kagamma",
     "repository": {

@@ -445,13 +445,14 @@ const predefineSnippets = JSON.parse(`
 }
 `);
 
-readFiles('./nodes-specification/').then(files => {
+readFiles('../nodes-specification/').then(files => {
   let source = '';
   files.forEach(f => {
     source += f.content + '\n';
   });
   const data = (new Parser()).execute(source);
   const output = { ...predefineSnippets };
+  const keywords = {};
   for (let x3dName in data) {
     const x3d = data[x3dName];
     const snippet = {};
@@ -469,12 +470,23 @@ readFiles('./nodes-specification/').then(files => {
         const field = x3dRef.fields[i];
         let s = `\t${field.name} \${${count}:${field.value ? field.value : '<' + field.type + '>' }}`;
         snippet.body.push(s);
+        keywords[field.name] = true;
+        keywords[field.type] = true;
         count++;
       }
     }
     snippet.body.push('}');
     output[x3dName] = snippet;
   }
+  for (let keyword in keywords) {
+    const snippet = {};
+    snippet.prefix = keyword;
+    snippet.description = '';
+    snippet.body = [`${keyword}`];
+    snippet.body.push('}');
+    output[keyword] = snippet;
+  }
+
   fs.writeFile('snippets.json', JSON.stringify(output, null, "\t"), function (err) {
     if (err) throw err;
     console.log('Saved!');

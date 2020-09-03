@@ -294,7 +294,8 @@ class Parser {
           } while (token.kind !== TokenType.CloseSquareBracket);
           field.value = s;
         } else if (token.kind === TokenType.Word) {
-          if (token.value === 'TRUE' || token.value === 'FALSE') {
+          if (token.value === 'TRUE' || token.value === 'FALSE' || token.value === 'NULL') {
+            field.value = token.value;
             token = this.nextToken();
           } else if (!isNaN(token.value)) {
             let s = '';
@@ -445,7 +446,7 @@ const predefineSnippets = JSON.parse(`
 }
 `);
 
-readFiles('../nodes-specification/').then(files => {
+readFiles('./nodes-specification/').then(files => {
   let source = '';
   files.forEach(f => {
     source += f.content + '\n';
@@ -487,7 +488,7 @@ readFiles('../nodes-specification/').then(files => {
     output[keyword] = snippet;
   }
 
-  fs.writeFile('snippets.json', JSON.stringify(output, null, "\t"), function (err) {
+  fs.writeFile('./src/snippets.json', JSON.stringify(output, null, "\t"), function (err) {
     if (err) throw err;
     console.log('Saved!');
   });

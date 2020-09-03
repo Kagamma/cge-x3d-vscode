@@ -60,7 +60,7 @@
 		"description": "",
 		"body": [
 			"CADFace {",
-			"\tshape ${1:<SFNode>}",
+			"\tshape ${1:NULL}",
 			"\tbboxCenter ${2:0 0 0}",
 			"\tbboxSize ${3:<SFVec3f>}",
 			"\tname ${4:\"\"}",
@@ -109,13 +109,13 @@
 			"IndexedQuadSet {",
 			"\tset_index ${1:[]}",
 			"\tattrib ${2:[]}",
-			"\tcoord ${3:<SFNode>}",
-			"\tfogCoord ${4:<SFNode>}",
-			"\ttexCoord ${5:<SFNode>}",
-			"\tccw ${6:<SFBool>}",
-			"\tcolorPerVertex ${7:<SFBool>}",
-			"\tnormalPerVertex ${8:<SFBool>}",
-			"\tsolid ${9:<SFBool>}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:NULL}",
+			"\ttexCoord ${5:NULL}",
+			"\tccw ${6:TRUE}",
+			"\tcolorPerVertex ${7:TRUE}",
+			"\tnormalPerVertex ${8:TRUE}",
+			"\tsolid ${9:TRUE}",
 			"\tradianceTransfer ${10:[]}",
 			"}"
 		]
@@ -126,13 +126,13 @@
 		"body": [
 			"QuadSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:<SFNode>}",
-			"\tfogCoord ${3:<SFNode>}",
-			"\ttexCoord ${4:<SFNode>}",
-			"\tccw ${5:<SFBool>}",
-			"\tcolorPerVertex ${6:<SFBool>}",
-			"\tnormalPerVertex ${7:<SFBool>}",
-			"\tsolid ${8:<SFBool>}",
+			"\tcoord ${2:NULL}",
+			"\tfogCoord ${3:NULL}",
+			"\ttexCoord ${4:NULL}",
+			"\tccw ${5:TRUE}",
+			"\tcolorPerVertex ${6:TRUE}",
+			"\tnormalPerVertex ${7:TRUE}",
+			"\tsolid ${8:TRUE}",
 			"\tradianceTransfer ${9:[]}",
 			"}"
 		]
@@ -142,14 +142,14 @@
 		"description": "",
 		"body": [
 			"KambiAppearance {",
-			"\tfillProperties ${1:<SFNode>}",
-			"\tmaterial ${2:<SFNode>}",
-			"\tbackMaterial ${3:<SFNode>}",
+			"\tfillProperties ${1:NULL}",
+			"\tmaterial ${2:NULL}",
+			"\tbackMaterial ${3:NULL}",
 			"\tshaders ${4:[]}",
-			"\ttexture ${5:<SFNode>}",
-			"\ttextureTransform ${6:<SFNode>}",
+			"\ttexture ${5:NULL}",
+			"\ttextureTransform ${6:NULL}",
 			"\treceiveShadows ${7:[]}",
-			"\tnormalMap ${8:<SFNode>}",
+			"\tnormalMap ${8:NULL}",
 			"}"
 		]
 	},
@@ -159,7 +159,7 @@
 		"body": [
 			"GeneratedShadowMap {",
 			"\tupdate ${1:\"NONE\"}",
-			"\tlight ${2:<SFNode>}",
+			"\tlight ${2:NULL}",
 			"\tbias ${3:4.0}",
 			"\tcompareMode ${4:\"COMPARE_R_LEQUAL\"}",
 			"\teffects ${5:[]}",
@@ -173,7 +173,7 @@
 		"body": [
 			"Text3D {",
 			"\tstring ${1:[]}",
-			"\tfontStyle ${2:<SFNode>}",
+			"\tfontStyle ${2:NULL}",
 			"\tlength ${3:[]}",
 			"\tmaxExtent ${4:0}",
 			"\tdepth ${5:0.1}",
@@ -187,7 +187,7 @@
 			"KambiInline {",
 			"\treplaceNames ${1:[]}",
 			"\treplaceNodes ${2:[]}",
-			"\tload ${3:<SFBool>}",
+			"\tload ${3:TRUE}",
 			"\turl ${4:[]}",
 			"\tbboxCenter ${5:0 0 0}",
 			"\tbboxSize ${6:<SFVec3f>}",
@@ -199,10 +199,10 @@
 		"description": "",
 		"body": [
 			"KambiNavigationInfo {",
-			"\ttimeOriginAtLoad ${1:<SFBool>}",
-			"\toctreeRendering ${2:<SFNode>}",
+			"\ttimeOriginAtLoad ${1:FALSE}",
+			"\toctreeRendering ${2:NULL}",
 			"\tavatarSize ${3:[0.251.60.75]}",
-			"\theadlight ${4:<SFBool>}",
+			"\theadlight ${4:TRUE}",
 			"\tspeed ${5:1.0}",
 			"\ttransitionTime ${6:1.0}",
 			"\ttransitionType ${7:[\"LINEAR\"]}",
@@ -229,7 +229,7 @@
 		"body": [
 			"KambiOctreeProperties {",
 			"\tmaxDepth ${1:<SFInt32>}",
-			"\tmetadata ${2:<SFNode>}",
+			"\tmetadata ${2:NULL}",
 			"}"
 		]
 	},
@@ -239,9 +239,9 @@
 		"body": [
 			"Teapot {",
 			"\tsize ${1:3 3 3}",
-			"\tsolid ${2:<SFBool>}",
-			"\tmanifold ${3:<SFBool>}",
-			"\ttexCoord ${4:<SFNode>}",
+			"\tsolid ${2:TRUE}",
+			"\tmanifold ${3:FALSE}",
+			"\ttexCoord ${4:NULL}",
 			"}"
 		]
 	},
@@ -252,8 +252,8 @@
 			"RenderedTexture {",
 			"\tdimensions ${1:128 128 4 1 1}",
 			"\tupdate ${2:\"NONE\"}",
-			"\trepeatT ${3:<SFBool>}",
-			"\trepeatR ${4:<SFBool>}",
+			"\trepeatT ${3:TRUE}",
+			"\trepeatR ${4:TRUE}",
 			"\tdepthMap ${5:[]}",
 			"\teffects ${6:[]}",
 			"\tcrossOrigin ${7:\"\"}",
@@ -267,7 +267,7 @@
 			"Logger {",
 			"\tlevel ${1:1}",
 			"\tlogFile ${2:\"\"}",
-			"\tenabled ${3:<SFBool>}",
+			"\tenabled ${3:TRUE}",
 			"\twrite ${4:<XFAny>}",
 			"}"
 		]
@@ -277,7 +277,7 @@
 		"description": "",
 		"body": [
 			"MultiGeneratedTextureCoordinate {",
-			"\ttexCoord ${1:<MFNode>}",
+			"\ttexCoord ${1:NULL}",
 			"}"
 		]
 	},
@@ -286,7 +286,7 @@
 		"description": "",
 		"body": [
 			"ProjectedTextureCoordinate {",
-			"\tprojector ${1:<SFNode>}",
+			"\tprojector ${1:NULL}",
 			"\tmapping ${2:\"\"}",
 			"}"
 		]
@@ -296,8 +296,8 @@
 		"description": "",
 		"body": [
 			"ScreenEffect {",
-			"\tenabled ${1:<SFBool>}",
-			"\tneedsDepth ${2:<SFBool>}",
+			"\tenabled ${1:TRUE}",
+			"\tneedsDepth ${2:FALSE}",
 			"\tshaders ${3:[]}",
 			"}"
 		]
@@ -346,7 +346,7 @@
 		"body": [
 			"EffectPart {",
 			"\turl ${1:[]}",
-			"\tmetadata ${2:<SFNode>}",
+			"\tmetadata ${2:NULL}",
 			"\turl ${3:[]}",
 			"}"
 		]
@@ -377,8 +377,8 @@
 		"description": "",
 		"body": [
 			"Toggler {",
-			"\tstatus ${1:<SFBool>}",
-			"\tnotStatus ${2:<SFBool>}",
+			"\tstatus ${1:FALSE}",
+			"\tnotStatus ${2:TRUE}",
 			"\ttoggle ${3:<XFAny>}",
 			"}"
 		]
@@ -452,7 +452,7 @@
 		"description": "",
 		"body": [
 			"X3DChildNode {",
-			"\tmetadata ${1:<SFNode>}",
+			"\tmetadata ${1:NULL}",
 			"}"
 		]
 	},
@@ -479,7 +479,7 @@
 		"description": "",
 		"body": [
 			"X3DNode {",
-			"\tmetadata ${1:<SFNode>}",
+			"\tmetadata ${1:NULL}",
 			"}"
 		]
 	},
@@ -488,7 +488,7 @@
 		"description": "",
 		"body": [
 			"X3DSensorNode {",
-			"\tenabled ${1:<SFBool>}",
+			"\tenabled ${1:TRUE}",
 			"\tisActive ${2:<SFBool>}",
 			"}"
 		]
@@ -501,7 +501,7 @@
 			"\tname ${1:\"\"}",
 			"\treference ${2:\"\"}",
 			"\tvalue ${3:[]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"\tname ${5:\"\"}",
 			"\treference ${6:\"\"}",
 			"}"
@@ -515,7 +515,7 @@
 			"\tname ${1:\"\"}",
 			"\treference ${2:\"\"}",
 			"\tvalue ${3:[]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"\tname ${5:\"\"}",
 			"\treference ${6:\"\"}",
 			"}"
@@ -529,7 +529,7 @@
 			"\tname ${1:\"\"}",
 			"\treference ${2:\"\"}",
 			"\tvalue ${3:[]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"\tname ${5:\"\"}",
 			"\treference ${6:\"\"}",
 			"}"
@@ -543,7 +543,7 @@
 			"\tname ${1:\"\"}",
 			"\treference ${2:\"\"}",
 			"\tvalue ${3:[]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"\tname ${5:\"\"}",
 			"\treference ${6:\"\"}",
 			"}"
@@ -557,7 +557,7 @@
 			"\tname ${1:\"\"}",
 			"\treference ${2:\"\"}",
 			"\tvalue ${3:[]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"\tname ${5:\"\"}",
 			"\treference ${6:\"\"}",
 			"}"
@@ -571,7 +571,7 @@
 			"\tname ${1:\"\"}",
 			"\treference ${2:\"\"}",
 			"\tvalue ${3:[]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"\tname ${5:\"\"}",
 			"\treference ${6:\"\"}",
 			"}"
@@ -602,13 +602,13 @@
 		"description": "",
 		"body": [
 			"ComposedCubeMapTexture {",
-			"\tback ${1:<SFNode>}",
-			"\tbottom ${2:<SFNode>}",
-			"\tfront ${3:<SFNode>}",
-			"\tleft ${4:<SFNode>}",
-			"\tright ${5:<SFNode>}",
-			"\ttop ${6:<SFNode>}",
-			"\ttextureProperties ${7:<SFNode>}",
+			"\tback ${1:NULL}",
+			"\tbottom ${2:NULL}",
+			"\tfront ${3:NULL}",
+			"\tleft ${4:NULL}",
+			"\tright ${5:NULL}",
+			"\ttop ${6:NULL}",
+			"\ttextureProperties ${7:NULL}",
 			"}"
 		]
 	},
@@ -619,7 +619,7 @@
 			"GeneratedCubeMapTexture {",
 			"\tupdate ${1:\"NONE\"}",
 			"\tsize ${2:128}",
-			"\ttextureProperties ${3:<SFNode>}",
+			"\ttextureProperties ${3:NULL}",
 			"}"
 		]
 	},
@@ -629,7 +629,7 @@
 		"body": [
 			"ImageCubeMapTexture {",
 			"\turl ${1:[]}",
-			"\ttextureProperties ${2:<SFNode>}",
+			"\ttextureProperties ${2:NULL}",
 			"\turl ${3:[]}",
 			"}"
 		]
@@ -692,7 +692,7 @@
 			"\tdetonationLocation ${20:0 0 0}",
 			"\tdetonationRelativeLocation ${21:0 0 0}",
 			"\tdetonationResult ${22:0}",
-			"\tenabled ${23:<SFBool>}",
+			"\tenabled ${23:TRUE}",
 			"\tentityCategory ${24:0}",
 			"\tentityCountry ${25:0}",
 			"\tentityDomain ${26:0}",
@@ -705,8 +705,8 @@
 			"\teventEntityID ${33:0}",
 			"\teventNumber ${34:0}",
 			"\teventSiteID ${35:0}",
-			"\tfired1 ${36:<SFBool>}",
-			"\tfired2 ${37:<SFBool>}",
+			"\tfired1 ${36:FALSE}",
+			"\tfired2 ${37:FALSE}",
 			"\tfireMissionIndex ${38:0}",
 			"\tfiringRange ${39:0.0}",
 			"\tfiringRate ${40:0}",
@@ -752,13 +752,13 @@
 			"\tisRtpHeaderHeard ${80:<SFBool>}",
 			"\tisStandAlone ${81:<SFBool>}",
 			"\ttimestamp ${82:<SFTime>}",
-			"\trtpHeaderExpected ${83:<SFBool>}",
+			"\trtpHeaderExpected ${83:FALSE}",
 			"\taddChildren ${84:[X3DChildNode]}",
 			"\tremoveChildren ${85:[X3DChildNode]}",
 			"\tchildren ${86:[]}",
 			"\tbboxCenter ${87:0 0 0}",
 			"\tbboxSize ${88:<SFVec3f>}",
-			"\tenabled ${89:<SFBool>}",
+			"\tenabled ${89:TRUE}",
 			"\tisActive ${90:<SFBool>}",
 			"}"
 		]
@@ -779,7 +779,7 @@
 			"\treadInterval ${9:0.1}",
 			"\treceivedPower ${10:0.0}",
 			"\treceiverState ${11:0}",
-			"\trtpHeaderExpected ${12:<SFBool>}",
+			"\trtpHeaderExpected ${12:FALSE}",
 			"\tsiteID ${13:0}",
 			"\ttransmitterApplicationID ${14:1}",
 			"\ttransmitterEntityID ${15:0}",
@@ -794,7 +794,7 @@
 			"\ttimestamp ${24:<SFTime>}",
 			"\tbboxCenter ${25:0 0 0}",
 			"\tbboxSize ${26:<SFVec3f>}",
-			"\tenabled ${27:<SFBool>}",
+			"\tenabled ${27:TRUE}",
 			"\tisActive ${28:<SFBool>}",
 			"}"
 		]
@@ -816,7 +816,7 @@
 			"\tport ${10:0}",
 			"\tradioID ${11:0}",
 			"\treadInterval ${12:0.1}",
-			"\trtpHeaderExpected ${13:<SFBool>}",
+			"\trtpHeaderExpected ${13:FALSE}",
 			"\tsampleRate ${14:0}",
 			"\tsamples ${15:0}",
 			"\tsiteID ${16:0}",
@@ -830,7 +830,7 @@
 			"\ttimestamp ${24:<SFTime>}",
 			"\tbboxCenter ${25:0 0 0}",
 			"\tbboxSize ${26:<SFVec3f>}",
-			"\tenabled ${27:<SFBool>}",
+			"\tenabled ${27:TRUE}",
 			"\tisActive ${28:<SFBool>}",
 			"}"
 		]
@@ -869,7 +869,7 @@
 			"\tradioID ${27:0}",
 			"\treadInterval ${28:0.1}",
 			"\trelativeAntennaLocation ${29:0 0 0}",
-			"\trtpHeaderExpected ${30:<SFBool>}",
+			"\trtpHeaderExpected ${30:FALSE}",
 			"\tsiteID ${31:0}",
 			"\ttransmitFrequencyBandwidth ${32:0.0}",
 			"\ttransmitState ${33:0}",
@@ -882,7 +882,7 @@
 			"\ttimestamp ${40:<SFTime>}",
 			"\tbboxCenter ${41:0 0 0}",
 			"\tbboxSize ${42:<SFVec3f>}",
-			"\tenabled ${43:<SFBool>}",
+			"\tenabled ${43:TRUE}",
 			"\tisActive ${44:<SFBool>}",
 			"}"
 		]
@@ -920,7 +920,7 @@
 			"\tcolor ${1:1 1 1}",
 			"\tfogType ${2:\"LINEAR\"}",
 			"\tvisibilityRange ${3:0}",
-			"\tvolumetric ${4:<SFBool>}",
+			"\tvolumetric ${4:FALSE}",
 			"\tvolumetricDirection ${5:0}",
 			"}"
 		]
@@ -952,14 +952,14 @@
 			"\tcolor ${1:1 1 1}",
 			"\tfogType ${2:\"LINEAR\"}",
 			"\tvisibilityRange ${3:0}",
-			"\tvolumetric ${4:<SFBool>}",
+			"\tvolumetric ${4:FALSE}",
 			"\tvolumetricDirection ${5:0}",
 			"\tset_bind ${6:<SFBool>}",
 			"\tbindTime ${7:<SFTime>}",
 			"\tcolor ${8:1 1 1}",
 			"\tfogType ${9:\"LINEAR\"}",
 			"\tvisibilityRange ${10:0}",
-			"\tvolumetric ${11:<SFBool>}",
+			"\tvolumetric ${11:FALSE}",
 			"\tvolumetricDirection ${12:0}",
 			"}"
 		]
@@ -979,15 +979,15 @@
 		"body": [
 			"LocalFog {",
 			"\tcolor ${1:1 1 1}",
-			"\tenabled ${2:<SFBool>}",
+			"\tenabled ${2:TRUE}",
 			"\tfogType ${3:\"LINEAR\"}",
 			"\tvisibilityRange ${4:0}",
-			"\tvolumetric ${5:<SFBool>}",
+			"\tvolumetric ${5:FALSE}",
 			"\tvolumetricDirection ${6:0}",
 			"\tcolor ${7:1 1 1}",
 			"\tfogType ${8:\"LINEAR\"}",
 			"\tvisibilityRange ${9:0}",
-			"\tvolumetric ${10:<SFBool>}",
+			"\tvolumetric ${10:FALSE}",
 			"\tvolumetricDirection ${11:0}",
 			"}"
 		]
@@ -997,12 +997,12 @@
 		"description": "",
 		"body": [
 			"TextureBackground {",
-			"\tbackTexture ${1:<SFNode>}",
-			"\tbottomTexture ${2:<SFNode>}",
-			"\tfrontTexture ${3:<SFNode>}",
-			"\tleftTexture ${4:<SFNode>}",
-			"\trightTexture ${5:<SFNode>}",
-			"\ttopTexture ${6:<SFNode>}",
+			"\tbackTexture ${1:NULL}",
+			"\tbottomTexture ${2:NULL}",
+			"\tfrontTexture ${3:NULL}",
+			"\tleftTexture ${4:NULL}",
+			"\trightTexture ${5:NULL}",
+			"\ttopTexture ${6:NULL}",
 			"\tgroundAngle ${7:[]}",
 			"\tgroundColor ${8:[]}",
 			"\tskyAngle ${9:[]}",
@@ -1020,7 +1020,7 @@
 			"\tsize ${2:0 0 0}",
 			"\tenterTime ${3:<SFTime>}",
 			"\texitTime ${4:<SFTime>}",
-			"\tenabled ${5:<SFBool>}",
+			"\tenabled ${5:TRUE}",
 			"\tisActive ${6:<SFBool>}",
 			"}"
 		]
@@ -1045,7 +1045,7 @@
 		"description": "",
 		"body": [
 			"TransformSensor {",
-			"\ttargetObject ${1:<SFNode>}",
+			"\ttargetObject ${1:NULL}",
 			"\torientation_changed ${2:<SFRotation>}",
 			"\tposition_changed ${3:<SFVec3f>}",
 			"\tcenter ${4:0 0 0}",
@@ -1119,7 +1119,7 @@
 		"body": [
 			"BooleanToggle {",
 			"\tset_boolean ${1:<SFBool>}",
-			"\ttoggle ${2:<SFBool>}",
+			"\ttoggle ${2:FALSE}",
 			"}"
 		]
 	},
@@ -1173,7 +1173,7 @@
 		"description": "",
 		"body": [
 			"ValueTrigger {",
-			"\tenabled ${1:<SFBool>}",
+			"\tenabled ${1:TRUE}",
 			"\ttrigger ${2:<SFBool>}",
 			"}"
 		]
@@ -1380,7 +1380,7 @@
 			"\tclosureType ${1:\"PIE\"}",
 			"\tendAngle ${2:<SFFloat>}",
 			"\tradius ${3:1}",
-			"\tsolid ${4:<SFBool>}",
+			"\tsolid ${4:FALSE}",
 			"\tstartAngle ${5:0}",
 			"}"
 		]
@@ -1402,7 +1402,7 @@
 			"Disk2D {",
 			"\tinnerRadius ${1:0}",
 			"\touterRadius ${2:1}",
-			"\tsolid ${3:<SFBool>}",
+			"\tsolid ${3:FALSE}",
 			"}"
 		]
 	},
@@ -1430,7 +1430,7 @@
 		"body": [
 			"Rectangle2D {",
 			"\tsize ${1:2 2}",
-			"\tsolid ${2:<SFBool>}",
+			"\tsolid ${2:FALSE}",
 			"}"
 		]
 	},
@@ -1440,7 +1440,7 @@
 		"body": [
 			"TriangleSet2D {",
 			"\tvertices ${1:[]}",
-			"\tsolid ${2:<SFBool>}",
+			"\tsolid ${2:FALSE}",
 			"}"
 		]
 	},
@@ -1450,9 +1450,9 @@
 		"body": [
 			"Box {",
 			"\tsize ${1:2 2 2}",
-			"\tsolid ${2:<SFBool>}",
-			"\tccw ${3:<SFBool>}",
-			"\ttexCoord ${4:<SFNode>}",
+			"\tsolid ${2:TRUE}",
+			"\tccw ${3:TRUE}",
+			"\ttexCoord ${4:NULL}",
 			"}"
 		]
 	},
@@ -1461,12 +1461,12 @@
 		"description": "",
 		"body": [
 			"Cone {",
-			"\tbottom ${1:<SFBool>}",
+			"\tbottom ${1:TRUE}",
 			"\tbottomRadius ${2:1}",
 			"\theight ${3:2}",
-			"\tside ${4:<SFBool>}",
-			"\tsolid ${5:<SFBool>}",
-			"\ttexCoord ${6:<SFNode>}",
+			"\tside ${4:TRUE}",
+			"\tsolid ${5:TRUE}",
+			"\ttexCoord ${6:NULL}",
 			"}"
 		]
 	},
@@ -1475,13 +1475,13 @@
 		"description": "",
 		"body": [
 			"Cylinder {",
-			"\tbottom ${1:<SFBool>}",
+			"\tbottom ${1:TRUE}",
 			"\theight ${2:2}",
 			"\tradius ${3:1}",
-			"\tside ${4:<SFBool>}",
-			"\tsolid ${5:<SFBool>}",
-			"\ttop ${6:<SFBool>}",
-			"\ttexCoord ${7:<SFNode>}",
+			"\tside ${4:TRUE}",
+			"\tsolid ${5:TRUE}",
+			"\ttop ${6:TRUE}",
+			"\ttexCoord ${7:NULL}",
 			"}"
 		]
 	},
@@ -1492,16 +1492,16 @@
 			"ElevationGrid {",
 			"\tset_height ${1:<MFFloat>}",
 			"\tattrib ${2:[]}",
-			"\tcolor ${3:<SFNode>}",
-			"\tfogCoord ${4:<SFNode>}",
-			"\tnormal ${5:<SFNode>}",
-			"\ttexCoord ${6:<SFNode>}",
-			"\tccw ${7:<SFBool>}",
-			"\tcolorPerVertex ${8:<SFBool>}",
+			"\tcolor ${3:NULL}",
+			"\tfogCoord ${4:NULL}",
+			"\tnormal ${5:NULL}",
+			"\ttexCoord ${6:NULL}",
+			"\tccw ${7:TRUE}",
+			"\tcolorPerVertex ${8:TRUE}",
 			"\tcreaseAngle ${9:0}",
 			"\theight ${10:[]}",
-			"\tnormalPerVertex ${11:<SFBool>}",
-			"\tsolid ${12:<SFBool>}",
+			"\tnormalPerVertex ${11:TRUE}",
+			"\tsolid ${12:TRUE}",
 			"\txDimension ${13:0}",
 			"\txSpacing ${14:1.0}",
 			"\tzDimension ${15:0}",
@@ -1518,17 +1518,17 @@
 			"\tset_orientation ${2:<MFRotation>}",
 			"\tset_scale ${3:<MFVec2f>}",
 			"\tset_spine ${4:<MFVec3f>}",
-			"\tbeginCap ${5:<SFBool>}",
-			"\tccw ${6:<SFBool>}",
-			"\tconvex ${7:<SFBool>}",
+			"\tbeginCap ${5:TRUE}",
+			"\tccw ${6:TRUE}",
+			"\tconvex ${7:TRUE}",
 			"\tcreaseAngle ${8:0}",
 			"\tcrossSection ${9:[111-1-1-1-1111]}",
-			"\tendCap ${10:<SFBool>}",
+			"\tendCap ${10:TRUE}",
 			"\torientation ${11:0 0 1 0}",
 			"\tscale ${12:1 1}",
-			"\tsolid ${13:<SFBool>}",
+			"\tsolid ${13:TRUE}",
 			"\tspine ${14:[000010]}",
-			"\ttexCoord ${15:<SFNode>}",
+			"\ttexCoord ${15:NULL}",
 			"}"
 		]
 	},
@@ -1538,19 +1538,19 @@
 		"body": [
 			"IndexedFaceSet {",
 			"\tset_colorIndex ${1:<MFInt32>}",
-			"\tconvex ${2:<SFBool>}",
+			"\tconvex ${2:TRUE}",
 			"\tcoordIndex ${3:[]}",
 			"\tcreaseAngle ${4:0}",
 			"\tnormalIndex ${5:[]}",
 			"\ttexCoordIndex ${6:[]}",
 			"\tattrib ${7:[]}",
-			"\tcoord ${8:<SFNode>}",
-			"\tfogCoord ${9:<SFNode>}",
-			"\ttexCoord ${10:<SFNode>}",
-			"\tccw ${11:<SFBool>}",
-			"\tcolorPerVertex ${12:<SFBool>}",
-			"\tnormalPerVertex ${13:<SFBool>}",
-			"\tsolid ${14:<SFBool>}",
+			"\tcoord ${8:NULL}",
+			"\tfogCoord ${9:NULL}",
+			"\ttexCoord ${10:NULL}",
+			"\tccw ${11:TRUE}",
+			"\tcolorPerVertex ${12:TRUE}",
+			"\tnormalPerVertex ${13:TRUE}",
+			"\tsolid ${14:TRUE}",
 			"\tradianceTransfer ${15:[]}",
 			"}"
 		]
@@ -1561,8 +1561,8 @@
 		"body": [
 			"Sphere {",
 			"\tradius ${1:1}",
-			"\tsolid ${2:<SFBool>}",
-			"\ttexCoord ${3:<SFNode>}",
+			"\tsolid ${2:TRUE}",
+			"\ttexCoord ${3:NULL}",
 			"}"
 		]
 	},
@@ -1572,7 +1572,7 @@
 		"body": [
 			"GeoCoordinate {",
 			"\tpoint ${1:[]}",
-			"\tgeoOrigin ${2:<SFNode>}",
+			"\tgeoOrigin ${2:NULL}",
 			"\tgeoSystem ${3:[\"GD\",\"WE\"]}",
 			"}"
 		]
@@ -1583,19 +1583,19 @@
 		"body": [
 			"GeoElevationGrid {",
 			"\tset_height ${1:<MFDouble>}",
-			"\tcolor ${2:<SFNode>}",
-			"\tnormal ${3:<SFNode>}",
-			"\ttexCoord ${4:<SFNode>}",
+			"\tcolor ${2:NULL}",
+			"\tnormal ${3:NULL}",
+			"\ttexCoord ${4:NULL}",
 			"\tyScale ${5:1.0}",
-			"\tccw ${6:<SFBool>}",
-			"\tcolorPerVertex ${7:<SFBool>}",
+			"\tccw ${6:TRUE}",
+			"\tcolorPerVertex ${7:TRUE}",
 			"\tcreaseAngle ${8:0}",
 			"\tgeoGridOrigin ${9:0 0 0}",
-			"\tgeoOrigin ${10:<SFNode>}",
+			"\tgeoOrigin ${10:NULL}",
 			"\tgeoSystem ${11:[\"GD\",\"WE\"]}",
 			"\theight ${12:[00]}",
-			"\tnormalPerVertex ${13:<SFBool>}",
-			"\tsolid ${14:<SFBool>}",
+			"\tnormalPerVertex ${13:TRUE}",
+			"\tsolid ${14:TRUE}",
 			"\txDimension ${15:0}",
 			"\txSpacing ${16:1.0}",
 			"\tzDimension ${17:0}",
@@ -1609,7 +1609,7 @@
 		"body": [
 			"GeoLocation {",
 			"\tgeoCoords ${1:0 0 0}",
-			"\tgeoOrigin ${2:<SFNode>}",
+			"\tgeoOrigin ${2:NULL}",
 			"\tgeoSystem ${3:[\"GD\",\"WE\"]}",
 			"\taddChildren ${4:[X3DChildNode]}",
 			"\tremoveChildren ${5:[X3DChildNode]}",
@@ -1631,7 +1631,7 @@
 			"\tchild2Url ${5:[]}",
 			"\tchild3Url ${6:[]}",
 			"\tchild4Url ${7:[]}",
-			"\tgeoOrigin ${8:<SFNode>}",
+			"\tgeoOrigin ${8:NULL}",
 			"\tgeoSystem ${9:[\"GD\",\"WE\"]}",
 			"\trange ${10:10}",
 			"\trootUrl ${11:[]}",
@@ -1659,8 +1659,8 @@
 			"GeoOrigin {",
 			"\tgeoCoords ${1:0 0 0}",
 			"\tgeoSystem ${2:[\"GD\",\"WE\"]}",
-			"\trotateYUp ${3:<SFBool>}",
-			"\tmetadata ${4:<SFNode>}",
+			"\trotateYUp ${3:FALSE}",
+			"\tmetadata ${4:NULL}",
 			"}"
 		]
 	},
@@ -1672,7 +1672,7 @@
 			"\tkeyValue ${1:[]}",
 			"\tgeovalue_changed ${2:<SFVec3d>}",
 			"\tvalue_changed ${3:<SFVec3f>}",
-			"\tgeoOrigin ${4:<SFNode>}",
+			"\tgeoOrigin ${4:NULL}",
 			"\tgeoSystem ${5:[\"GD\",\"WE\"]}",
 			"\tset_fraction ${6:<SFFloat>}",
 			"\tkey ${7:[]}",
@@ -1689,7 +1689,7 @@
 			"\tgeoCoord_changed ${3:<SFVec3d>}",
 			"\torientation_changed ${4:<SFRotation>}",
 			"\tposition_changed ${5:<SFVec3f>}",
-			"\tgeoOrigin ${6:<SFNode>}",
+			"\tgeoOrigin ${6:NULL}",
 			"\tgeoSystem ${7:[\"GD\",\"WE\"]}",
 			"\tcenter ${8:0 0 0}",
 			"\tsize ${9:0 0 0}",
@@ -1707,7 +1707,7 @@
 			"\thitPoint_changed ${2:<SFVec3f>}",
 			"\thitTexCoord_changed ${3:<SFVec2f>}",
 			"\thitGeoCoord_changed ${4:<SFVec3d>}",
-			"\tgeoOrigin ${5:<SFNode>}",
+			"\tgeoOrigin ${5:NULL}",
 			"\tgeoSystem ${6:[\"GD\",\"WE\"]}",
 			"\ttouchTime ${7:<SFTime>}",
 			"}"
@@ -1723,7 +1723,7 @@
 			"\tscale ${3:1 1 1}",
 			"\tscaleOrientation ${4:0 0 1 0}",
 			"\ttranslation ${5:0 0 0}",
-			"\tgeoOrigin ${6:<SFNode>}",
+			"\tgeoOrigin ${6:NULL}",
 			"\tgeoSystem ${7:[\"GD\",\"WE\"]}",
 			"\taddChildren ${8:[X3DChildNode]}",
 			"\tremoveChildren ${9:[X3DChildNode]}",
@@ -1741,22 +1741,22 @@
 			"\tset_orientation ${1:<SFRotation>}",
 			"\tset_position ${2:<SFVec3d>}",
 			"\tfieldOfView ${3:<SFFloat>}",
-			"\theadlight ${4:<SFBool>}",
+			"\theadlight ${4:TRUE}",
 			"\tnavType ${5:[\"EXAMINE\",\"ANY\"]}",
-			"\tgeoOrigin ${6:<SFNode>}",
+			"\tgeoOrigin ${6:NULL}",
 			"\tgeoSystem ${7:[\"GD\",\"WE\"]}",
 			"\tposition ${8:0 0 100000}",
 			"\tspeedFactor ${9:1.0}",
 			"\tcenterOfRotation ${10:0 0 0}",
 			"\tdescription ${11:\"\"}",
-			"\tjump ${12:<SFBool>}",
+			"\tjump ${12:TRUE}",
 			"\torientation ${13:0 0 1 0}",
-			"\tretainUserOffsets ${14:<SFBool>}",
+			"\tretainUserOffsets ${14:FALSE}",
 			"\tcameraMatrix ${15:<SFMatrix4f>}",
 			"\tcameraInverseMatrix ${16:<SFMatrix4f>}",
 			"\tcameraRotationMatrix ${17:<SFMatrix3f>}",
 			"\tcameraRotationInverseMatrix ${18:<SFMatrix3f>}",
-			"\tcameraMatrixSendAlsoOnOffscreenRendering ${19:<SFBool>}",
+			"\tcameraMatrixSendAlsoOnOffscreenRendering ${19:FALSE}",
 			"\tdirection ${20:[]}",
 			"\tup ${21:[]}",
 			"\tgravityUp ${22:0 1 0}",
@@ -1860,8 +1860,8 @@
 			"\tsites ${9:[]}",
 			"\tskeleton ${10:[]}",
 			"\tskin ${11:[]}",
-			"\tskinCoord ${12:<SFNode>}",
-			"\tskinNormal ${13:<SFNode>}",
+			"\tskinCoord ${12:NULL}",
+			"\tskinNormal ${13:NULL}",
 			"\ttranslation ${14:0 0 0}",
 			"\tversion ${15:\"\"}",
 			"\tviewpoints ${16:[]}",
@@ -1902,7 +1902,7 @@
 		"body": [
 			"HAnimSegment {",
 			"\tcenterOfMass ${1:0 0 0}",
-			"\tcoord ${2:<SFNode>}",
+			"\tcoord ${2:NULL}",
 			"\tdisplacers ${3:[]}",
 			"\tmass ${4:0}",
 			"\tmomentsOfInertia ${5:[000000000]}",
@@ -1960,64 +1960,64 @@
 			"\talphaTextureId ${2:<SFInt32>}",
 			"\talphaTextureCoordinatesId ${3:0}",
 			"\talphaTextureChannelMask ${4:\"a\"}",
-			"\talphaTexture ${5:<SFNode>}",
+			"\talphaTexture ${5:NULL}",
 			"\tambientFactor ${6:0.2 0.2 0.2}",
 			"\tambientTextureId ${7:<SFInt32>}",
 			"\tambientTextureCoordinatesId ${8:0}",
 			"\tambientTextureChannelMask ${9:\"rgb\"}",
-			"\tambientTexture ${10:<SFNode>}",
+			"\tambientTexture ${10:NULL}",
 			"\tdiffuseFactor ${11:0.8 0.8 0.8}",
 			"\tdiffuseTextureId ${12:<SFInt32>}",
 			"\tdiffuseTextureCoordinatesId ${13:0}",
 			"\tdiffuseTextureChannelMask ${14:\"rgb\"}",
-			"\tdiffuseTexture ${15:<SFNode>}",
-			"\tdiffuseDisplacementTexture ${16:<SFNode>}",
+			"\tdiffuseTexture ${15:NULL}",
+			"\tdiffuseDisplacementTexture ${16:NULL}",
 			"\tdisplacementAxis ${17:\"y\"}",
 			"\tdisplacementFactor ${18:255.0}",
 			"\tdisplacementTextureId ${19:<SFInt32>}",
 			"\tdisplacementTextureCoordinatesId ${20:0}",
-			"\tdisplacementTexture ${21:<SFNode>}",
+			"\tdisplacementTexture ${21:NULL}",
 			"\temissiveFactor ${22:0 0 0}",
 			"\temissiveTextureId ${23:<SFInt32>}",
 			"\temissiveTextureCoordinatesId ${24:0}",
 			"\temissiveTextureChannelMask ${25:\"rgb\"}",
-			"\temissiveTexture ${26:<SFNode>}",
+			"\temissiveTexture ${26:NULL}",
 			"\tenvironmentFactor ${27:1 1 1}",
 			"\tenvironmentTextureId ${28:<SFInt32>}",
 			"\tenvironmentTextureCoordinatesId ${29:0}",
 			"\tenvironmentTextureChannelMask ${30:\"rgb\"}",
-			"\tenvironmentTexture ${31:<SFNode>}",
-			"\tmultiDiffuseAlphaTexture ${32:<SFNode>}",
+			"\tenvironmentTexture ${31:NULL}",
+			"\tmultiDiffuseAlphaTexture ${32:NULL}",
 			"\tnormalFormat ${33:\"UNORM\"}",
 			"\tnormalTextureCoordinatesId ${34:0}",
 			"\tnormalTextureChannelMask ${35:\"rgb\"}",
 			"\tnormalScale ${36:2 2 2}",
 			"\tnormalBias ${37:<SFVec3f>}",
-			"\tnormalTexture ${38:<SFNode>}",
+			"\tnormalTexture ${38:NULL}",
 			"\tnormalTextureParallaxHeight ${39:0}",
 			"\treflectionFactor ${40:0 0 0}",
 			"\treflectionTextureId ${41:<SFInt32>}",
 			"\treflectionTextureCoordinatesId ${42:0}",
 			"\treflectionTextureChannelMask ${43:\"rgb\"}",
-			"\treflectionTexture ${44:<SFNode>}",
+			"\treflectionTexture ${44:NULL}",
 			"\tshininessFactor ${45:0.2}",
 			"\tshininessTextureId ${46:<SFInt32>}",
 			"\tshininessTextureCoordinatesId ${47:0}",
 			"\tshininessTextureChannelMask ${48:\"a\"}",
-			"\tshininessTexture ${49:<SFNode>}",
+			"\tshininessTexture ${49:NULL}",
 			"\tspecularFactor ${50:0 0 0}",
 			"\tspecularTextureId ${51:<SFInt32>}",
 			"\tspecularTextureCoordinatesId ${52:0}",
 			"\tspecularTextureChannelMask ${53:\"rgb\"}",
-			"\tspecularTexture ${54:<SFNode>}",
+			"\tspecularTexture ${54:NULL}",
 			"\ttransmissionFactor ${55:0 0 0}",
 			"\ttransmissionTextureId ${56:<SFInt32>}",
 			"\ttransmissionTextureCoordinatesId ${57:0}",
 			"\ttransmissionTextureChannelMask ${58:\"rgb\"}",
-			"\ttransmissionTexture ${59:<SFNode>}",
+			"\ttransmissionTexture ${59:NULL}",
 			"\ttangentTextureCoordinatesId ${60:<SFInt32>}",
 			"\tbinormalTextureCoordinatesId ${61:<SFInt32>}",
-			"\tinvertAlphaTexture ${62:<SFBool>}",
+			"\tinvertAlphaTexture ${62:FALSE}",
 			"\trelativeIndexOfRefraction ${63:1}",
 			"\tfresnelBlend ${64:0}",
 			"\ttextureTransformEnabled ${65:[FALSEFALSEFALSEFALSEFALSEFALSEFALSEFALSE]}",
@@ -2034,7 +2034,7 @@
 		"body": [
 			"ImageBackground {",
 			"\tcolor ${1:1 1 1 1}",
-			"\ttexture ${2:<SFNode>}",
+			"\ttexture ${2:NULL}",
 			"}"
 		]
 	},
@@ -2093,7 +2093,7 @@
 			"\teaseInEaseOut ${2:[]}",
 			"\tkey ${3:[]}",
 			"\tmodifiedFraction_changed ${4:<SFFloat>}",
-			"\tmetadata ${5:<SFNode>}",
+			"\tmetadata ${5:NULL}",
 			"}"
 		]
 	},
@@ -2162,10 +2162,10 @@
 		"description": "",
 		"body": [
 			"SplinePositionInterpolator {",
-			"\tclosed ${1:<SFBool>}",
+			"\tclosed ${1:FALSE}",
 			"\tkeyValue ${2:[]}",
 			"\tkeyVelocity ${3:[]}",
-			"\tnormalizeVelocity ${4:<SFBool>}",
+			"\tnormalizeVelocity ${4:FALSE}",
 			"\tvalue_changed ${5:<SFVec3f>}",
 			"\tset_fraction ${6:<SFFloat>}",
 			"\tkey ${7:[]}",
@@ -2177,10 +2177,10 @@
 		"description": "",
 		"body": [
 			"SplinePositionInterpolator2D {",
-			"\tclosed ${1:<SFBool>}",
+			"\tclosed ${1:FALSE}",
 			"\tkeyValue ${2:[]}",
 			"\tkeyVelocity ${3:[]}",
-			"\tnormalizeVelocity ${4:<SFBool>}",
+			"\tnormalizeVelocity ${4:FALSE}",
 			"\tvalue_changed ${5:<SFVec2f>}",
 			"\tset_fraction ${6:<SFFloat>}",
 			"\tkey ${7:[]}",
@@ -2192,10 +2192,10 @@
 		"description": "",
 		"body": [
 			"SplineScalarInterpolator {",
-			"\tclosed ${1:<SFBool>}",
+			"\tclosed ${1:FALSE}",
 			"\tkeyValue ${2:[]}",
 			"\tkeyVelocity ${3:[]}",
-			"\tnormalizeVelocity ${4:<SFBool>}",
+			"\tnormalizeVelocity ${4:FALSE}",
 			"\tvalue_changed ${5:<SFFloat>}",
 			"\tset_fraction ${6:<SFFloat>}",
 			"\tkey ${7:[]}",
@@ -2208,7 +2208,7 @@
 		"body": [
 			"SquadOrientationInterpolator {",
 			"\tkeyValue ${1:[]}",
-			"\tnormalizeVelocity ${2:<SFBool>}",
+			"\tnormalizeVelocity ${2:FALSE}",
 			"\tvalue_changed ${3:<SFRotation>}",
 			"\tset_fraction ${4:<SFFloat>}",
 			"\tkey ${5:[]}",
@@ -2220,7 +2220,7 @@
 		"description": "",
 		"body": [
 			"X3DKeyDeviceSensorNode {",
-			"\tenabled ${1:<SFBool>}",
+			"\tenabled ${1:TRUE}",
 			"\tisActive ${2:<SFBool>}",
 			"}"
 		]
@@ -2245,7 +2245,7 @@
 		"description": "",
 		"body": [
 			"StringSensor {",
-			"\tdeletionAllowed ${1:<SFBool>}",
+			"\tdeletionAllowed ${1:TRUE}",
 			"\tenteredText ${2:<SFString>}",
 			"\tfinalText ${3:<SFString>}",
 			"}"
@@ -2256,9 +2256,9 @@
 		"description": "",
 		"body": [
 			"X3DLayerNode {",
-			"\tisPickable ${1:<SFBool>}",
-			"\tviewport ${2:<SFNode>}",
-			"\tmetadata ${3:<SFNode>}",
+			"\tisPickable ${1:TRUE}",
+			"\tviewport ${2:NULL}",
+			"\tmetadata ${3:NULL}",
 			"}"
 		]
 	},
@@ -2283,8 +2283,8 @@
 			"\taddChildren ${1:[]}",
 			"\tremoveChildren ${2:[]}",
 			"\tchildren ${3:[]}",
-			"\tisPickable ${4:<SFBool>}",
-			"\tviewport ${5:<SFNode>}",
+			"\tisPickable ${4:TRUE}",
+			"\tviewport ${5:NULL}",
 			"}"
 		]
 	},
@@ -2296,7 +2296,7 @@
 			"\tactiveLayer ${1:0}",
 			"\tlayers ${2:[]}",
 			"\torder ${3:[0]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"}"
 		]
 	},
@@ -2341,8 +2341,8 @@
 		"description": "",
 		"body": [
 			"LayoutGroup {",
-			"\tlayout ${1:<SFNode>}",
-			"\tviewport ${2:<SFNode>}",
+			"\tlayout ${1:NULL}",
+			"\tviewport ${2:NULL}",
 			"\taddChildren ${3:[X3DChildNode]}",
 			"\tremoveChildren ${4:[X3DChildNode]}",
 			"\tchildren ${5:[]}",
@@ -2359,9 +2359,9 @@
 			"\taddChildren ${1:[]}",
 			"\tremoveChildren ${2:[]}",
 			"\tchildren ${3:[]}",
-			"\tlayout ${4:<SFNode>}",
-			"\tisPickable ${5:<SFBool>}",
-			"\tviewport ${6:<SFNode>}",
+			"\tlayout ${4:NULL}",
+			"\tisPickable ${5:TRUE}",
+			"\tviewport ${6:NULL}",
 			"}"
 		]
 	},
@@ -2371,14 +2371,14 @@
 		"body": [
 			"ScreenFontStyle {",
 			"\tfamily ${1:\"SERIF\"}",
-			"\thorizontal ${2:<SFBool>}",
+			"\thorizontal ${2:TRUE}",
 			"\tjustify ${3:\"BEGIN\"}",
 			"\tlanguage ${4:\"\"}",
-			"\tleftToRight ${5:<SFBool>}",
+			"\tleftToRight ${5:TRUE}",
 			"\tpointSize ${6:12.0}",
 			"\tspacing ${7:1.0}",
 			"\tstyle ${8:\"PLAIN\"}",
-			"\ttopToBottom ${9:<SFBool>}",
+			"\ttopToBottom ${9:TRUE}",
 			"}"
 		]
 	},
@@ -2402,9 +2402,9 @@
 			"X3DLightNode {",
 			"\tambientIntensity ${1:0}",
 			"\tcolor ${2:1 1 1}",
-			"\tglobal ${3:<SFBool>}",
+			"\tglobal ${3:FALSE}",
 			"\tintensity ${4:1}",
-			"\ton ${5:<SFBool>}",
+			"\ton ${5:TRUE}",
 			"\teffects ${6:[]}",
 			"}"
 		]
@@ -2414,14 +2414,14 @@
 		"description": "",
 		"body": [
 			"X3DPunctualLightNode {",
-			"\tshadows ${1:<SFBool>}",
-			"\tshadowVolumesMain ${2:<SFBool>}",
-			"\tdefaultShadowMap ${3:<SFNode>}",
+			"\tshadows ${1:FALSE}",
+			"\tshadowVolumesMain ${2:FALSE}",
+			"\tdefaultShadowMap ${3:NULL}",
 			"\tambientIntensity ${4:0}",
 			"\tcolor ${5:1 1 1}",
-			"\tglobal ${6:<SFBool>}",
+			"\tglobal ${6:FALSE}",
 			"\tintensity ${7:1}",
-			"\ton ${8:<SFBool>}",
+			"\ton ${8:TRUE}",
 			"\teffects ${9:[]}",
 			"}"
 		]
@@ -2433,9 +2433,9 @@
 			"DirectionalLight {",
 			"\tambientIntensity ${1:0}",
 			"\tcolor ${2:1 1 1}",
-			"\tglobal ${3:<SFBool>}",
+			"\tglobal ${3:FALSE}",
 			"\tintensity ${4:1}",
-			"\ton ${5:<SFBool>}",
+			"\ton ${5:TRUE}",
 			"\teffects ${6:[]}",
 			"}"
 		]
@@ -2447,9 +2447,9 @@
 			"PointLight {",
 			"\tambientIntensity ${1:0}",
 			"\tcolor ${2:1 1 1}",
-			"\tglobal ${3:<SFBool>}",
+			"\tglobal ${3:FALSE}",
 			"\tintensity ${4:1}",
-			"\ton ${5:<SFBool>}",
+			"\ton ${5:TRUE}",
 			"\teffects ${6:[]}",
 			"}"
 		]
@@ -2468,9 +2468,9 @@
 			"\tprojectionAngle ${7:0}",
 			"\tambientIntensity ${8:0}",
 			"\tcolor ${9:1 1 1}",
-			"\tglobal ${10:<SFBool>}",
+			"\tglobal ${10:FALSE}",
 			"\tintensity ${11:1}",
-			"\ton ${12:<SFBool>}",
+			"\ton ${12:TRUE}",
 			"\teffects ${13:[]}",
 			"}"
 		]
@@ -2480,13 +2480,13 @@
 		"description": "",
 		"body": [
 			"EnvironmentLight {",
-			"\tdiffuseTexture ${1:<SFNode>}",
-			"\tspecularTexture ${2:<SFNode>}",
+			"\tdiffuseTexture ${1:NULL}",
+			"\tspecularTexture ${2:NULL}",
 			"\tambientIntensity ${3:0}",
 			"\tcolor ${4:1 1 1}",
-			"\tglobal ${5:<SFBool>}",
+			"\tglobal ${5:FALSE}",
 			"\tintensity ${6:1}",
-			"\ton ${7:<SFBool>}",
+			"\ton ${7:TRUE}",
 			"\teffects ${8:[]}",
 			"}"
 		]
@@ -2498,14 +2498,14 @@
 			"X3DViewpointNode {",
 			"\tcenterOfRotation ${1:0 0 0}",
 			"\tdescription ${2:\"\"}",
-			"\tjump ${3:<SFBool>}",
+			"\tjump ${3:TRUE}",
 			"\torientation ${4:0 0 1 0}",
-			"\tretainUserOffsets ${5:<SFBool>}",
+			"\tretainUserOffsets ${5:FALSE}",
 			"\tcameraMatrix ${6:<SFMatrix4f>}",
 			"\tcameraInverseMatrix ${7:<SFMatrix4f>}",
 			"\tcameraRotationMatrix ${8:<SFMatrix3f>}",
 			"\tcameraRotationInverseMatrix ${9:<SFMatrix3f>}",
-			"\tcameraMatrixSendAlsoOnOffscreenRendering ${10:<SFBool>}",
+			"\tcameraMatrixSendAlsoOnOffscreenRendering ${10:FALSE}",
 			"\tdirection ${11:[]}",
 			"\tup ${12:[]}",
 			"\tgravityUp ${13:0 1 0}",
@@ -2536,13 +2536,13 @@
 			"\tenabled ${1:<SFBool>}",
 			"\tcollideTime ${2:<SFTime>}",
 			"\tisActive ${3:<SFBool>}",
-			"\tproxy ${4:<SFNode>}",
+			"\tproxy ${4:NULL}",
 			"\taddChildren ${5:[X3DChildNode]}",
 			"\tremoveChildren ${6:[X3DChildNode]}",
 			"\tchildren ${7:[]}",
 			"\tbboxCenter ${8:0 0 0}",
 			"\tbboxSize ${9:<SFVec3f>}",
-			"\tenabled ${10:<SFBool>}",
+			"\tenabled ${10:TRUE}",
 			"\tisActive ${11:<SFBool>}",
 			"}"
 		]
@@ -2554,7 +2554,7 @@
 			"LOD {",
 			"\tlevel_changed ${1:<SFInt32>}",
 			"\tcenter ${2:0 0 0}",
-			"\tforceTransitions ${3:<SFBool>}",
+			"\tforceTransitions ${3:FALSE}",
 			"\trange ${4:[]}",
 			"\taddChildren ${5:[X3DChildNode]}",
 			"\tremoveChildren ${6:[X3DChildNode]}",
@@ -2570,7 +2570,7 @@
 		"body": [
 			"NavigationInfo {",
 			"\tavatarSize ${1:[0.251.60.75]}",
-			"\theadlight ${2:<SFBool>}",
+			"\theadlight ${2:TRUE}",
 			"\tspeed ${3:1.0}",
 			"\ttransitionTime ${4:1.0}",
 			"\ttransitionType ${5:[\"LINEAR\"]}",
@@ -2591,14 +2591,14 @@
 			"\tposition ${2:0 0 10}",
 			"\tcenterOfRotation ${3:0 0 0}",
 			"\tdescription ${4:\"\"}",
-			"\tjump ${5:<SFBool>}",
+			"\tjump ${5:TRUE}",
 			"\torientation ${6:0 0 1 0}",
-			"\tretainUserOffsets ${7:<SFBool>}",
+			"\tretainUserOffsets ${7:FALSE}",
 			"\tcameraMatrix ${8:<SFMatrix4f>}",
 			"\tcameraInverseMatrix ${9:<SFMatrix4f>}",
 			"\tcameraRotationMatrix ${10:<SFMatrix3f>}",
 			"\tcameraRotationInverseMatrix ${11:<SFMatrix3f>}",
-			"\tcameraMatrixSendAlsoOnOffscreenRendering ${12:<SFBool>}",
+			"\tcameraMatrixSendAlsoOnOffscreenRendering ${12:FALSE}",
 			"\tdirection ${13:[]}",
 			"\tup ${14:[]}",
 			"\tgravityUp ${15:0 1 0}",
@@ -2612,17 +2612,17 @@
 			"Viewpoint {",
 			"\tfieldOfView ${1:<SFFloat>}",
 			"\tposition ${2:0 0 10}",
-			"\tfieldOfViewForceVertical ${3:<SFBool>}",
+			"\tfieldOfViewForceVertical ${3:FALSE}",
 			"\tcenterOfRotation ${4:0 0 0}",
 			"\tdescription ${5:\"\"}",
-			"\tjump ${6:<SFBool>}",
+			"\tjump ${6:TRUE}",
 			"\torientation ${7:0 0 1 0}",
-			"\tretainUserOffsets ${8:<SFBool>}",
+			"\tretainUserOffsets ${8:FALSE}",
 			"\tcameraMatrix ${9:<SFMatrix4f>}",
 			"\tcameraInverseMatrix ${10:<SFMatrix4f>}",
 			"\tcameraRotationMatrix ${11:<SFMatrix3f>}",
 			"\tcameraRotationInverseMatrix ${12:<SFMatrix3f>}",
-			"\tcameraMatrixSendAlsoOnOffscreenRendering ${13:<SFBool>}",
+			"\tcameraMatrixSendAlsoOnOffscreenRendering ${13:FALSE}",
 			"\tdirection ${14:[]}",
 			"\tup ${15:[]}",
 			"\tgravityUp ${16:0 1 0}",
@@ -2637,8 +2637,8 @@
 			"\tcenter ${1:0 0 0}",
 			"\tchildren ${2:[]}",
 			"\tdescription ${3:\"\"}",
-			"\tdisplayed ${4:<SFBool>}",
-			"\tretainUserOffsets ${5:<SFBool>}",
+			"\tdisplayed ${4:TRUE}",
+			"\tretainUserOffsets ${5:FALSE}",
 			"\tsize ${6:0 0 0}",
 			"}"
 		]
@@ -2648,7 +2648,7 @@
 		"description": "",
 		"body": [
 			"X3DNetworkSensorNode {",
-			"\tenabled ${1:<SFBool>}",
+			"\tenabled ${1:TRUE}",
 			"\tisActive ${2:<SFBool>}",
 			"}"
 		]
@@ -2683,7 +2683,7 @@
 		"description": "",
 		"body": [
 			"Inline {",
-			"\tload ${1:<SFBool>}",
+			"\tload ${1:TRUE}",
 			"\turl ${2:[]}",
 			"\tbboxCenter ${3:0 0 0}",
 			"\tbboxSize ${4:<SFVec3f>}",
@@ -2710,7 +2710,7 @@
 		"body": [
 			"X3DNurbsControlCurveNode {",
 			"\tcontrolPoint ${1:[]}",
-			"\tmetadata ${2:<SFNode>}",
+			"\tmetadata ${2:NULL}",
 			"}"
 		]
 	},
@@ -2724,12 +2724,12 @@
 			"\tuTessellation ${3:0}",
 			"\tvTessellation ${4:0}",
 			"\tweight ${5:[]}",
-			"\tsolid ${6:<SFBool>}",
-			"\tuClosed ${7:<SFBool>}",
+			"\tsolid ${6:TRUE}",
+			"\tuClosed ${7:FALSE}",
 			"\tuDimension ${8:0}",
 			"\tuKnot ${9:[]}",
 			"\tuOrder ${10:3}",
-			"\tvClosed ${11:<SFBool>}",
+			"\tvClosed ${11:FALSE}",
 			"\tvDimension ${12:0}",
 			"\tvKnot ${13:[]}",
 			"\tvOrder ${14:3}",
@@ -2752,7 +2752,7 @@
 			"\taddChildren ${1:[NurbsCurve2D|ContourPolyline2D]}",
 			"\tremoveChildren ${2:[NurbsCurve2D|ContourPolyline2D]}",
 			"\tchildren ${3:[]}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"}"
 		]
 	},
@@ -2782,7 +2782,7 @@
 			"\tcontrolPoint ${1:[]}",
 			"\ttessellation ${2:0}",
 			"\tweight ${3:[]}",
-			"\tclosed ${4:<SFBool>}",
+			"\tclosed ${4:FALSE}",
 			"\tknot ${5:[]}",
 			"\torder ${6:3}",
 			"}"
@@ -2795,7 +2795,7 @@
 			"NurbsCurve2D {",
 			"\ttessellation ${1:0}",
 			"\tweight ${2:[]}",
-			"\tclosed ${3:<SFBool>}",
+			"\tclosed ${3:FALSE}",
 			"\tknot ${4:[]}",
 			"\torder ${5:3}",
 			"\tcontrolPoint ${6:[]}",
@@ -2826,12 +2826,12 @@
 			"\tuTessellation ${3:0}",
 			"\tvTessellation ${4:0}",
 			"\tweight ${5:[]}",
-			"\tsolid ${6:<SFBool>}",
-			"\tuClosed ${7:<SFBool>}",
+			"\tsolid ${6:TRUE}",
+			"\tuClosed ${7:FALSE}",
 			"\tuDimension ${8:0}",
 			"\tuKnot ${9:[]}",
 			"\tuOrder ${10:3}",
-			"\tvClosed ${11:<SFBool>}",
+			"\tvClosed ${11:FALSE}",
 			"\tvDimension ${12:0}",
 			"\tvKnot ${13:[]}",
 			"\tvOrder ${14:3}",
@@ -2892,8 +2892,8 @@
 			"NurbsSweptSurface {",
 			"\tcrossSectionCurve ${1:[]}",
 			"\ttrajectoryCurve ${2:[]}",
-			"\tccw ${3:<SFBool>}",
-			"\tsolid ${4:<SFBool>}",
+			"\tccw ${3:TRUE}",
+			"\tsolid ${4:TRUE}",
 			"}"
 		]
 	},
@@ -2904,8 +2904,8 @@
 			"NurbsSwungSurface {",
 			"\tprofileCurve ${1:[]}",
 			"\ttrajectoryCurve ${2:[]}",
-			"\tccw ${3:<SFBool>}",
-			"\tsolid ${4:<SFBool>}",
+			"\tccw ${3:TRUE}",
+			"\tsolid ${4:TRUE}",
 			"}"
 		]
 	},
@@ -2922,7 +2922,7 @@
 			"\tvDimension ${6:0}",
 			"\tvKnot ${7:[]}",
 			"\tvOrder ${8:3}",
-			"\tmetadata ${9:<SFNode>}",
+			"\tmetadata ${9:NULL}",
 			"}"
 		]
 	},
@@ -2939,12 +2939,12 @@
 			"\tuTessellation ${6:0}",
 			"\tvTessellation ${7:0}",
 			"\tweight ${8:[]}",
-			"\tsolid ${9:<SFBool>}",
-			"\tuClosed ${10:<SFBool>}",
+			"\tsolid ${9:TRUE}",
+			"\tuClosed ${10:FALSE}",
 			"\tuDimension ${11:0}",
 			"\tuKnot ${12:[]}",
 			"\tuOrder ${13:3}",
-			"\tvClosed ${14:<SFBool>}",
+			"\tvClosed ${14:FALSE}",
 			"\tvDimension ${15:0}",
 			"\tvKnot ${16:[]}",
 			"\tvOrder ${17:3}",
@@ -2960,7 +2960,7 @@
 			"\tvariation ${2:0.25}",
 			"\tmass ${3:0}",
 			"\tsurfaceArea ${4:0}",
-			"\tmetadata ${5:<SFNode>}",
+			"\tmetadata ${5:NULL}",
 			"}"
 		]
 	},
@@ -2969,8 +2969,8 @@
 		"description": "",
 		"body": [
 			"X3DParticlePhysicsModelNode {",
-			"\tenabled ${1:<SFBool>}",
-			"\tmetadata ${2:<SFNode>}",
+			"\tenabled ${1:TRUE}",
+			"\tmetadata ${2:NULL}",
 			"}"
 		]
 	},
@@ -2979,8 +2979,8 @@
 		"description": "",
 		"body": [
 			"BoundedPhysicsModel {",
-			"\tgeometry ${1:<SFNode>}",
-			"\tenabled ${2:<SFBool>}",
+			"\tgeometry ${1:NULL}",
+			"\tenabled ${2:TRUE}",
 			"}"
 		]
 	},
@@ -3018,7 +3018,7 @@
 		"body": [
 			"ForcePhysicsModel {",
 			"\tforce ${1:0}",
-			"\tenabled ${2:<SFBool>}",
+			"\tenabled ${2:TRUE}",
 			"}"
 		]
 	},
@@ -3027,22 +3027,22 @@
 		"description": "",
 		"body": [
 			"ParticleSystem {",
-			"\tcreateParticles ${1:<SFBool>}",
-			"\tenabled ${2:<SFBool>}",
+			"\tcreateParticles ${1:TRUE}",
+			"\tenabled ${2:TRUE}",
 			"\tlifetimeVariation ${3:0.25}",
 			"\tmaxParticles ${4:200}",
 			"\tparticleLifetime ${5:5}",
 			"\tparticleSize ${6:0.02 0.02}",
 			"\tisActive ${7:<SFBool>}",
-			"\tcolorRamp ${8:<SFNode>}",
-			"\tcolorKey ${9:<MFFloat>}",
-			"\temitter ${10:<SFNode>}",
+			"\tcolorRamp ${8:NULL}",
+			"\tcolorKey ${9:NULL}",
+			"\temitter ${10:NULL}",
 			"\tgeometryType ${11:\"QUAD\"}",
 			"\tphysics ${12:[]}",
-			"\ttexCoordRamp ${13:<SFNode>}",
+			"\ttexCoordRamp ${13:NULL}",
 			"\ttexCoordKey ${14:[]}",
-			"\tappearance ${15:<SFNode>}",
-			"\tgeometry ${16:<SFNode>}",
+			"\tappearance ${15:NULL}",
+			"\tgeometry ${16:NULL}",
 			"\tbboxCenter ${17:0 0 0}",
 			"\tbboxSize ${18:<SFVec3f>}",
 			"\tshading ${19:\"DEFAULT\"}",
@@ -3070,7 +3070,7 @@
 		"body": [
 			"PolylineEmitter {",
 			"\tset_coordinate ${1:<SFInt32>}",
-			"\tcoord ${2:<SFNode>}",
+			"\tcoord ${2:NULL}",
 			"\tdirection ${3:0 1 0}",
 			"\tcoordIndex ${4:<MFInt32>}",
 			"\tspeed ${5:0}",
@@ -3087,7 +3087,7 @@
 			"SurfaceEmitter {",
 			"\tset_coordinate ${1:<SFInt32>}",
 			"\tcoordIndex ${2:<MFInt32>}",
-			"\tsurface ${3:<SFNode>}",
+			"\tsurface ${3:NULL}",
 			"\tspeed ${4:0}",
 			"\tvariation ${5:0.25}",
 			"\tmass ${6:0}",
@@ -3101,10 +3101,10 @@
 		"body": [
 			"VolumeEmitter {",
 			"\tset_coordinate ${1:<SFInt32>}",
-			"\tcoord ${2:<SFNode>}",
+			"\tcoord ${2:NULL}",
 			"\tdirection ${3:0 1 0}",
 			"\tcoordIndex ${4:<MFInt32>}",
-			"\tinternal ${5:<SFBool>}",
+			"\tinternal ${5:TRUE}",
 			"\tspeed ${6:0}",
 			"\tvariation ${7:0.25}",
 			"\tmass ${8:0}",
@@ -3121,7 +3121,7 @@
 			"\tgustiness ${2:0.1}",
 			"\tspeed ${3:0.1}",
 			"\tturbulence ${4:0}",
-			"\tenabled ${5:<SFBool>}",
+			"\tenabled ${5:TRUE}",
 			"}"
 		]
 	},
@@ -3131,7 +3131,7 @@
 		"body": [
 			"X3DPickableObject {",
 			"\tobjectType ${1:\"ALL\"}",
-			"\tpickable ${2:<SFBool>}",
+			"\tpickable ${2:TRUE}",
 			"}"
 		]
 	},
@@ -3141,12 +3141,12 @@
 		"body": [
 			"X3DPickSensorNode {",
 			"\tobjectType ${1:\"ALL\"}",
-			"\tpickingGeometry ${2:<SFNode>}",
+			"\tpickingGeometry ${2:NULL}",
 			"\tpickTarget ${3:[]}",
 			"\tpickedGeometry ${4:<MFNode>}",
 			"\tintersectionType ${5:\"BOUNDS\"}",
 			"\tsortOrder ${6:\"CLOSEST\"}",
-			"\tenabled ${7:<SFBool>}",
+			"\tenabled ${7:TRUE}",
 			"\tisActive ${8:<SFBool>}",
 			"}"
 		]
@@ -3160,7 +3160,7 @@
 			"\tpickedPoint ${2:<MFVec3f>}",
 			"\tpickedTextureCoordinate ${3:<MFVec3f>}",
 			"\tobjectType ${4:\"ALL\"}",
-			"\tpickingGeometry ${5:<SFNode>}",
+			"\tpickingGeometry ${5:NULL}",
 			"\tpickTarget ${6:[]}",
 			"\tpickedGeometry ${7:<MFNode>}",
 			"\tintersectionType ${8:\"BOUNDS\"}",
@@ -3174,14 +3174,14 @@
 		"body": [
 			"PickableGroup {",
 			"\tobjectType ${1:\"ALL\"}",
-			"\tpickable ${2:<SFBool>}",
+			"\tpickable ${2:TRUE}",
 			"\taddChildren ${3:[X3DChildNode]}",
 			"\tremoveChildren ${4:[X3DChildNode]}",
 			"\tchildren ${5:[]}",
 			"\tbboxCenter ${6:0 0 0}",
 			"\tbboxSize ${7:<SFVec3f>}",
 			"\tobjectType ${8:\"ALL\"}",
-			"\tpickable ${9:<SFBool>}",
+			"\tpickable ${9:TRUE}",
 			"}"
 		]
 	},
@@ -3192,7 +3192,7 @@
 			"PointPickSensor {",
 			"\tpickedPoint ${1:<MFVec3f>}",
 			"\tobjectType ${2:\"ALL\"}",
-			"\tpickingGeometry ${3:<SFNode>}",
+			"\tpickingGeometry ${3:NULL}",
 			"\tpickTarget ${4:[]}",
 			"\tpickedGeometry ${5:<MFNode>}",
 			"\tintersectionType ${6:\"BOUNDS\"}",
@@ -3206,7 +3206,7 @@
 		"body": [
 			"PrimitivePickSensor {",
 			"\tobjectType ${1:\"ALL\"}",
-			"\tpickingGeometry ${2:<SFNode>}",
+			"\tpickingGeometry ${2:NULL}",
 			"\tpickTarget ${3:[]}",
 			"\tpickedGeometry ${4:<MFNode>}",
 			"\tintersectionType ${5:\"BOUNDS\"}",
@@ -3220,7 +3220,7 @@
 		"body": [
 			"VolumePickSensor {",
 			"\tobjectType ${1:\"ALL\"}",
-			"\tpickingGeometry ${2:<SFNode>}",
+			"\tpickingGeometry ${2:NULL}",
 			"\tpickTarget ${3:[]}",
 			"\tpickedGeometry ${4:<MFNode>}",
 			"\tintersectionType ${5:\"BOUNDS\"}",
@@ -3233,7 +3233,7 @@
 		"description": "",
 		"body": [
 			"X3DDragSensorNode {",
-			"\tautoOffset ${1:<SFBool>}",
+			"\tautoOffset ${1:TRUE}",
 			"\ttrackPoint_changed ${2:<SFVec3f>}",
 			"\tdescription ${3:\"\"}",
 			"\tisOver ${4:<SFBool>}",
@@ -3247,7 +3247,7 @@
 			"X3DPointingDeviceSensorNode {",
 			"\tdescription ${1:\"\"}",
 			"\tisOver ${2:<SFBool>}",
-			"\tenabled ${3:<SFBool>}",
+			"\tenabled ${3:TRUE}",
 			"\tisActive ${4:<SFBool>}",
 			"}"
 		]
@@ -3274,7 +3274,7 @@
 			"\tminAngle ${4:0}",
 			"\toffset ${5:0}",
 			"\trotation_changed ${6:<SFRotation>}",
-			"\tautoOffset ${7:<SFBool>}",
+			"\tautoOffset ${7:TRUE}",
 			"\ttrackPoint_changed ${8:<SFVec3f>}",
 			"}"
 		]
@@ -3289,7 +3289,7 @@
 			"\tminPosition ${3:0 0}",
 			"\toffset ${4:0 0 0}",
 			"\ttranslation_changed ${5:<SFVec3f>}",
-			"\tautoOffset ${6:<SFBool>}",
+			"\tautoOffset ${6:TRUE}",
 			"\ttrackPoint_changed ${7:<SFVec3f>}",
 			"}"
 		]
@@ -3301,7 +3301,7 @@
 			"SphereSensor {",
 			"\toffset ${1:0 1 0 0}",
 			"\trotation_changed ${2:<SFRotation>}",
-			"\tautoOffset ${3:<SFBool>}",
+			"\tautoOffset ${3:TRUE}",
 			"\ttrackPoint_changed ${4:<SFVec3f>}",
 			"}"
 		]
@@ -3333,13 +3333,13 @@
 		"body": [
 			"X3DComposedGeometryNode {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:<SFNode>}",
-			"\tfogCoord ${3:<SFNode>}",
-			"\ttexCoord ${4:<SFNode>}",
-			"\tccw ${5:<SFBool>}",
-			"\tcolorPerVertex ${6:<SFBool>}",
-			"\tnormalPerVertex ${7:<SFBool>}",
-			"\tsolid ${8:<SFBool>}",
+			"\tcoord ${2:NULL}",
+			"\tfogCoord ${3:NULL}",
+			"\ttexCoord ${4:NULL}",
+			"\tccw ${5:TRUE}",
+			"\tcolorPerVertex ${6:TRUE}",
+			"\tnormalPerVertex ${7:TRUE}",
+			"\tsolid ${8:TRUE}",
 			"\tradianceTransfer ${9:[]}",
 			"}"
 		]
@@ -3357,7 +3357,7 @@
 		"description": "",
 		"body": [
 			"X3DGeometricPropertyNode {",
-			"\tmetadata ${1:<SFNode>}",
+			"\tmetadata ${1:NULL}",
 			"}"
 		]
 	},
@@ -3366,7 +3366,7 @@
 		"description": "",
 		"body": [
 			"X3DGeometryNode {",
-			"\tmetadata ${1:<SFNode>}",
+			"\tmetadata ${1:NULL}",
 			"}"
 		]
 	},
@@ -3383,7 +3383,7 @@
 		"description": "",
 		"body": [
 			"ClipPlane {",
-			"\tenabled ${1:<SFBool>}",
+			"\tenabled ${1:TRUE}",
 			"\tplane ${2:0 1 0 0}",
 			"}"
 		]
@@ -3425,9 +3425,9 @@
 			"\tset_colorIndex ${1:<MFInt32>}",
 			"\tset_coordIndex ${2:<MFInt32>}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:<SFNode>}",
+			"\tcoord ${4:NULL}",
 			"\tfogCoord ${5:[]}",
-			"\tcolorPerVertex ${6:<SFBool>}",
+			"\tcolorPerVertex ${6:TRUE}",
 			"\tcoordIndex ${7:[]}",
 			"}"
 		]
@@ -3440,13 +3440,13 @@
 			"\tset_index ${1:[]}",
 			"\tindex ${2:[]}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:<SFNode>}",
-			"\tfogCoord ${5:<SFNode>}",
-			"\ttexCoord ${6:<SFNode>}",
-			"\tccw ${7:<SFBool>}",
-			"\tcolorPerVertex ${8:<SFBool>}",
-			"\tnormalPerVertex ${9:<SFBool>}",
-			"\tsolid ${10:<SFBool>}",
+			"\tcoord ${4:NULL}",
+			"\tfogCoord ${5:NULL}",
+			"\ttexCoord ${6:NULL}",
+			"\tccw ${7:TRUE}",
+			"\tcolorPerVertex ${8:TRUE}",
+			"\tnormalPerVertex ${9:TRUE}",
+			"\tsolid ${10:TRUE}",
 			"\tradianceTransfer ${11:[]}",
 			"}"
 		]
@@ -3459,13 +3459,13 @@
 			"\tset_index ${1:[]}",
 			"\tindex ${2:[]}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:<SFNode>}",
-			"\tfogCoord ${5:<SFNode>}",
-			"\ttexCoord ${6:<SFNode>}",
-			"\tccw ${7:<SFBool>}",
-			"\tcolorPerVertex ${8:<SFBool>}",
-			"\tnormalPerVertex ${9:<SFBool>}",
-			"\tsolid ${10:<SFBool>}",
+			"\tcoord ${4:NULL}",
+			"\tfogCoord ${5:NULL}",
+			"\ttexCoord ${6:NULL}",
+			"\tccw ${7:TRUE}",
+			"\tcolorPerVertex ${8:TRUE}",
+			"\tnormalPerVertex ${9:TRUE}",
+			"\tsolid ${10:TRUE}",
 			"\tradianceTransfer ${11:[]}",
 			"}"
 		]
@@ -3478,13 +3478,13 @@
 			"\tset_index ${1:[]}",
 			"\tindex ${2:[]}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:<SFNode>}",
-			"\tfogCoord ${5:<SFNode>}",
-			"\ttexCoord ${6:<SFNode>}",
-			"\tccw ${7:<SFBool>}",
-			"\tcolorPerVertex ${8:<SFBool>}",
-			"\tnormalPerVertex ${9:<SFBool>}",
-			"\tsolid ${10:<SFBool>}",
+			"\tcoord ${4:NULL}",
+			"\tfogCoord ${5:NULL}",
+			"\ttexCoord ${6:NULL}",
+			"\tccw ${7:TRUE}",
+			"\tcolorPerVertex ${8:TRUE}",
+			"\tnormalPerVertex ${9:TRUE}",
+			"\tsolid ${10:TRUE}",
 			"\tradianceTransfer ${11:[]}",
 			"}"
 		]
@@ -3495,7 +3495,7 @@
 		"body": [
 			"LineSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:<SFNode>}",
+			"\tcoord ${2:NULL}",
 			"\tfogCoord ${3:[]}",
 			"}"
 		]
@@ -3515,7 +3515,7 @@
 		"body": [
 			"PointSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:<SFNode>}",
+			"\tcoord ${2:NULL}",
 			"\tfogCoord ${3:[]}",
 			"}"
 		]
@@ -3527,13 +3527,13 @@
 			"TriangleFanSet {",
 			"\tfanCount ${1:[]}",
 			"\tattrib ${2:[]}",
-			"\tcoord ${3:<SFNode>}",
-			"\tfogCoord ${4:<SFNode>}",
-			"\ttexCoord ${5:<SFNode>}",
-			"\tccw ${6:<SFBool>}",
-			"\tcolorPerVertex ${7:<SFBool>}",
-			"\tnormalPerVertex ${8:<SFBool>}",
-			"\tsolid ${9:<SFBool>}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:NULL}",
+			"\ttexCoord ${5:NULL}",
+			"\tccw ${6:TRUE}",
+			"\tcolorPerVertex ${7:TRUE}",
+			"\tnormalPerVertex ${8:TRUE}",
+			"\tsolid ${9:TRUE}",
 			"\tradianceTransfer ${10:[]}",
 			"}"
 		]
@@ -3544,13 +3544,13 @@
 		"body": [
 			"TriangleSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:<SFNode>}",
-			"\tfogCoord ${3:<SFNode>}",
-			"\ttexCoord ${4:<SFNode>}",
-			"\tccw ${5:<SFBool>}",
-			"\tcolorPerVertex ${6:<SFBool>}",
-			"\tnormalPerVertex ${7:<SFBool>}",
-			"\tsolid ${8:<SFBool>}",
+			"\tcoord ${2:NULL}",
+			"\tfogCoord ${3:NULL}",
+			"\ttexCoord ${4:NULL}",
+			"\tccw ${5:TRUE}",
+			"\tcolorPerVertex ${6:TRUE}",
+			"\tnormalPerVertex ${7:TRUE}",
+			"\tsolid ${8:TRUE}",
 			"\tradianceTransfer ${9:[]}",
 			"}"
 		]
@@ -3562,13 +3562,13 @@
 			"TriangleStripSet {",
 			"\tstripCount ${1:[]}",
 			"\tattrib ${2:[]}",
-			"\tcoord ${3:<SFNode>}",
-			"\tfogCoord ${4:<SFNode>}",
-			"\ttexCoord ${5:<SFNode>}",
-			"\tccw ${6:<SFBool>}",
-			"\tcolorPerVertex ${7:<SFBool>}",
-			"\tnormalPerVertex ${8:<SFBool>}",
-			"\tsolid ${9:<SFBool>}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:NULL}",
+			"\ttexCoord ${5:NULL}",
+			"\tccw ${6:TRUE}",
+			"\tcolorPerVertex ${7:TRUE}",
+			"\tnormalPerVertex ${8:TRUE}",
+			"\tsolid ${9:TRUE}",
 			"\tradianceTransfer ${10:[]}",
 			"}"
 		]
@@ -3578,7 +3578,7 @@
 		"description": "",
 		"body": [
 			"X3DNBodyCollidableNode {",
-			"\tenabled ${1:<SFBool>}",
+			"\tenabled ${1:TRUE}",
 			"\trotation ${2:0 0 1 0}",
 			"\ttranslation ${3:0 0 0}",
 			"\tbboxCenter ${4:0 0 0}",
@@ -3591,10 +3591,10 @@
 		"description": "",
 		"body": [
 			"X3DNBodyCollisionSpaceNode {",
-			"\tenabled ${1:<SFBool>}",
+			"\tenabled ${1:TRUE}",
 			"\tbboxCenter ${2:0 0 0}",
 			"\tbboxSize ${3:<SFVec3f>}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"}"
 		]
 	},
@@ -3603,10 +3603,10 @@
 		"description": "",
 		"body": [
 			"X3DRigidJointNode {",
-			"\tbody1 ${1:<SFNode>}",
-			"\tbody2 ${2:<SFNode>}",
+			"\tbody1 ${1:NULL}",
+			"\tbody2 ${2:NULL}",
 			"\tforceOutput ${3:\"NONE\"}",
-			"\tmetadata ${4:<SFNode>}",
+			"\tmetadata ${4:NULL}",
 			"}"
 		]
 	},
@@ -3618,8 +3618,8 @@
 			"\tanchorPoint ${1:0 0 0}",
 			"\tbody1AnchorPoint ${2:<SFVec3f>}",
 			"\tbody2AnchorPoint ${3:<SFVec3f>}",
-			"\tbody1 ${4:<SFNode>}",
-			"\tbody2 ${5:<SFNode>}",
+			"\tbody1 ${4:NULL}",
+			"\tbody2 ${5:NULL}",
 			"\tforceOutput ${6:\"NONE\"}",
 			"}"
 		]
@@ -3629,8 +3629,8 @@
 		"description": "",
 		"body": [
 			"CollidableOffset {",
-			"\tcollidable ${1:<SFNode>}",
-			"\tenabled ${2:<SFBool>}",
+			"\tcollidable ${1:NULL}",
+			"\tenabled ${2:TRUE}",
 			"\trotation ${3:0 0 1 0}",
 			"\ttranslation ${4:0 0 0}",
 			"\tbboxCenter ${5:0 0 0}",
@@ -3643,8 +3643,8 @@
 		"description": "",
 		"body": [
 			"CollidableShape {",
-			"\tshape ${1:<SFNode>}",
-			"\tenabled ${2:<SFBool>}",
+			"\tshape ${1:NULL}",
+			"\tenabled ${2:TRUE}",
 			"\trotation ${3:0 0 1 0}",
 			"\ttranslation ${4:0 0 0}",
 			"\tbboxCenter ${5:0 0 0}",
@@ -3659,8 +3659,8 @@
 			"CollisionCollection {",
 			"\tappliedParameters ${1:\"BOUNCE\"}",
 			"\tbounce ${2:0}",
-			"\tcollidables ${3:<MFNode>}",
-			"\tenabled ${4:<SFBool>}",
+			"\tcollidables ${3:NULL}",
+			"\tenabled ${4:TRUE}",
 			"\tfrictionCoefficients ${5:0 0}",
 			"\tminBounceSpeed ${6:0.1}",
 			"\tslipFactors ${7:0 0}",
@@ -3675,10 +3675,10 @@
 		"description": "",
 		"body": [
 			"CollisionSensor {",
-			"\tcollider ${1:<SFNode>}",
+			"\tcollider ${1:NULL}",
 			"\tintersections ${2:<MFNode>}",
 			"\tcontacts ${3:<MFNode>}",
-			"\tenabled ${4:<SFBool>}",
+			"\tenabled ${4:TRUE}",
 			"\tisActive ${5:<SFBool>}",
 			"}"
 		]
@@ -3688,9 +3688,9 @@
 		"description": "",
 		"body": [
 			"CollisionSpace {",
-			"\tcollidables ${1:<MFNode>}",
-			"\tuseGeometry ${2:<SFBool>}",
-			"\tenabled ${3:<SFBool>}",
+			"\tcollidables ${1:NULL}",
+			"\tuseGeometry ${2:FALSE}",
+			"\tenabled ${3:TRUE}",
 			"\tbboxCenter ${4:0 0 0}",
 			"\tbboxSize ${5:<SFVec3f>}",
 			"}"
@@ -3702,22 +3702,22 @@
 		"body": [
 			"Contact {",
 			"\tappliedParameters ${1:\"BOUNCE\"}",
-			"\tbody1 ${2:<SFNode>}",
-			"\tbody2 ${3:<SFNode>}",
+			"\tbody1 ${2:NULL}",
+			"\tbody2 ${3:NULL}",
 			"\tbounce ${4:0}",
 			"\tcontactNormal ${5:0 1 0}",
 			"\tdepth ${6:0}",
 			"\tfrictionCoefficients ${7:0 0}",
 			"\tfrictionDirection ${8:0 1 0}",
-			"\tgeometry1 ${9:<SFNode>}",
-			"\tgeometry2 ${10:<SFNode>}",
+			"\tgeometry1 ${9:NULL}",
+			"\tgeometry2 ${10:NULL}",
 			"\tminbounceSpeed ${11:0}",
 			"\tposition ${12:0 0 0}",
 			"\tslipCoefficients ${13:0 0}",
 			"\tsoftnessConstantForceMix ${14:0.0001}",
 			"\tsoftnessErrorCorrection ${15:0.8}",
 			"\tsurfaceSpeed ${16:0 0}",
-			"\tmetadata ${17:<SFNode>}",
+			"\tmetadata ${17:NULL}",
 			"}"
 		]
 	},
@@ -3748,8 +3748,8 @@
 			"\thinge1AngleRate ${20:<SFFloat>}",
 			"\thinge2Angle ${21:<SFFloat>}",
 			"\thinge2AngleRate ${22:<SFFloat>}",
-			"\tbody1 ${23:<SFNode>}",
-			"\tbody2 ${24:<SFNode>}",
+			"\tbody1 ${23:NULL}",
+			"\tbody2 ${24:NULL}",
 			"\tforceOutput ${25:\"NONE\"}",
 			"}"
 		]
@@ -3781,9 +3781,9 @@
 			"\tmotor2AngleRate ${20:<SFFloat>}",
 			"\tmotor3Angle ${21:<SFFloat>}",
 			"\tmotor3AngleRate ${22:<SFFloat>}",
-			"\tautoCalc ${23:<SFBool>}",
-			"\tbody1 ${24:<SFNode>}",
-			"\tbody2 ${25:<SFNode>}",
+			"\tautoCalc ${23:FALSE}",
+			"\tbody1 ${24:NULL}",
+			"\tbody2 ${25:NULL}",
 			"\tforceOutput ${26:\"NONE\"}",
 			"}"
 		]
@@ -3795,28 +3795,28 @@
 			"RigidBody {",
 			"\tangularDampingFactor ${1:0.001}",
 			"\tangularVelocity ${2:0 0 0}",
-			"\tautoDamp ${3:<SFBool>}",
-			"\tautoDisable ${4:<SFBool>}",
+			"\tautoDamp ${3:FALSE}",
+			"\tautoDisable ${4:FALSE}",
 			"\tcenterOfMass ${5:0 0 0}",
 			"\tdisableAngularSpeed ${6:0}",
 			"\tdisableLinearSpeed ${7:0}",
 			"\tdisableTime ${8:0}",
-			"\tenabled ${9:<SFBool>}",
+			"\tenabled ${9:TRUE}",
 			"\tfiniteRotationAxis ${10:0 0 0}",
-			"\tfixed ${11:<SFBool>}",
+			"\tfixed ${11:FALSE}",
 			"\tforces ${12:[]}",
 			"\tgeometry ${13:[]}",
 			"\tinertia ${14:1 0 0 0 1 0 0 0 1}",
 			"\tlinearDampingFactor ${15:0.001}",
 			"\tlinearVelocity ${16:0 0 0}",
 			"\tmass ${17:1}",
-			"\tmassDensityModel ${18:<SFNode>}",
+			"\tmassDensityModel ${18:NULL}",
 			"\torientation ${19:0 0 1 0}",
 			"\tposition ${20:0 0 0}",
 			"\ttorques ${21:[]}",
-			"\tuseFiniteRotation ${22:<SFBool>}",
-			"\tuseGlobalGravity ${23:<SFBool>}",
-			"\tmetadata ${24:<SFNode>}",
+			"\tuseFiniteRotation ${22:FALSE}",
+			"\tuseGlobalGravity ${23:TRUE}",
+			"\tmetadata ${24:NULL}",
 			"}"
 		]
 	},
@@ -3826,21 +3826,21 @@
 		"body": [
 			"RigidBodyCollection {",
 			"\tset_contacts ${1:[]}",
-			"\tautoDisable ${2:<SFBool>}",
+			"\tautoDisable ${2:FALSE}",
 			"\tbodies ${3:[]}",
 			"\tconstantForceMix ${4:0.0001}",
 			"\tcontactSurfaceThickness ${5:0}",
 			"\tdisableAngularSpeed ${6:0}",
 			"\tdisableLinearSpeed ${7:0}",
 			"\tdisableTime ${8:0}",
-			"\tenabled ${9:<SFBool>}",
+			"\tenabled ${9:TRUE}",
 			"\terrorCorrection ${10:0.8}",
 			"\tgravity ${11:0}",
 			"\titerations ${12:10}",
 			"\tjoints ${13:[]}",
 			"\tmaxCorrectionSpeed ${14:<SFFloat>}",
-			"\tpreferAccuracy ${15:<SFBool>}",
-			"\tcollider ${16:<SFNode>}",
+			"\tpreferAccuracy ${15:FALSE}",
+			"\tcollider ${16:NULL}",
 			"}"
 		]
 	},
@@ -3859,8 +3859,8 @@
 			"\tangleRate ${8:<SFFloat>}",
 			"\tbody1AnchorPoint ${9:<SFVec3f>}",
 			"\tbody2AnchorPoint ${10:<SFVec3f>}",
-			"\tbody1 ${11:<SFNode>}",
-			"\tbody2 ${12:<SFNode>}",
+			"\tbody1 ${11:NULL}",
+			"\tbody2 ${12:NULL}",
 			"\tforceOutput ${13:\"NONE\"}",
 			"}"
 		]
@@ -3877,8 +3877,8 @@
 			"\tstopErrorCorrection ${5:1}",
 			"\tseparation ${6:<SFFloat>}",
 			"\tseparationRate ${7:<SFFloat>}",
-			"\tbody1 ${8:<SFNode>}",
-			"\tbody2 ${9:<SFNode>}",
+			"\tbody1 ${8:NULL}",
+			"\tbody2 ${9:NULL}",
 			"\tforceOutput ${10:\"NONE\"}",
 			"}"
 		]
@@ -3899,8 +3899,8 @@
 			"\tbody1Axis ${9:<SFVec3f>}",
 			"\tbody2AnchorPoint ${10:<SFVec3f>}",
 			"\tbody2Axis ${11:<SFVec3f>}",
-			"\tbody1 ${12:<SFNode>}",
-			"\tbody2 ${13:<SFNode>}",
+			"\tbody1 ${12:NULL}",
+			"\tbody2 ${13:NULL}",
 			"\tforceOutput ${14:\"NONE\"}",
 			"}"
 		]
@@ -3919,8 +3919,8 @@
 		"description": "",
 		"body": [
 			"Script {",
-			"\tdirectOutput ${1:<SFBool>}",
-			"\tmustEvaluate ${2:<SFBool>}",
+			"\tdirectOutput ${1:FALSE}",
+			"\tmustEvaluate ${2:FALSE}",
 			"\turl ${3:[]}",
 			"}"
 		]
@@ -4024,7 +4024,7 @@
 			"ShaderPart {",
 			"\turl ${1:[]}",
 			"\ttype ${2:\"VERTEX\"}",
-			"\tmetadata ${3:<SFNode>}",
+			"\tmetadata ${3:NULL}",
 			"\turl ${4:[]}",
 			"}"
 		]
@@ -4036,7 +4036,7 @@
 			"ShaderProgram {",
 			"\turl ${1:[]}",
 			"\ttype ${2:\"VERTEX\"}",
-			"\tmetadata ${3:<SFNode>}",
+			"\tmetadata ${3:NULL}",
 			"\turl ${4:[]}",
 			"}"
 		]
@@ -4046,7 +4046,7 @@
 		"description": "",
 		"body": [
 			"X3DAppearanceChildNode {",
-			"\tmetadata ${1:<SFNode>}",
+			"\tmetadata ${1:NULL}",
 			"}"
 		]
 	},
@@ -4055,7 +4055,7 @@
 		"description": "",
 		"body": [
 			"X3DAppearanceNode {",
-			"\tmetadata ${1:<SFNode>}",
+			"\tmetadata ${1:NULL}",
 			"}"
 		]
 	},
@@ -4073,7 +4073,7 @@
 		"body": [
 			"X3DOneSidedMaterialNode {",
 			"\temissiveColor ${1:0 0 0}",
-			"\tnormalTexture ${2:<SFNode>}",
+			"\tnormalTexture ${2:NULL}",
 			"}"
 		]
 	},
@@ -4082,8 +4082,8 @@
 		"description": "",
 		"body": [
 			"X3DShapeNode {",
-			"\tappearance ${1:<SFNode>}",
-			"\tgeometry ${2:<SFNode>}",
+			"\tappearance ${1:NULL}",
+			"\tgeometry ${2:NULL}",
 			"\tbboxCenter ${3:0 0 0}",
 			"\tbboxSize ${4:<SFVec3f>}",
 			"\tshading ${5:\"DEFAULT\"}",
@@ -4096,14 +4096,14 @@
 		"description": "",
 		"body": [
 			"Appearance {",
-			"\tfillProperties ${1:<SFNode>}",
-			"\tmaterial ${2:<SFNode>}",
-			"\tbackMaterial ${3:<SFNode>}",
+			"\tfillProperties ${1:NULL}",
+			"\tmaterial ${2:NULL}",
+			"\tbackMaterial ${3:NULL}",
 			"\tshaders ${4:[]}",
-			"\ttexture ${5:<SFNode>}",
-			"\ttextureTransform ${6:<SFNode>}",
+			"\ttexture ${5:NULL}",
+			"\ttextureTransform ${6:NULL}",
 			"\treceiveShadows ${7:[]}",
-			"\tnormalMap ${8:<SFNode>}",
+			"\tnormalMap ${8:NULL}",
 			"}"
 		]
 	},
@@ -4112,9 +4112,9 @@
 		"description": "",
 		"body": [
 			"FillProperties {",
-			"\tfilled ${1:<SFBool>}",
+			"\tfilled ${1:TRUE}",
 			"\thatchColor ${2:1 1 1}",
-			"\thatched ${3:<SFBool>}",
+			"\thatched ${3:TRUE}",
 			"\thatchStyle ${4:1}",
 			"}"
 		]
@@ -4124,7 +4124,7 @@
 		"description": "",
 		"body": [
 			"LineProperties {",
-			"\tapplied ${1:<SFBool>}",
+			"\tapplied ${1:TRUE}",
 			"\tlinetype ${2:1}",
 			"\tlinewidthScaleFactor ${3:0}",
 			"}"
@@ -4136,24 +4136,24 @@
 		"body": [
 			"Material {",
 			"\tambientIntensity ${1:0.2}",
-			"\tambientTexture ${2:<SFNode>}",
+			"\tambientTexture ${2:NULL}",
 			"\tambientTextureMapping ${3:\"\"}",
 			"\tdiffuseColor ${4:0.8 0.8 0.8}",
-			"\tdiffuseTexture ${5:<SFNode>}",
+			"\tdiffuseTexture ${5:NULL}",
 			"\tdiffuseTextureMapping ${6:\"\"}",
 			"\tocclusionStrength ${7:1}",
-			"\tocclusionTexture ${8:<SFNode>}",
+			"\tocclusionTexture ${8:NULL}",
 			"\tocclusionTextureMapping ${9:\"\"}",
 			"\tshininess ${10:0.2}",
-			"\tshininessTexture ${11:<SFNode>}",
+			"\tshininessTexture ${11:NULL}",
 			"\tshininessTextureMapping ${12:\"\"}",
 			"\tspecularColor ${13:0 0 0}",
-			"\tspecularTexture ${14:<SFNode>}",
+			"\tspecularTexture ${14:NULL}",
 			"\tspecularTextureMapping ${15:\"\"}",
 			"\ttransparency ${16:0}",
-			"\tfogImmune ${17:<SFBool>}",
+			"\tfogImmune ${17:FALSE}",
 			"\temissiveColor ${18:0 0 0}",
-			"\tnormalTexture ${19:<SFNode>}",
+			"\tnormalTexture ${19:NULL}",
 			"}"
 		]
 	},
@@ -4163,18 +4163,18 @@
 		"body": [
 			"PhysicalMaterial {",
 			"\tbaseColor ${1:1 1 1}",
-			"\tbaseTexture ${2:<SFNode>}",
+			"\tbaseTexture ${2:NULL}",
 			"\tbaseTextureMapping ${3:\"\"}",
 			"\tmetallic ${4:1}",
-			"\tmetallicRoughnessTexture ${5:<SFNode>}",
+			"\tmetallicRoughnessTexture ${5:NULL}",
 			"\tmetallicRoughnessTextureMapping ${6:\"\"}",
 			"\tocclusionStrength ${7:1}",
-			"\tocclusionTexture ${8:<SFNode>}",
+			"\tocclusionTexture ${8:NULL}",
 			"\tocclusionTextureMapping ${9:\"\"}",
 			"\troughness ${10:1}",
 			"\ttransparency ${11:0}",
 			"\temissiveColor ${12:0 0 0}",
-			"\tnormalTexture ${13:<SFNode>}",
+			"\tnormalTexture ${13:NULL}",
 			"}"
 		]
 	},
@@ -4183,8 +4183,8 @@
 		"description": "",
 		"body": [
 			"Shape {",
-			"\tappearance ${1:<SFNode>}",
-			"\tgeometry ${2:<SFNode>}",
+			"\tappearance ${1:NULL}",
+			"\tgeometry ${2:NULL}",
 			"\tbboxCenter ${3:0 0 0}",
 			"\tbboxSize ${4:<SFVec3f>}",
 			"\tshading ${5:\"DEFAULT\"}",
@@ -4207,7 +4207,7 @@
 			"\tdiffuseColor ${8:0.8 0.8 0.8}",
 			"\temissiveColor ${9:0 0 0}",
 			"\tshininess ${10:0.2}",
-			"\tseparateBackColor ${11:<SFBool>}",
+			"\tseparateBackColor ${11:FALSE}",
 			"\tspecularColor ${12:0 0 0}",
 			"\ttransparency ${13:0}",
 			"}"
@@ -4220,7 +4220,7 @@
 			"UnlitMaterial {",
 			"\ttransparency ${1:0}",
 			"\temissiveColor ${2:0 0 0}",
-			"\tnormalTexture ${3:<SFNode>}",
+			"\tnormalTexture ${3:NULL}",
 			"}"
 		]
 	},
@@ -4240,7 +4240,7 @@
 			"\tdescription ${1:\"\"}",
 			"\tpitch ${2:1.0}",
 			"\tduration_changed ${3:<SFTime>}",
-			"\tloop ${4:<SFBool>}",
+			"\tloop ${4:FALSE}",
 			"\tpauseTime ${5:0}",
 			"\tresumeTime ${6:0}",
 			"\tstartTime ${7:0}",
@@ -4277,8 +4277,8 @@
 			"\tminBack ${6:1}",
 			"\tminFront ${7:1}",
 			"\tpriority ${8:0}",
-			"\tsource ${9:<SFNode>}",
-			"\tspatialize ${10:<SFBool>}",
+			"\tsource ${9:NULL}",
+			"\tspatialize ${10:TRUE}",
 			"}"
 		]
 	},
@@ -4287,7 +4287,7 @@
 		"description": "",
 		"body": [
 			"X3DFontStyleNode {",
-			"\tmetadata ${1:<SFNode>}",
+			"\tmetadata ${1:NULL}",
 			"}"
 		]
 	},
@@ -4297,12 +4297,12 @@
 		"body": [
 			"FontStyle {",
 			"\tfamily ${1:\"SERIF\"}",
-			"\thorizontal ${2:<SFBool>}",
+			"\thorizontal ${2:TRUE}",
 			"\tjustify ${3:\"BEGIN\"}",
 			"\tlanguage ${4:\"\"}",
 			"\tspacing ${5:1.0}",
 			"\tstyle ${6:\"PLAIN\"}",
-			"\ttopToBottom ${7:<SFBool>}",
+			"\ttopToBottom ${7:TRUE}",
 			"}"
 		]
 	},
@@ -4311,7 +4311,7 @@
 		"description": "",
 		"body": [
 			"Text {",
-			"\tfontStyle ${1:<SFNode>}",
+			"\tfontStyle ${1:NULL}",
 			"\tlength ${2:[]}",
 			"\tmaxExtent ${3:0.0}",
 			"\tmaxDisplayChars ${4:<SFInt32>}",
@@ -4319,7 +4319,7 @@
 			"\tlineBounds ${6:<MFVec2f>}",
 			"\torigin ${7:<SFVec3f>}",
 			"\ttextBounds ${8:<SFVec2f>}",
-			"\tsolid ${9:<SFBool>}",
+			"\tsolid ${9:FALSE}",
 			"}"
 		]
 	},
@@ -4372,9 +4372,9 @@
 		"description": "",
 		"body": [
 			"X3DTexture2DNode {",
-			"\trepeatS ${1:<SFBool>}",
-			"\trepeatT ${2:<SFBool>}",
-			"\ttextureProperties ${3:<SFNode>}",
+			"\trepeatS ${1:TRUE}",
+			"\trepeatT ${2:TRUE}",
+			"\ttextureProperties ${3:NULL}",
 			"\teffects ${4:[]}",
 			"\tcrossOrigin ${5:\"\"}",
 			"}"
@@ -4394,10 +4394,10 @@
 		"body": [
 			"ImageTexture {",
 			"\turl ${1:[]}",
-			"\tflipVertically ${2:<SFBool>}",
-			"\trepeatS ${3:<SFBool>}",
-			"\trepeatT ${4:<SFBool>}",
-			"\ttextureProperties ${5:<SFNode>}",
+			"\tflipVertically ${2:FALSE}",
+			"\trepeatS ${3:TRUE}",
+			"\trepeatT ${4:TRUE}",
+			"\ttextureProperties ${5:NULL}",
 			"\turl ${6:[]}",
 			"}"
 		]
@@ -4408,21 +4408,21 @@
 		"body": [
 			"MovieTexture {",
 			"\tdescription ${1:\"\"}",
-			"\tloop ${2:<SFBool>}",
+			"\tloop ${2:FALSE}",
 			"\tpauseTime ${3:0}",
 			"\tresumeTime ${4:0}",
 			"\tspeed ${5:1.0}",
 			"\tstartTime ${6:0}",
 			"\tstopTime ${7:0}",
 			"\turl ${8:[]}",
-			"\tflipVertically ${9:<SFBool>}",
+			"\tflipVertically ${9:FALSE}",
 			"\tduration_changed ${10:<SFTime>}",
 			"\telapsedTime ${11:<SFTime>}",
 			"\tisActive ${12:<SFBool>}",
 			"\tisPaused ${13:<SFBool>}",
-			"\trepeatS ${14:<SFBool>}",
-			"\trepeatT ${15:<SFBool>}",
-			"\ttextureProperties ${16:<SFNode>}",
+			"\trepeatS ${14:TRUE}",
+			"\trepeatT ${15:TRUE}",
+			"\ttextureProperties ${16:NULL}",
 			"\tdescription ${17:\"\"}",
 			"\tpitch ${18:1.0}",
 			"\tduration_changed ${19:<SFTime>}",
@@ -4449,7 +4449,7 @@
 		"description": "",
 		"body": [
 			"MultiTextureCoordinate {",
-			"\ttexCoord ${1:<MFNode>}",
+			"\ttexCoord ${1:NULL}",
 			"}"
 		]
 	},
@@ -4458,7 +4458,7 @@
 		"description": "",
 		"body": [
 			"MultiTextureTransform {",
-			"\ttextureTransform ${1:<MFNode>}",
+			"\ttextureTransform ${1:NULL}",
 			"}"
 		]
 	},
@@ -4468,9 +4468,9 @@
 		"body": [
 			"PixelTexture {",
 			"\timage ${1:0 0 0}",
-			"\trepeatS ${2:<SFBool>}",
-			"\trepeatT ${3:<SFBool>}",
-			"\ttextureProperties ${4:<SFNode>}",
+			"\trepeatS ${2:TRUE}",
+			"\trepeatT ${3:TRUE}",
+			"\ttextureProperties ${4:NULL}",
 			"}"
 		]
 	},
@@ -4510,9 +4510,9 @@
 			"\tminificationFilter ${8:\"FASTEST\"}",
 			"\ttextureCompression ${9:\"FASTEST\"}",
 			"\ttexturePriority ${10:0}",
-			"\tgenerateMipMaps ${11:<SFBool>}",
-			"\tguiTexture ${12:<SFBool>}",
-			"\tmetadata ${13:<SFNode>}",
+			"\tgenerateMipMaps ${11:FALSE}",
+			"\tguiTexture ${12:FALSE}",
+			"\tmetadata ${13:NULL}",
 			"}"
 		]
 	},
@@ -4534,10 +4534,10 @@
 		"description": "",
 		"body": [
 			"X3DTexture3DNode {",
-			"\trepeatS ${1:<SFBool>}",
-			"\trepeatT ${2:<SFBool>}",
-			"\trepeatR ${3:<SFBool>}",
-			"\ttextureProperties ${4:<SFNode>}",
+			"\trepeatS ${1:FALSE}",
+			"\trepeatT ${2:FALSE}",
+			"\trepeatR ${3:FALSE}",
+			"\ttextureProperties ${4:NULL}",
 			"\teffects ${5:[]}",
 			"\tcrossOrigin ${6:\"\"}",
 			"}"
@@ -4549,10 +4549,10 @@
 		"body": [
 			"ComposedTexture3D {",
 			"\ttexture ${1:[]}",
-			"\trepeatS ${2:<SFBool>}",
-			"\trepeatT ${3:<SFBool>}",
-			"\trepeatR ${4:<SFBool>}",
-			"\ttextureProperties ${5:<SFNode>}",
+			"\trepeatS ${2:FALSE}",
+			"\trepeatT ${3:FALSE}",
+			"\trepeatR ${4:FALSE}",
+			"\ttextureProperties ${5:NULL}",
 			"}"
 		]
 	},
@@ -4562,10 +4562,10 @@
 		"body": [
 			"ImageTexture3D {",
 			"\turl ${1:[]}",
-			"\trepeatS ${2:<SFBool>}",
-			"\trepeatT ${3:<SFBool>}",
-			"\trepeatR ${4:<SFBool>}",
-			"\ttextureProperties ${5:<SFNode>}",
+			"\trepeatS ${2:FALSE}",
+			"\trepeatT ${3:FALSE}",
+			"\trepeatR ${4:FALSE}",
+			"\ttextureProperties ${5:NULL}",
 			"\turl ${6:[]}",
 			"}"
 		]
@@ -4576,10 +4576,10 @@
 		"body": [
 			"PixelTexture3D {",
 			"\timage ${1:[0000]}",
-			"\trepeatS ${2:<SFBool>}",
-			"\trepeatT ${3:<SFBool>}",
-			"\trepeatR ${4:<SFBool>}",
-			"\ttextureProperties ${5:<SFNode>}",
+			"\trepeatS ${2:FALSE}",
+			"\trepeatT ${3:FALSE}",
+			"\trepeatR ${4:FALSE}",
+			"\ttextureProperties ${5:NULL}",
 			"}"
 		]
 	},
@@ -4631,7 +4631,7 @@
 		"description": "",
 		"body": [
 			"X3DTimeDependentNode {",
-			"\tloop ${1:<SFBool>}",
+			"\tloop ${1:FALSE}",
 			"\tpauseTime ${2:0}",
 			"\tresumeTime ${3:0}",
 			"\tstartTime ${4:0}",
@@ -4651,10 +4651,10 @@
 			"\tcycleTime ${2:<SFTime>}",
 			"\tfraction_changed ${3:<SFFloat>}",
 			"\ttime ${4:<SFTime>}",
-			"\tenabled ${5:<SFBool>}",
-			"\tfractionIncreasing ${6:<SFBool>}",
-			"\tdetectAffectedFields ${7:<SFBool>}",
-			"\tloop ${8:<SFBool>}",
+			"\tenabled ${5:TRUE}",
+			"\tfractionIncreasing ${6:TRUE}",
+			"\tdetectAffectedFields ${7:TRUE}",
+			"\tloop ${8:FALSE}",
 			"\tpauseTime ${9:0}",
 			"\tresumeTime ${10:0}",
 			"\tstartTime ${11:0}",
@@ -4662,7 +4662,7 @@
 			"\telapsedTime ${13:<SFTime>}",
 			"\tisActive ${14:<SFBool>}",
 			"\tisPaused ${15:<SFBool>}",
-			"\tenabled ${16:<SFBool>}",
+			"\tenabled ${16:TRUE}",
 			"\tisActive ${17:<SFBool>}",
 			"}"
 		]

@@ -467,7 +467,7 @@ readFiles('./nodes-specification/').then(files => {
       }
       for (let i = 0; i < x3dRef.fields.length; i += 1) {
         const field = x3dRef.fields[i];
-        let s = `\t\${${count}:${field.name} ${field.value ? field.value : '<' + field.type + '>' }}`;
+        let s = `\t${field.name} \${${count}:${field.value ? field.value : '<' + field.type + '>' }}`;
         snippet.body.push(s);
         count++;
       }

@@ -1,460 +1,4670 @@
 {
-    "X3D": {
-        "prefix": "#X3D",
-        "body": [
-            "#X3D V4.0 utf8"
-        ],
-        "description": "X3D V4.0"
-    },
-    "DEF": {
-        "prefix": "DEF",
-        "body": [
-            "DEF ${1:variable}"
-        ],
-        "description": ""
-    },
-    "PROTO": {
-        "prefix": "PROTO",
-        "body": [
-            "PROTO ${1:name} [",
-                "\tinitializeOnly ${2:SFVec3f param}",
-            "] {",
-                "\t${3:node}",
-            "}"
-        ],
-        "description": ""
-    },
-    "PROFILE": {
-        "prefix": "PROFILE",
-        "body": [
-            "PROFILE ${1:Interchange}"
-        ],
-        "description": ""
-    },
-    "Shape": {
-        "prefix": "Shape",
-        "body": [
-            "Shape {",
-                "\tgeometry ${1:Shape}",
-                "\tappearance ${2:Appearance}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Sphere": {
-        "prefix": "Sphere",
-        "body": [
-            "Sphere {",
-                "\tradius ${1:1}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Box": {
-        "prefix": "Box",
-        "body": [
-            "Box {",
-                "\tsize ${1:1} ${2:1} ${3:1}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Cone": {
-        "prefix": "Cone",
-        "body": [
-            "Cone {",
-                "\tbottomRadius ${1:1}",
-                "\theight ${2:1}",
-                "\tbottom ${3:1}",
-                "\tside ${4:1}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Cylinder": {
-        "prefix": "Cylinder",
-        "body": [
-            "Cylinder {",
-                "\tradius ${1:1}",
-                "\theight ${2:1}",
-                "\tbottom ${3:1}",
-                "\ttop ${4:1}",
-                "\tside ${5:1}",
-            "}"
-        ],
-        "description": ""
-    },
-    "IndexedFaceSet": {
-        "prefix": "IndexedFaceSet",
-        "body": [
-            "IndexedFaceSet {",
-                "\tcreaseAngle ${1:0}",
-                "\tccw ${2:TRUE}",
-                "\tsolid ${3:TRUE}",
-                "\tcolor ${4:SFNode}",
-                "\tcolorIndex ${5:MFInt32}",
-                "\tcoord ${6:SFNode}",
-                "\tcoordIndex ${7:MFInt32}",
-                "\ttexCoord ${8:SFNode}",
-                "\ttexCoordIndex ${9:MFInt32}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Coordinate": {
-        "prefix": "Coordinate",
-        "body": [
-            "Coordinate {",
-                "\tpoint ${1:[ ... ]}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Normal": {
-        "prefix": "Normal",
-        "body": [
-            "Normal {",
-                "\tvector ${1:[ ... ]}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Color": {
-        "prefix": "Color",
-        "body": [
-            "Color {",
-                "\tcolor ${1:[ ... ]}",
-            "}"
-        ],
-        "description": ""
-    },
-
-    "Appearance": {
-        "prefix": "Appearance",
-        "body": [
-            "Appearance {",
-                "\tmaterial ${1:Material}",
-                "\ttexture ${2:Texture}",
-            "}"
-        ],
-        "description": ""
-    },
-    "UnlitMaterial": {
-        "prefix": "UnlitMaterial",
-        "body": [
-            "UnlitMaterial {",
-                "\temissive ${1:1 1 1}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Material": {
-        "prefix": "Material",
-        "body": [
-            "Material {",
-                "\tambientIntensity ${1:2}",
-                "\tdiffuseColor ${2:1 1 1}",
-                "\tspecularColor ${3:0 0 0}",
-                "\tshininess ${4:2}",
-                "\temissiveColor ${5:0 0 0}",
-                "\ttransparency ${6:0}",
-            "}"
-        ],
-        "description": ""
-    },
-    "ImageTexture": {
-        "prefix": "ImageTexture",
-        "body": [
-            "ImageTexture {",
-                "\turl ${1:\"url\"}",
-                "\trepeatS ${2:TRUE}",
-                "\trepeatT ${3:TRUE}",
-            "}"
-        ],
-        "description": ""
-    },
-    "TextureTransform": {
-        "prefix": "TextureTransform",
-        "body": [
-            "TextureTransform {",
-                "\tcenter ${1:0 0}",
-                "\trotation ${2:0}",
-                "\tscale ${3:1 1}",
-                "\ttranslation ${4:0 0}",
-            "}"
-        ],
-        "description": ""
-    },
-    "Group": {
-        "prefix": "Group",
-        "body": [
-            "Group {",
-                "\tchildren ${1}",
-            "}"
-        ]
-    },
-    "Transform": {
-        "prefix": "Transform",
-        "body": [
-            "Transform {",
-                "\ttranslation ${1:x y z}",
-                "\trotation ${2:x y z r}",
-                "\tscale ${3:x y z}",
-                "\tchildren []",
-            "}"
-        ]
-    },
-    "Background": {
-        "prefix": "Background",
-        "body": [
-            "Background {",
-                "\tset_bind ${1:var}",
-                "\tgroundAngle ${2:var}",
-                "\tgroundColor ${3:var}",
-                "\tbackUrl ${4:var}",
-                "\tbottomUrl ${5:var}",
-                "\tfrontUrl ${6:var}",
-                "\tleftUrl ${7:var}",
-                "\trightUrl ${8:var}",
-                "\ttopUrl ${9:var}",
-                "\tskyAngle ${10:var}",
-                "\tskyColor ${11:var}",
-                "\tisBound ${12:var}",
-            "}"
-        ],
-        "description": ""
-    },
-    "ScreenEffect": {
-        "prefix": "ScreenEffect",
-        "body": [
-            "ScreenEffect {",
-                "\tshaders ${1:ComposeShader}",
-            "}"
-        ],
-        "description": ""
-    },
-    "ComposedShader": {
-        "prefix": "ComposedShader",
-        "body": [
-            "ComposedShader {",
-                "\tlanguage ${1:\"GLSL\"}",
-                "\tparts ${2:ShaderPart}",
-            "}"
-        ],
-        "description": ""
-    },
-    "ShaderPart": {
-        "prefix": "ShaderPart",
-        "body": [
-            "ShaderPart {",
-                "\ttype ${1:\"VERTEX|FRAGMENT\"}",
-                "\turl ${2:\"data:text/plain,\"}",
-            "}"
-        ],
-        "description": ""
-    },
-    "appearance": {
-        "prefix": "appearance",
-        "body": ["appearance"]
-    },
-    "geometry": {
-        "prefix": "geometry",
-        "body": ["geometry"]
-    },
-    "initializeOnly": {
-        "prefix": "initializeOnly",
-        "body": ["initializeOnly"]
-    },
-    "SFBool": {
-        "prefix": "SFBool",
-        "body": ["SFBool"]
-    },
-    "MFBool": {
-        "prefix": "MFBool",
-        "body": ["MFBool"]
-    },
-    "SFColor": {
-        "prefix": "SFColor",
-        "body": ["SFColor"]
-    },
-    "MFColor": {
-        "prefix": "MFColor",
-        "body": ["MFColor"]
-    },
-    "SFColorRGBA": {
-        "prefix": "SFColorRGBA",
-        "body": ["SFColorRGBA"]
-    },
-    "MFColorRGBA": {
-        "prefix": "MFColorRGBA",
-        "body": ["MFColorRGBA"]
-    },
-    "SFDouble": {
-        "prefix": "SFDouble",
-        "body": ["SFDouble"]
-    },
-    "MFDouble": {
-        "prefix": "MFDouble",
-        "body": ["MFDouble"]
-    },
-    "SFFloat": {
-        "prefix": "SFFloat",
-        "body": ["SFFloat"]
-    },
-    "MFFloat": {
-        "prefix": "MFFloat",
-        "body": ["MFFloat"]
-    },
-    "SFImage": {
-        "prefix": "SFImage",
-        "body": ["SFImage"]
-    },
-    "MFImage": {
-        "prefix": "MFImage",
-        "body": ["MFImage"]
-    },
-    "SFInt32": {
-        "prefix": "SFInt32",
-        "body": ["SFInt32"]
-    },
-    "MFInt32": {
-        "prefix": "MFInt32",
-        "body": ["MFInt32"]
-    },
-    "SFMatrix3d": {
-        "prefix": "SFMatrix3d",
-        "body": ["SFMatrix3d"]
-    },
-    "MFMatrix3d": {
-        "prefix": "MFMatrix3d",
-        "body": ["MFMatrix3d"]
-    },
-    "SFMatrix3f": {
-        "prefix": "SFMatrix3f",
-        "body": ["SFMatrix3f"]
-    },
-    "MFMatrix3f": {
-        "prefix": "MFMatrix3f",
-        "body": ["MFMatrix3f"]
-    },
-    "SFMatrix4d": {
-        "prefix": "SFMatrix4d",
-        "body": ["SFMatrix4d"]
-    },
-    "MFMatrix4d": {
-        "prefix": "MFMatrix4d",
-        "body": ["MFMatrix4d"]
-    },
-    "SFMatrix4f": {
-        "prefix": "SFMatrix4f",
-        "body": ["SFMatrix4f"]
-    },
-    "MFMatrix4f": {
-        "prefix": "MFMatrix4f",
-        "body": ["MFMatrix4f"]
-    },
-    "SFNode": {
-        "prefix": "SFNode",
-        "body": ["SFNode"]
-    },
-    "MFNode": {
-        "prefix": "MFNode",
-        "body": ["MFNode"]
-    },
-    "SFRotation": {
-        "prefix": "SFRotation",
-        "body": ["SFRotation"]
-    },
-    "MFRotation": {
-        "prefix": "MFRotation",
-        "body": ["MFRotation"]
-    },
-    "SFString": {
-        "prefix": "SFString",
-        "body": ["SFString"]
-    },
-    "MFString": {
-        "prefix": "MFString",
-        "body": ["MFString"]
-    },
-    "SFTime": {
-        "prefix": "SFTime",
-        "body": ["SFTime"]
-    },
-    "MFTime": {
-        "prefix": "MFTime",
-        "body": ["MFTime"]
-    },
-    "SFVec2d": {
-        "prefix": "SFVec2d",
-        "body": ["SFVec2d"]
-    },
-    "MFVec2d": {
-        "prefix": "MFVec2d",
-        "body": ["MFVec2d"]
-    },
-    "SFVec2f": {
-        "prefix": "SFVec2f",
-        "body": ["SFVec2f"]
-    },
-    "MFVec2f": {
-        "prefix": "MFVec2f",
-        "body": ["MFVec2f"]
-    },
-    "SFVec3d": {
-        "prefix": "SFVec3d",
-        "body": ["SFVec3d"]
-    },
-    "MFVec3d": {
-        "prefix": "MFVec3d",
-        "body": ["MFVec3d"]
-    },
-    "SFVec3f": {
-        "prefix": "SFVec3f",
-        "body": ["SFVec3f"]
-    },
-    "MFVec3f": {
-        "prefix": "MFVec3f",
-        "body": ["MFVec3f"]
-    },
-    "SFVec4f": {
-        "prefix": "SFVec4f",
-        "body": ["SFVec4f"]
-    },
-    "MFVec4f": {
-        "prefix": "MFVec4f",
-        "body": ["MFVec4f"]
-    },
-    "fraction_changed": {
-        "prefix": "fraction_changed",
-        "body": ["fraction_changed"]
-    },
-    "set_fraction": {
-        "prefix": "set_fraction",
-        "body": ["set_fraction"]
-    },
-    "touchTime": {
-        "prefix": "touchTime",
-        "body": ["touchTime"]
-    },
-    "startTime": {
-        "prefix": "startTime",
-        "body": ["startTime"]
-    },
-    "value_changed": {
-        "prefix": "value_changed",
-        "body": ["value_changed"]
-    },
-    "rotation": {
-        "prefix": "rotation",
-        "body": ["rotation"]
-    },
-    "translation": {
-        "prefix": "translation",
-        "body": ["translation"]
-    },
-    "transparency": {
-        "prefix": "transparency",
-        "body": ["transparency"]
-    }
+	"X3D": {
+		"prefix": "#X3D",
+		"body": [
+			"#X3D V4.0 utf8"
+		],
+		"description": "X3D V4.0"
+	},
+	"DEF": {
+		"prefix": "DEF",
+		"body": [
+			"DEF ${1:variable}"
+		],
+		"description": ""
+	},
+	"PROTO": {
+		"prefix": "PROTO",
+		"body": [
+			"PROTO ${1:name} [",
+			"\tinitializeOnly ${2:SFVec3f param}",
+			"] {",
+			"\t${3:node}",
+			"}"
+		],
+		"description": ""
+	},
+	"PROFILE": {
+		"prefix": "PROFILE",
+		"body": [
+			"PROFILE ${1:Interchange}"
+		],
+		"description": ""
+	},
+	"X3DProductStructureChildNode": {
+		"prefix": "X3DProductStructureChildNode",
+		"description": "",
+		"body": [
+			"X3DProductStructureChildNode {",
+			"\t${1:name \"\"}",
+			"}"
+		]
+	},
+	"CADAssembly": {
+		"prefix": "CADAssembly",
+		"description": "",
+		"body": [
+			"CADAssembly {",
+			"\t${1:name \"\"}",
+			"\t${2:addChildren [X3DChildNode]}",
+			"\t${3:removeChildren [X3DChildNode]}",
+			"\t${4:children []}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"\t${7:name \"\"}",
+			"}"
+		]
+	},
+	"CADFace": {
+		"prefix": "CADFace",
+		"description": "",
+		"body": [
+			"CADFace {",
+			"\t${1:shape <SFNode>}",
+			"\t${2:bboxCenter 0 0 0}",
+			"\t${3:bboxSize <SFVec3f>}",
+			"\t${4:name \"\"}",
+			"}"
+		]
+	},
+	"CADLayer": {
+		"prefix": "CADLayer",
+		"description": "",
+		"body": [
+			"CADLayer {",
+			"\t${1:name \"\"}",
+			"\t${2:visible []}",
+			"\t${3:addChildren [X3DChildNode]}",
+			"\t${4:removeChildren [X3DChildNode]}",
+			"\t${5:children []}",
+			"\t${6:bboxCenter 0 0 0}",
+			"\t${7:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"CADPart": {
+		"prefix": "CADPart",
+		"description": "",
+		"body": [
+			"CADPart {",
+			"\t${1:center 0 0 0}",
+			"\t${2:name \"\"}",
+			"\t${3:rotation 0 0 1 0}",
+			"\t${4:scale 1 1 1}",
+			"\t${5:scaleOrientation 0 0 1 0}",
+			"\t${6:translation 0 0 0}",
+			"\t${7:addChildren [X3DChildNode]}",
+			"\t${8:removeChildren [X3DChildNode]}",
+			"\t${9:children []}",
+			"\t${10:bboxCenter 0 0 0}",
+			"\t${11:bboxSize <SFVec3f>}",
+			"\t${12:name \"\"}",
+			"}"
+		]
+	},
+	"IndexedQuadSet": {
+		"prefix": "IndexedQuadSet",
+		"description": "",
+		"body": [
+			"IndexedQuadSet {",
+			"\t${1:set_index []}",
+			"\t${2:attrib []}",
+			"\t${3:coord <SFNode>}",
+			"\t${4:fogCoord <SFNode>}",
+			"\t${5:texCoord <SFNode>}",
+			"\t${6:ccw <SFBool>}",
+			"\t${7:colorPerVertex <SFBool>}",
+			"\t${8:normalPerVertex <SFBool>}",
+			"\t${9:solid <SFBool>}",
+			"\t${10:radianceTransfer []}",
+			"}"
+		]
+	},
+	"QuadSet": {
+		"prefix": "QuadSet",
+		"description": "",
+		"body": [
+			"QuadSet {",
+			"\t${1:attrib []}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:fogCoord <SFNode>}",
+			"\t${4:texCoord <SFNode>}",
+			"\t${5:ccw <SFBool>}",
+			"\t${6:colorPerVertex <SFBool>}",
+			"\t${7:normalPerVertex <SFBool>}",
+			"\t${8:solid <SFBool>}",
+			"\t${9:radianceTransfer []}",
+			"}"
+		]
+	},
+	"KambiAppearance": {
+		"prefix": "KambiAppearance",
+		"description": "",
+		"body": [
+			"KambiAppearance {",
+			"\t${1:fillProperties <SFNode>}",
+			"\t${2:material <SFNode>}",
+			"\t${3:backMaterial <SFNode>}",
+			"\t${4:shaders []}",
+			"\t${5:texture <SFNode>}",
+			"\t${6:textureTransform <SFNode>}",
+			"\t${7:receiveShadows []}",
+			"\t${8:normalMap <SFNode>}",
+			"}"
+		]
+	},
+	"GeneratedShadowMap": {
+		"prefix": "GeneratedShadowMap",
+		"description": "",
+		"body": [
+			"GeneratedShadowMap {",
+			"\t${1:update \"NONE\"}",
+			"\t${2:light <SFNode>}",
+			"\t${3:bias 4.0}",
+			"\t${4:compareMode \"COMPARE_R_LEQUAL\"}",
+			"\t${5:effects []}",
+			"\t${6:crossOrigin \"\"}",
+			"}"
+		]
+	},
+	"Text3D": {
+		"prefix": "Text3D",
+		"description": "",
+		"body": [
+			"Text3D {",
+			"\t${1:string []}",
+			"\t${2:fontStyle <SFNode>}",
+			"\t${3:length []}",
+			"\t${4:maxExtent 0}",
+			"\t${5:depth 0.1}",
+			"}"
+		]
+	},
+	"KambiInline": {
+		"prefix": "KambiInline",
+		"description": "",
+		"body": [
+			"KambiInline {",
+			"\t${1:replaceNames []}",
+			"\t${2:replaceNodes []}",
+			"\t${3:load <SFBool>}",
+			"\t${4:url []}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"KambiNavigationInfo": {
+		"prefix": "KambiNavigationInfo",
+		"description": "",
+		"body": [
+			"KambiNavigationInfo {",
+			"\t${1:timeOriginAtLoad <SFBool>}",
+			"\t${2:octreeRendering <SFNode>}",
+			"\t${3:avatarSize [0.251.60.75]}",
+			"\t${4:headlight <SFBool>}",
+			"\t${5:speed 1.0}",
+			"\t${6:transitionTime 1.0}",
+			"\t${7:transitionType [\"LINEAR\"]}",
+			"\t${8:type [\"EXAMINE\"\"ANY\"]}",
+			"\t${9:visibilityLimit 0.0}",
+			"\t${10:transitionComplete <SFBool>}",
+			"}"
+		]
+	},
+	"KambiHeadLight": {
+		"prefix": "KambiHeadLight",
+		"description": "",
+		"body": [
+			"KambiHeadLight {",
+			"\t${1:ambientIntensity 0}",
+			"\t${2:spotDropOffRate 0}",
+			"\t${3:spotCutOffAngle 0.785398}",
+			"}"
+		]
+	},
+	"KambiOctreeProperties": {
+		"prefix": "KambiOctreeProperties",
+		"description": "",
+		"body": [
+			"KambiOctreeProperties {",
+			"\t${1:maxDepth <SFInt32>}",
+			"\t${2:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"Teapot": {
+		"prefix": "Teapot",
+		"description": "",
+		"body": [
+			"Teapot {",
+			"\t${1:size 3 3 3}",
+			"\t${2:solid <SFBool>}",
+			"\t${3:manifold <SFBool>}",
+			"\t${4:texCoord <SFNode>}",
+			"}"
+		]
+	},
+	"RenderedTexture": {
+		"prefix": "RenderedTexture",
+		"description": "",
+		"body": [
+			"RenderedTexture {",
+			"\t${1:dimensions 128 128 4 1 1}",
+			"\t${2:update \"NONE\"}",
+			"\t${3:repeatT <SFBool>}",
+			"\t${4:repeatR <SFBool>}",
+			"\t${5:depthMap []}",
+			"\t${6:effects []}",
+			"\t${7:crossOrigin \"\"}",
+			"}"
+		]
+	},
+	"Logger": {
+		"prefix": "Logger",
+		"description": "",
+		"body": [
+			"Logger {",
+			"\t${1:level 1}",
+			"\t${2:logFile \"\"}",
+			"\t${3:enabled <SFBool>}",
+			"\t${4:write <XFAny>}",
+			"}"
+		]
+	},
+	"MultiGeneratedTextureCoordinate": {
+		"prefix": "MultiGeneratedTextureCoordinate",
+		"description": "",
+		"body": [
+			"MultiGeneratedTextureCoordinate {",
+			"\t${1:texCoord <MFNode>}",
+			"}"
+		]
+	},
+	"ProjectedTextureCoordinate": {
+		"prefix": "ProjectedTextureCoordinate",
+		"description": "",
+		"body": [
+			"ProjectedTextureCoordinate {",
+			"\t${1:projector <SFNode>}",
+			"\t${2:mapping \"\"}",
+			"}"
+		]
+	},
+	"ScreenEffect": {
+		"prefix": "ScreenEffect",
+		"description": "",
+		"body": [
+			"ScreenEffect {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:needsDepth <SFBool>}",
+			"\t${3:shaders []}",
+			"}"
+		]
+	},
+	"ColorSetInterpolator": {
+		"prefix": "ColorSetInterpolator",
+		"description": "",
+		"body": [
+			"ColorSetInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <MFColor>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"VectorInterpolator": {
+		"prefix": "VectorInterpolator",
+		"description": "",
+		"body": [
+			"VectorInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <MFFloat>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"Effect": {
+		"prefix": "Effect",
+		"description": "",
+		"body": [
+			"Effect {",
+			"\t${1:language \"\"}",
+			"\t${2:parts []}",
+			"\t${3:fieldName <fieldType>}",
+			"\t${4:fieldName <fieldType>}",
+			"\t${5:fieldName <fieldType>}",
+			"\t${6:fieldName <fieldType>}",
+			"}"
+		]
+	},
+	"EffectPart": {
+		"prefix": "EffectPart",
+		"description": "",
+		"body": [
+			"EffectPart {",
+			"\t${1:url []}",
+			"\t${2:metadata <SFNode>}",
+			"\t${3:url []}",
+			"}"
+		]
+	},
+	"ShaderTexture": {
+		"prefix": "ShaderTexture",
+		"description": "",
+		"body": [
+			"ShaderTexture {",
+			"\t${1:effects []}",
+			"\t${2:effects []}",
+			"\t${3:crossOrigin \"\"}",
+			"}"
+		]
+	},
+	"BlendMode": {
+		"prefix": "BlendMode",
+		"description": "",
+		"body": [
+			"BlendMode {",
+			"\t${1:srcFactor \"src_alpha\"}",
+			"\t${2:colorTransparency 0}",
+			"}"
+		]
+	},
+	"Toggler": {
+		"prefix": "Toggler",
+		"description": "",
+		"body": [
+			"Toggler {",
+			"\t${1:status <SFBool>}",
+			"\t${2:notStatus <SFBool>}",
+			"\t${3:toggle <XFAny>}",
+			"}"
+		]
+	},
+	"ViewpointMirror": {
+		"prefix": "ViewpointMirror",
+		"description": "",
+		"body": [
+			"ViewpointMirror {",
+			"\t${1:distanceFromShape 0.01}",
+			"}"
+		]
+	},
+	"X3DCubicBezierInterpolator": {
+		"prefix": "X3DCubicBezierInterpolator",
+		"description": "",
+		"body": [
+			"X3DCubicBezierInterpolator {",
+			"\t${1:controlPoints []}",
+			"}"
+		]
+	},
+	"CubicBezier2DOrientationInterpolator": {
+		"prefix": "CubicBezier2DOrientationInterpolator",
+		"description": "",
+		"body": [
+			"CubicBezier2DOrientationInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:axis 0 0 1}",
+			"\t${3:value_changed <SFRotation>}",
+			"\t${4:controlPoints []}",
+			"}"
+		]
+	},
+	"CubicBezierPositionInterpolator": {
+		"prefix": "CubicBezierPositionInterpolator",
+		"description": "",
+		"body": [
+			"CubicBezierPositionInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFVec3f>}",
+			"\t${3:controlPoints []}",
+			"}"
+		]
+	},
+	"OrientationInterpolator2D": {
+		"prefix": "OrientationInterpolator2D",
+		"description": "",
+		"body": [
+			"OrientationInterpolator2D {",
+			"\t${1:keyValue []}",
+			"\t${2:axis 0 0 1}",
+			"\t${3:value_changed <SFRotation>}",
+			"\t${4:set_fraction <SFFloat>}",
+			"\t${5:key []}",
+			"}"
+		]
+	},
+	"X3DBindableNode": {
+		"prefix": "X3DBindableNode",
+		"description": "",
+		"body": [
+			"X3DBindableNode {",
+			"\t${1:set_bind <SFBool>}",
+			"\t${2:bindTime <SFTime>}",
+			"}"
+		]
+	},
+	"X3DChildNode": {
+		"prefix": "X3DChildNode",
+		"description": "",
+		"body": [
+			"X3DChildNode {",
+			"\t${1:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DInfoNode": {
+		"prefix": "X3DInfoNode",
+		"description": "",
+		"body": [
+			"X3DInfoNode {",
+			"}"
+		]
+	},
+	"X3DMetadataObject": {
+		"prefix": "X3DMetadataObject",
+		"description": "",
+		"body": [
+			"X3DMetadataObject {",
+			"\t${1:name \"\"}",
+			"\t${2:reference \"\"}",
+			"}"
+		]
+	},
+	"X3DNode": {
+		"prefix": "X3DNode",
+		"description": "",
+		"body": [
+			"X3DNode {",
+			"\t${1:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DSensorNode": {
+		"prefix": "X3DSensorNode",
+		"description": "",
+		"body": [
+			"X3DSensorNode {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"MetadataBoolean": {
+		"prefix": "MetadataBoolean",
+		"description": "",
+		"body": [
+			"MetadataBoolean {",
+			"\t${1:name \"\"}",
+			"\t${2:reference \"\"}",
+			"\t${3:value []}",
+			"\t${4:metadata <SFNode>}",
+			"\t${5:name \"\"}",
+			"\t${6:reference \"\"}",
+			"}"
+		]
+	},
+	"MetadataDouble": {
+		"prefix": "MetadataDouble",
+		"description": "",
+		"body": [
+			"MetadataDouble {",
+			"\t${1:name \"\"}",
+			"\t${2:reference \"\"}",
+			"\t${3:value []}",
+			"\t${4:metadata <SFNode>}",
+			"\t${5:name \"\"}",
+			"\t${6:reference \"\"}",
+			"}"
+		]
+	},
+	"MetadataFloat": {
+		"prefix": "MetadataFloat",
+		"description": "",
+		"body": [
+			"MetadataFloat {",
+			"\t${1:name \"\"}",
+			"\t${2:reference \"\"}",
+			"\t${3:value []}",
+			"\t${4:metadata <SFNode>}",
+			"\t${5:name \"\"}",
+			"\t${6:reference \"\"}",
+			"}"
+		]
+	},
+	"MetadataInteger": {
+		"prefix": "MetadataInteger",
+		"description": "",
+		"body": [
+			"MetadataInteger {",
+			"\t${1:name \"\"}",
+			"\t${2:reference \"\"}",
+			"\t${3:value []}",
+			"\t${4:metadata <SFNode>}",
+			"\t${5:name \"\"}",
+			"\t${6:reference \"\"}",
+			"}"
+		]
+	},
+	"MetadataSet": {
+		"prefix": "MetadataSet",
+		"description": "",
+		"body": [
+			"MetadataSet {",
+			"\t${1:name \"\"}",
+			"\t${2:reference \"\"}",
+			"\t${3:value []}",
+			"\t${4:metadata <SFNode>}",
+			"\t${5:name \"\"}",
+			"\t${6:reference \"\"}",
+			"}"
+		]
+	},
+	"MetadataString": {
+		"prefix": "MetadataString",
+		"description": "",
+		"body": [
+			"MetadataString {",
+			"\t${1:name \"\"}",
+			"\t${2:reference \"\"}",
+			"\t${3:value []}",
+			"\t${4:metadata <SFNode>}",
+			"\t${5:name \"\"}",
+			"\t${6:reference \"\"}",
+			"}"
+		]
+	},
+	"WorldInfo": {
+		"prefix": "WorldInfo",
+		"description": "",
+		"body": [
+			"WorldInfo {",
+			"\t${1:info []}",
+			"\t${2:title \"\"}",
+			"}"
+		]
+	},
+	"X3DEnvironmentTextureNode": {
+		"prefix": "X3DEnvironmentTextureNode",
+		"description": "",
+		"body": [
+			"X3DEnvironmentTextureNode {",
+			"\t${1:effects []}",
+			"\t${2:crossOrigin \"\"}",
+			"}"
+		]
+	},
+	"ComposedCubeMapTexture": {
+		"prefix": "ComposedCubeMapTexture",
+		"description": "",
+		"body": [
+			"ComposedCubeMapTexture {",
+			"\t${1:back <SFNode>}",
+			"\t${2:bottom <SFNode>}",
+			"\t${3:front <SFNode>}",
+			"\t${4:left <SFNode>}",
+			"\t${5:right <SFNode>}",
+			"\t${6:top <SFNode>}",
+			"\t${7:textureProperties <SFNode>}",
+			"}"
+		]
+	},
+	"GeneratedCubeMapTexture": {
+		"prefix": "GeneratedCubeMapTexture",
+		"description": "",
+		"body": [
+			"GeneratedCubeMapTexture {",
+			"\t${1:update \"NONE\"}",
+			"\t${2:size 128}",
+			"\t${3:textureProperties <SFNode>}",
+			"}"
+		]
+	},
+	"ImageCubeMapTexture": {
+		"prefix": "ImageCubeMapTexture",
+		"description": "",
+		"body": [
+			"ImageCubeMapTexture {",
+			"\t${1:url []}",
+			"\t${2:textureProperties <SFNode>}",
+			"\t${3:url []}",
+			"}"
+		]
+	},
+	"DISEntityManager": {
+		"prefix": "DISEntityManager",
+		"description": "",
+		"body": [
+			"DISEntityManager {",
+			"\t${1:address \"localhost\"}",
+			"\t${2:applicationID 1}",
+			"\t${3:mapping []}",
+			"\t${4:port 0}",
+			"\t${5:siteID 0}",
+			"\t${6:addedEntities <MFNode>}",
+			"\t${7:removedEntities <MFNode>}",
+			"}"
+		]
+	},
+	"DISEntityTypeMapping": {
+		"prefix": "DISEntityTypeMapping",
+		"description": "",
+		"body": [
+			"DISEntityTypeMapping {",
+			"\t${1:url []}",
+			"\t${2:category 0}",
+			"\t${3:country 0}",
+			"\t${4:domain 0}",
+			"\t${5:extra 0}",
+			"\t${6:kind 0}",
+			"\t${7:specific 0}",
+			"\t${8:subcategory 0}",
+			"}"
+		]
+	},
+	"EspduTransform": {
+		"prefix": "EspduTransform",
+		"description": "",
+		"body": [
+			"EspduTransform {",
+			"\t${1:set_articulationParameterValue0 <SFFloat>}",
+			"\t${2:set_articulationParameterValue1 <SFFloat>}",
+			"\t${3:set_articulationParameterValue2 <SFFloat>}",
+			"\t${4:set_articulationParameterValue3 <SFFloat>}",
+			"\t${5:set_articulationParameterValue4 <SFFloat>}",
+			"\t${6:set_articulationParameterValue5 <SFFloat>}",
+			"\t${7:set_articulationParameterValue6 <SFFloat>}",
+			"\t${8:set_articulationParameterValue7 <SFFloat>}",
+			"\t${9:address \"localhost\"}",
+			"\t${10:applicationID 1}",
+			"\t${11:articulationParameterCount 0}",
+			"\t${12:articulationParameterDesignatorArray []}",
+			"\t${13:articulationParameterChangeIndicatorArray []}",
+			"\t${14:articulationParameterIdPartAttachedToArray []}",
+			"\t${15:articulationParameterTypeArray []}",
+			"\t${16:articulationParameterArray []}",
+			"\t${17:center 0 0 0}",
+			"\t${18:collisionType 0}",
+			"\t${19:deadReckoning 0}",
+			"\t${20:detonationLocation 0 0 0}",
+			"\t${21:detonationRelativeLocation 0 0 0}",
+			"\t${22:detonationResult 0}",
+			"\t${23:enabled <SFBool>}",
+			"\t${24:entityCategory 0}",
+			"\t${25:entityCountry 0}",
+			"\t${26:entityDomain 0}",
+			"\t${27:entityExtra 0}",
+			"\t${28:entityID 0}",
+			"\t${29:entityKind 0}",
+			"\t${30:entitySpecific 0}",
+			"\t${31:entitySubCategory 0}",
+			"\t${32:eventApplicationID 1}",
+			"\t${33:eventEntityID 0}",
+			"\t${34:eventNumber 0}",
+			"\t${35:eventSiteID 0}",
+			"\t${36:fired1 <SFBool>}",
+			"\t${37:fired2 <SFBool>}",
+			"\t${38:fireMissionIndex 0}",
+			"\t${39:firingRange 0.0}",
+			"\t${40:firingRate 0}",
+			"\t${41:forceID 0}",
+			"\t${42:fuse 0}",
+			"\t${43:linearVelocity 0 0 0}",
+			"\t${44:linearAcceleration 0 0 0}",
+			"\t${45:marking \"\"}",
+			"\t${46:multicastRelayHost \"\"}",
+			"\t${47:multicastRelayPort 0}",
+			"\t${48:munitionApplicationID 1}",
+			"\t${49:munitionEndPoint 0 0 0}",
+			"\t${50:munitionEntityID 0}",
+			"\t${51:munitionQuantity 0}",
+			"\t${52:munitionSiteID 0}",
+			"\t${53:munitionStartPoint 0 0 0}",
+			"\t${54:networkMode \"standAlone\"}",
+			"\t${55:port 0}",
+			"\t${56:readInterval 0.1}",
+			"\t${57:rotation 0 0 1 0}",
+			"\t${58:scale 1 1 1}",
+			"\t${59:scaleOrientation 0 0 1 0}",
+			"\t${60:siteID 0}",
+			"\t${61:translation 0 0 0}",
+			"\t${62:warhead 0}",
+			"\t${63:writeInterval 1.0}",
+			"\t${64:articulationParameterValue0_changed <SFFloat>}",
+			"\t${65:articulationParameterValue1_changed <SFFloat>}",
+			"\t${66:articulationParameterValue2_changed <SFFloat>}",
+			"\t${67:articulationParameterValue3_changed <SFFloat>}",
+			"\t${68:articulationParameterValue4_changed <SFFloat>}",
+			"\t${69:articulationParameterValue5_changed <SFFloat>}",
+			"\t${70:articulationParameterValue6_changed <SFFloat>}",
+			"\t${71:articulationParameterValue7_changed <SFFloat>}",
+			"\t${72:collideTime <SFTime>}",
+			"\t${73:detonateTime <SFTime>}",
+			"\t${74:firedTime <SFTime>}",
+			"\t${75:isActive <SFBool>}",
+			"\t${76:isCollided <SFBool>}",
+			"\t${77:isDetonated <SFBool>}",
+			"\t${78:isNetworkReader <SFBool>}",
+			"\t${79:isNetworkWriter <SFBool>}",
+			"\t${80:isRtpHeaderHeard <SFBool>}",
+			"\t${81:isStandAlone <SFBool>}",
+			"\t${82:timestamp <SFTime>}",
+			"\t${83:rtpHeaderExpected <SFBool>}",
+			"\t${84:addChildren [X3DChildNode]}",
+			"\t${85:removeChildren [X3DChildNode]}",
+			"\t${86:children []}",
+			"\t${87:bboxCenter 0 0 0}",
+			"\t${88:bboxSize <SFVec3f>}",
+			"\t${89:enabled <SFBool>}",
+			"\t${90:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"ReceiverPdu": {
+		"prefix": "ReceiverPdu",
+		"description": "",
+		"body": [
+			"ReceiverPdu {",
+			"\t${1:address \"localhost\"}",
+			"\t${2:applicationID 1}",
+			"\t${3:entityID 0}",
+			"\t${4:multicastRelayHost \"\"}",
+			"\t${5:multicastRelayPort 0}",
+			"\t${6:networkMode \"standAlone\"}",
+			"\t${7:port 0}",
+			"\t${8:radioID 0}",
+			"\t${9:readInterval 0.1}",
+			"\t${10:receivedPower 0.0}",
+			"\t${11:receiverState 0}",
+			"\t${12:rtpHeaderExpected <SFBool>}",
+			"\t${13:siteID 0}",
+			"\t${14:transmitterApplicationID 1}",
+			"\t${15:transmitterEntityID 0}",
+			"\t${16:transmitterRadioID 0}",
+			"\t${17:transmitterSiteID 0}",
+			"\t${18:whichGeometry 1}",
+			"\t${19:writeInterval 1.0}",
+			"\t${20:isNetworkReader <SFBool>}",
+			"\t${21:isNetworkWriter <SFBool>}",
+			"\t${22:isRtpHeaderHeard <SFBool>}",
+			"\t${23:isStandAlone <SFBool>}",
+			"\t${24:timestamp <SFTime>}",
+			"\t${25:bboxCenter 0 0 0}",
+			"\t${26:bboxSize <SFVec3f>}",
+			"\t${27:enabled <SFBool>}",
+			"\t${28:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"SignalPdu": {
+		"prefix": "SignalPdu",
+		"description": "",
+		"body": [
+			"SignalPdu {",
+			"\t${1:address \"localhost\"}",
+			"\t${2:applicationID 1}",
+			"\t${3:data []}",
+			"\t${4:dataLength 0}",
+			"\t${5:encodingScheme 0}",
+			"\t${6:entityID 0}",
+			"\t${7:multicastRelayHost \"\"}",
+			"\t${8:multicastRelayPort 0}",
+			"\t${9:networkMode \"standAlone\"}",
+			"\t${10:port 0}",
+			"\t${11:radioID 0}",
+			"\t${12:readInterval 0.1}",
+			"\t${13:rtpHeaderExpected <SFBool>}",
+			"\t${14:sampleRate 0}",
+			"\t${15:samples 0}",
+			"\t${16:siteID 0}",
+			"\t${17:tdlType 0}",
+			"\t${18:whichGeometry 1}",
+			"\t${19:writeInterval 1.0}",
+			"\t${20:isNetworkReader <SFBool>}",
+			"\t${21:isNetworkWriter <SFBool>}",
+			"\t${22:isRtpHeaderHeard <SFBool>}",
+			"\t${23:isStandAlone <SFBool>}",
+			"\t${24:timestamp <SFTime>}",
+			"\t${25:bboxCenter 0 0 0}",
+			"\t${26:bboxSize <SFVec3f>}",
+			"\t${27:enabled <SFBool>}",
+			"\t${28:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"TransmitterPdu": {
+		"prefix": "TransmitterPdu",
+		"description": "",
+		"body": [
+			"TransmitterPdu {",
+			"\t${1:address \"localhost\"}",
+			"\t${2:antennaLocation 0 0 0}",
+			"\t${3:antennaPatternLength 0}",
+			"\t${4:antennaPatternType 0}",
+			"\t${5:applicationID 1}",
+			"\t${6:cryptoKeyID 0}",
+			"\t${7:cryptoSystem 0}",
+			"\t${8:entityID 0}",
+			"\t${9:frequency 0}",
+			"\t${10:inputSource 0}",
+			"\t${11:lengthOfModulationParameters 0}",
+			"\t${12:modulationTypeDetail 0}",
+			"\t${13:modulationTypeMajor 0}",
+			"\t${14:modulationTypeSpreadSpectrum 0}",
+			"\t${15:modulationTypeSystem 0}",
+			"\t${16:multicastRelayHost \"\"}",
+			"\t${17:multicastRelayPort 0}",
+			"\t${18:networkMode \"standAlone\"}",
+			"\t${19:port 0}",
+			"\t${20:power 0.0}",
+			"\t${21:radioEntityTypeCategory 0}",
+			"\t${22:radioEntityTypeCountry 0}",
+			"\t${23:radioEntityTypeDomain 0}",
+			"\t${24:radioEntityTypeKind 0}",
+			"\t${25:radioEntityTypeNomenclature 0}",
+			"\t${26:radioEntityTypeNomenclatureVersion 0}",
+			"\t${27:radioID 0}",
+			"\t${28:readInterval 0.1}",
+			"\t${29:relativeAntennaLocation 0 0 0}",
+			"\t${30:rtpHeaderExpected <SFBool>}",
+			"\t${31:siteID 0}",
+			"\t${32:transmitFrequencyBandwidth 0.0}",
+			"\t${33:transmitState 0}",
+			"\t${34:whichGeometry 1}",
+			"\t${35:writeInterval 1.0}",
+			"\t${36:isNetworkReader <SFBool>}",
+			"\t${37:isNetworkWriter <SFBool>}",
+			"\t${38:isRtpHeaderHeard <SFBool>}",
+			"\t${39:isStandAlone <SFBool>}",
+			"\t${40:timestamp <SFTime>}",
+			"\t${41:bboxCenter 0 0 0}",
+			"\t${42:bboxSize <SFVec3f>}",
+			"\t${43:enabled <SFBool>}",
+			"\t${44:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"X3DBackgroundNode": {
+		"prefix": "X3DBackgroundNode",
+		"description": "",
+		"body": [
+			"X3DBackgroundNode {",
+			"\t${1:set_bind <SFBool>}",
+			"\t${2:bindTime <SFTime>}",
+			"}"
+		]
+	},
+	"X3D3DBackgroundNode": {
+		"prefix": "X3D3DBackgroundNode",
+		"description": "",
+		"body": [
+			"X3D3DBackgroundNode {",
+			"\t${1:groundAngle []}",
+			"\t${2:groundColor []}",
+			"\t${3:skyAngle []}",
+			"\t${4:skyColor 0 0 0}",
+			"\t${5:transparency 0}",
+			"\t${6:set_bind <SFBool>}",
+			"\t${7:bindTime <SFTime>}",
+			"}"
+		]
+	},
+	"X3DFogObject": {
+		"prefix": "X3DFogObject",
+		"description": "",
+		"body": [
+			"X3DFogObject {",
+			"\t${1:color 1 1 1}",
+			"\t${2:fogType \"LINEAR\"}",
+			"\t${3:visibilityRange 0}",
+			"\t${4:volumetric <SFBool>}",
+			"\t${5:volumetricDirection 0}",
+			"}"
+		]
+	},
+	"Background": {
+		"prefix": "Background",
+		"description": "",
+		"body": [
+			"Background {",
+			"\t${1:backUrl []}",
+			"\t${2:bottomUrl []}",
+			"\t${3:frontUrl []}",
+			"\t${4:leftUrl []}",
+			"\t${5:rightUrl []}",
+			"\t${6:topUrl []}",
+			"\t${7:groundAngle []}",
+			"\t${8:groundColor []}",
+			"\t${9:skyAngle []}",
+			"\t${10:skyColor 0 0 0}",
+			"\t${11:transparency 0}",
+			"}"
+		]
+	},
+	"Fog": {
+		"prefix": "Fog",
+		"description": "",
+		"body": [
+			"Fog {",
+			"\t${1:color 1 1 1}",
+			"\t${2:fogType \"LINEAR\"}",
+			"\t${3:visibilityRange 0}",
+			"\t${4:volumetric <SFBool>}",
+			"\t${5:volumetricDirection 0}",
+			"\t${6:set_bind <SFBool>}",
+			"\t${7:bindTime <SFTime>}",
+			"\t${8:color 1 1 1}",
+			"\t${9:fogType \"LINEAR\"}",
+			"\t${10:visibilityRange 0}",
+			"\t${11:volumetric <SFBool>}",
+			"\t${12:volumetricDirection 0}",
+			"}"
+		]
+	},
+	"FogCoordinate": {
+		"prefix": "FogCoordinate",
+		"description": "",
+		"body": [
+			"FogCoordinate {",
+			"\t${1:depth []}",
+			"}"
+		]
+	},
+	"LocalFog": {
+		"prefix": "LocalFog",
+		"description": "",
+		"body": [
+			"LocalFog {",
+			"\t${1:color 1 1 1}",
+			"\t${2:enabled <SFBool>}",
+			"\t${3:fogType \"LINEAR\"}",
+			"\t${4:visibilityRange 0}",
+			"\t${5:volumetric <SFBool>}",
+			"\t${6:volumetricDirection 0}",
+			"\t${7:color 1 1 1}",
+			"\t${8:fogType \"LINEAR\"}",
+			"\t${9:visibilityRange 0}",
+			"\t${10:volumetric <SFBool>}",
+			"\t${11:volumetricDirection 0}",
+			"}"
+		]
+	},
+	"TextureBackground": {
+		"prefix": "TextureBackground",
+		"description": "",
+		"body": [
+			"TextureBackground {",
+			"\t${1:backTexture <SFNode>}",
+			"\t${2:bottomTexture <SFNode>}",
+			"\t${3:frontTexture <SFNode>}",
+			"\t${4:leftTexture <SFNode>}",
+			"\t${5:rightTexture <SFNode>}",
+			"\t${6:topTexture <SFNode>}",
+			"\t${7:groundAngle []}",
+			"\t${8:groundColor []}",
+			"\t${9:skyAngle []}",
+			"\t${10:skyColor 0 0 0}",
+			"\t${11:transparency 0}",
+			"}"
+		]
+	},
+	"X3DEnvironmentalSensorNode": {
+		"prefix": "X3DEnvironmentalSensorNode",
+		"description": "",
+		"body": [
+			"X3DEnvironmentalSensorNode {",
+			"\t${1:center 0 0 0}",
+			"\t${2:size 0 0 0}",
+			"\t${3:enterTime <SFTime>}",
+			"\t${4:exitTime <SFTime>}",
+			"\t${5:enabled <SFBool>}",
+			"\t${6:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"ProximitySensor": {
+		"prefix": "ProximitySensor",
+		"description": "",
+		"body": [
+			"ProximitySensor {",
+			"\t${1:centerOfRotation_changed <SFVec3f>}",
+			"\t${2:orientation_changed <SFRotation>}",
+			"\t${3:position_changed <SFVec3f>}",
+			"\t${4:center 0 0 0}",
+			"\t${5:size 0 0 0}",
+			"\t${6:enterTime <SFTime>}",
+			"\t${7:exitTime <SFTime>}",
+			"}"
+		]
+	},
+	"TransformSensor": {
+		"prefix": "TransformSensor",
+		"description": "",
+		"body": [
+			"TransformSensor {",
+			"\t${1:targetObject <SFNode>}",
+			"\t${2:orientation_changed <SFRotation>}",
+			"\t${3:position_changed <SFVec3f>}",
+			"\t${4:center 0 0 0}",
+			"\t${5:size 0 0 0}",
+			"\t${6:enterTime <SFTime>}",
+			"\t${7:exitTime <SFTime>}",
+			"}"
+		]
+	},
+	"VisibilitySensor": {
+		"prefix": "VisibilitySensor",
+		"description": "",
+		"body": [
+			"VisibilitySensor {",
+			"\t${1:center 0 0 0}",
+			"\t${2:size 0 0 0}",
+			"\t${3:enterTime <SFTime>}",
+			"\t${4:exitTime <SFTime>}",
+			"}"
+		]
+	},
+	"X3DSequencerNode": {
+		"prefix": "X3DSequencerNode",
+		"description": "",
+		"body": [
+			"X3DSequencerNode {",
+			"\t${1:next <SFBool>}",
+			"\t${2:previous <SFBool>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"X3DTriggerNode": {
+		"prefix": "X3DTriggerNode",
+		"description": "",
+		"body": [
+			"X3DTriggerNode {",
+			"}"
+		]
+	},
+	"BooleanFilter": {
+		"prefix": "BooleanFilter",
+		"description": "",
+		"body": [
+			"BooleanFilter {",
+			"\t${1:set_boolean <SFBool>}",
+			"\t${2:inputFalse <SFBool>}",
+			"\t${3:inputNegate <SFBool>}",
+			"\t${4:inputTrue <SFBool>}",
+			"}"
+		]
+	},
+	"BooleanSequencer": {
+		"prefix": "BooleanSequencer",
+		"description": "",
+		"body": [
+			"BooleanSequencer {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFBool>}",
+			"\t${3:next <SFBool>}",
+			"\t${4:previous <SFBool>}",
+			"\t${5:set_fraction <SFFloat>}",
+			"\t${6:key []}",
+			"}"
+		]
+	},
+	"BooleanToggle": {
+		"prefix": "BooleanToggle",
+		"description": "",
+		"body": [
+			"BooleanToggle {",
+			"\t${1:set_boolean <SFBool>}",
+			"\t${2:toggle <SFBool>}",
+			"}"
+		]
+	},
+	"BooleanTrigger": {
+		"prefix": "BooleanTrigger",
+		"description": "",
+		"body": [
+			"BooleanTrigger {",
+			"\t${1:set_triggerTime <SFTime>}",
+			"\t${2:triggerTrue <SFBool>}",
+			"}"
+		]
+	},
+	"IntegerSequencer": {
+		"prefix": "IntegerSequencer",
+		"description": "",
+		"body": [
+			"IntegerSequencer {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFInt32>}",
+			"\t${3:next <SFBool>}",
+			"\t${4:previous <SFBool>}",
+			"\t${5:set_fraction <SFFloat>}",
+			"\t${6:key []}",
+			"}"
+		]
+	},
+	"IntegerTrigger": {
+		"prefix": "IntegerTrigger",
+		"description": "",
+		"body": [
+			"IntegerTrigger {",
+			"\t${1:set_boolean <SFBool>}",
+			"\t${2:integerKey <SFInt32>}",
+			"\t${3:triggerValue <SFInt32>}",
+			"}"
+		]
+	},
+	"TimeTrigger": {
+		"prefix": "TimeTrigger",
+		"description": "",
+		"body": [
+			"TimeTrigger {",
+			"\t${1:set_boolean <SFBool>}",
+			"\t${2:triggerTime <SFTime>}",
+			"}"
+		]
+	},
+	"ValueTrigger": {
+		"prefix": "ValueTrigger",
+		"description": "",
+		"body": [
+			"ValueTrigger {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:trigger <SFBool>}",
+			"}"
+		]
+	},
+	"X3DChaserNode": {
+		"prefix": "X3DChaserNode",
+		"description": "",
+		"body": [
+			"X3DChaserNode {",
+			"\t${1:duration 0}",
+			"\t${2:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"X3DDamperNode": {
+		"prefix": "X3DDamperNode",
+		"description": "",
+		"body": [
+			"X3DDamperNode {",
+			"\t${1:tau 0}",
+			"\t${2:tolerance <SFFloat>}",
+			"\t${3:order 0}",
+			"\t${4:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"X3DFollowerNode": {
+		"prefix": "X3DFollowerNode",
+		"description": "",
+		"body": [
+			"X3DFollowerNode {",
+			"\t${1:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"ColorDamper": {
+		"prefix": "ColorDamper",
+		"description": "",
+		"body": [
+			"ColorDamper {",
+			"\t${1:set_destination <SFColor>}",
+			"\t${2:set_value <SFColor>}",
+			"\t${3:value_changed <SFColor>}",
+			"\t${4:initialDestination 0.8 0.8 0.8}",
+			"\t${5:initialValue 0.8 0.8 0.8}",
+			"\t${6:tau 0}",
+			"\t${7:tolerance <SFFloat>}",
+			"\t${8:order 0}",
+			"}"
+		]
+	},
+	"CoordinateDamper": {
+		"prefix": "CoordinateDamper",
+		"description": "",
+		"body": [
+			"CoordinateDamper {",
+			"\t${1:set_destination <MFVec3f>}",
+			"\t${2:set_value <MFVec3f>}",
+			"\t${3:value_changed <MFVec3f>}",
+			"\t${4:initialDestination 0 0 0}",
+			"\t${5:initialValue 0 0 0}",
+			"\t${6:tau 0}",
+			"\t${7:tolerance <SFFloat>}",
+			"\t${8:order 0}",
+			"}"
+		]
+	},
+	"OrientationChaser": {
+		"prefix": "OrientationChaser",
+		"description": "",
+		"body": [
+			"OrientationChaser {",
+			"\t${1:set_destination <SFRotation>}",
+			"\t${2:set_value <SFRotation>}",
+			"\t${3:value_changed <SFRotation>}",
+			"\t${4:initialDestination 0 1 0 0}",
+			"\t${5:initialValue 0 1 0 0}",
+			"\t${6:duration 0}",
+			"}"
+		]
+	},
+	"OrientationDamper": {
+		"prefix": "OrientationDamper",
+		"description": "",
+		"body": [
+			"OrientationDamper {",
+			"\t${1:set_destination <SFRotation>}",
+			"\t${2:set_value <SFRotation>}",
+			"\t${3:value_changed <SFRotation>}",
+			"\t${4:initialDestination 0 1 0 0}",
+			"\t${5:initialValue 0 1 0 0}",
+			"\t${6:tau 0}",
+			"\t${7:tolerance <SFFloat>}",
+			"\t${8:order 0}",
+			"}"
+		]
+	},
+	"PositionChaser": {
+		"prefix": "PositionChaser",
+		"description": "",
+		"body": [
+			"PositionChaser {",
+			"\t${1:set_destination <SFVec3f>}",
+			"\t${2:set_value <SFVec3f>}",
+			"\t${3:value_changed <SFVec3f>}",
+			"\t${4:initialDestination 0 0 0}",
+			"\t${5:initialValue 0 0 0}",
+			"\t${6:duration 0}",
+			"}"
+		]
+	},
+	"PositionChaser2D": {
+		"prefix": "PositionChaser2D",
+		"description": "",
+		"body": [
+			"PositionChaser2D {",
+			"\t${1:set_destination <SFVec2f>}",
+			"\t${2:set_value <SFVec2f>}",
+			"\t${3:value_changed <SFVec2f>}",
+			"\t${4:initialDestination 0 0 0}",
+			"\t${5:initialValue 0 0 0}",
+			"\t${6:duration 0}",
+			"}"
+		]
+	},
+	"PositionDamper": {
+		"prefix": "PositionDamper",
+		"description": "",
+		"body": [
+			"PositionDamper {",
+			"\t${1:set_destination <SFVec3f>}",
+			"\t${2:set_value <SFVec3f>}",
+			"\t${3:value_changed <SFVec3f>}",
+			"\t${4:initialDestination 0 0 0}",
+			"\t${5:initialValue 0 0 0}",
+			"\t${6:tau 0}",
+			"\t${7:tolerance <SFFloat>}",
+			"\t${8:order 0}",
+			"}"
+		]
+	},
+	"PositionDamper2D": {
+		"prefix": "PositionDamper2D",
+		"description": "",
+		"body": [
+			"PositionDamper2D {",
+			"\t${1:set_destination <SFVec2f>}",
+			"\t${2:set_value <SFVec2f>}",
+			"\t${3:value_changed <SFVec2f>}",
+			"\t${4:initialDestination 0 0}",
+			"\t${5:initialValue 0 0}",
+			"\t${6:tau 0}",
+			"\t${7:tolerance <SFFloat>}",
+			"\t${8:order 0}",
+			"}"
+		]
+	},
+	"ScalarChaser": {
+		"prefix": "ScalarChaser",
+		"description": "",
+		"body": [
+			"ScalarChaser {",
+			"\t${1:set_destination <SFFloat>}",
+			"\t${2:set_value <SFFloat>}",
+			"\t${3:value_changed <SFFloat>}",
+			"\t${4:initialDestination 0}",
+			"\t${5:initialValue 0}",
+			"\t${6:duration 0}",
+			"}"
+		]
+	},
+	"TexCoordDamper2D": {
+		"prefix": "TexCoordDamper2D",
+		"description": "",
+		"body": [
+			"TexCoordDamper2D {",
+			"\t${1:set_destination <MFVec2f>}",
+			"\t${2:set_value <MFVec2f>}",
+			"\t${3:value_changed <MFVec2f>}",
+			"\t${4:initialDestination []}",
+			"\t${5:initialValue []}",
+			"\t${6:tau 0}",
+			"\t${7:tolerance <SFFloat>}",
+			"\t${8:order 0}",
+			"}"
+		]
+	},
+	"Arc2D": {
+		"prefix": "Arc2D",
+		"description": "",
+		"body": [
+			"Arc2D {",
+			"\t${1:endAngle <SFFloat>}",
+			"\t${2:radius 1}",
+			"\t${3:startAngle 0}",
+			"}"
+		]
+	},
+	"ArcClose2D": {
+		"prefix": "ArcClose2D",
+		"description": "",
+		"body": [
+			"ArcClose2D {",
+			"\t${1:closureType \"PIE\"}",
+			"\t${2:endAngle <SFFloat>}",
+			"\t${3:radius 1}",
+			"\t${4:solid <SFBool>}",
+			"\t${5:startAngle 0}",
+			"}"
+		]
+	},
+	"Circle2D": {
+		"prefix": "Circle2D",
+		"description": "",
+		"body": [
+			"Circle2D {",
+			"\t${1:radius 1}",
+			"\t${2:slices <SFInt32>}",
+			"}"
+		]
+	},
+	"Disk2D": {
+		"prefix": "Disk2D",
+		"description": "",
+		"body": [
+			"Disk2D {",
+			"\t${1:innerRadius 0}",
+			"\t${2:outerRadius 1}",
+			"\t${3:solid <SFBool>}",
+			"}"
+		]
+	},
+	"Polyline2D": {
+		"prefix": "Polyline2D",
+		"description": "",
+		"body": [
+			"Polyline2D {",
+			"\t${1:lineSegments []}",
+			"}"
+		]
+	},
+	"Polypoint2D": {
+		"prefix": "Polypoint2D",
+		"description": "",
+		"body": [
+			"Polypoint2D {",
+			"\t${1:point []}",
+			"}"
+		]
+	},
+	"Rectangle2D": {
+		"prefix": "Rectangle2D",
+		"description": "",
+		"body": [
+			"Rectangle2D {",
+			"\t${1:size 2 2}",
+			"\t${2:solid <SFBool>}",
+			"}"
+		]
+	},
+	"TriangleSet2D": {
+		"prefix": "TriangleSet2D",
+		"description": "",
+		"body": [
+			"TriangleSet2D {",
+			"\t${1:vertices []}",
+			"\t${2:solid <SFBool>}",
+			"}"
+		]
+	},
+	"Box": {
+		"prefix": "Box",
+		"description": "",
+		"body": [
+			"Box {",
+			"\t${1:size 2 2 2}",
+			"\t${2:solid <SFBool>}",
+			"\t${3:ccw <SFBool>}",
+			"\t${4:texCoord <SFNode>}",
+			"}"
+		]
+	},
+	"Cone": {
+		"prefix": "Cone",
+		"description": "",
+		"body": [
+			"Cone {",
+			"\t${1:bottom <SFBool>}",
+			"\t${2:bottomRadius 1}",
+			"\t${3:height 2}",
+			"\t${4:side <SFBool>}",
+			"\t${5:solid <SFBool>}",
+			"\t${6:texCoord <SFNode>}",
+			"}"
+		]
+	},
+	"Cylinder": {
+		"prefix": "Cylinder",
+		"description": "",
+		"body": [
+			"Cylinder {",
+			"\t${1:bottom <SFBool>}",
+			"\t${2:height 2}",
+			"\t${3:radius 1}",
+			"\t${4:side <SFBool>}",
+			"\t${5:solid <SFBool>}",
+			"\t${6:top <SFBool>}",
+			"\t${7:texCoord <SFNode>}",
+			"}"
+		]
+	},
+	"ElevationGrid": {
+		"prefix": "ElevationGrid",
+		"description": "",
+		"body": [
+			"ElevationGrid {",
+			"\t${1:set_height <MFFloat>}",
+			"\t${2:attrib []}",
+			"\t${3:color <SFNode>}",
+			"\t${4:fogCoord <SFNode>}",
+			"\t${5:normal <SFNode>}",
+			"\t${6:texCoord <SFNode>}",
+			"\t${7:ccw <SFBool>}",
+			"\t${8:colorPerVertex <SFBool>}",
+			"\t${9:creaseAngle 0}",
+			"\t${10:height []}",
+			"\t${11:normalPerVertex <SFBool>}",
+			"\t${12:solid <SFBool>}",
+			"\t${13:xDimension 0}",
+			"\t${14:xSpacing 1.0}",
+			"\t${15:zDimension 0}",
+			"\t${16:zSpacing 1.0}",
+			"}"
+		]
+	},
+	"Extrusion": {
+		"prefix": "Extrusion",
+		"description": "",
+		"body": [
+			"Extrusion {",
+			"\t${1:set_crossSection <MFVec2f>}",
+			"\t${2:set_orientation <MFRotation>}",
+			"\t${3:set_scale <MFVec2f>}",
+			"\t${4:set_spine <MFVec3f>}",
+			"\t${5:beginCap <SFBool>}",
+			"\t${6:ccw <SFBool>}",
+			"\t${7:convex <SFBool>}",
+			"\t${8:creaseAngle 0}",
+			"\t${9:crossSection [111-1-1-1-1111]}",
+			"\t${10:endCap <SFBool>}",
+			"\t${11:orientation 0 0 1 0}",
+			"\t${12:scale 1 1}",
+			"\t${13:solid <SFBool>}",
+			"\t${14:spine [000010]}",
+			"\t${15:texCoord <SFNode>}",
+			"}"
+		]
+	},
+	"IndexedFaceSet": {
+		"prefix": "IndexedFaceSet",
+		"description": "",
+		"body": [
+			"IndexedFaceSet {",
+			"\t${1:set_colorIndex <MFInt32>}",
+			"\t${2:convex <SFBool>}",
+			"\t${3:coordIndex []}",
+			"\t${4:creaseAngle 0}",
+			"\t${5:normalIndex []}",
+			"\t${6:texCoordIndex []}",
+			"\t${7:attrib []}",
+			"\t${8:coord <SFNode>}",
+			"\t${9:fogCoord <SFNode>}",
+			"\t${10:texCoord <SFNode>}",
+			"\t${11:ccw <SFBool>}",
+			"\t${12:colorPerVertex <SFBool>}",
+			"\t${13:normalPerVertex <SFBool>}",
+			"\t${14:solid <SFBool>}",
+			"\t${15:radianceTransfer []}",
+			"}"
+		]
+	},
+	"Sphere": {
+		"prefix": "Sphere",
+		"description": "",
+		"body": [
+			"Sphere {",
+			"\t${1:radius 1}",
+			"\t${2:solid <SFBool>}",
+			"\t${3:texCoord <SFNode>}",
+			"}"
+		]
+	},
+	"GeoCoordinate": {
+		"prefix": "GeoCoordinate",
+		"description": "",
+		"body": [
+			"GeoCoordinate {",
+			"\t${1:point []}",
+			"\t${2:geoOrigin <SFNode>}",
+			"\t${3:geoSystem [\"GD\",\"WE\"]}",
+			"}"
+		]
+	},
+	"GeoElevationGrid": {
+		"prefix": "GeoElevationGrid",
+		"description": "",
+		"body": [
+			"GeoElevationGrid {",
+			"\t${1:set_height <MFDouble>}",
+			"\t${2:color <SFNode>}",
+			"\t${3:normal <SFNode>}",
+			"\t${4:texCoord <SFNode>}",
+			"\t${5:yScale 1.0}",
+			"\t${6:ccw <SFBool>}",
+			"\t${7:colorPerVertex <SFBool>}",
+			"\t${8:creaseAngle 0}",
+			"\t${9:geoGridOrigin 0 0 0}",
+			"\t${10:geoOrigin <SFNode>}",
+			"\t${11:geoSystem [\"GD\",\"WE\"]}",
+			"\t${12:height [00]}",
+			"\t${13:normalPerVertex <SFBool>}",
+			"\t${14:solid <SFBool>}",
+			"\t${15:xDimension 0}",
+			"\t${16:xSpacing 1.0}",
+			"\t${17:zDimension 0}",
+			"\t${18:zSpacing 1.0}",
+			"}"
+		]
+	},
+	"GeoLocation": {
+		"prefix": "GeoLocation",
+		"description": "",
+		"body": [
+			"GeoLocation {",
+			"\t${1:geoCoords 0 0 0}",
+			"\t${2:geoOrigin <SFNode>}",
+			"\t${3:geoSystem [\"GD\",\"WE\"]}",
+			"\t${4:addChildren [X3DChildNode]}",
+			"\t${5:removeChildren [X3DChildNode]}",
+			"\t${6:children []}",
+			"\t${7:bboxCenter 0 0 0}",
+			"\t${8:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"GeoLOD": {
+		"prefix": "GeoLOD",
+		"description": "",
+		"body": [
+			"GeoLOD {",
+			"\t${1:children <MFNode>}",
+			"\t${2:level_changed <SFInt32>}",
+			"\t${3:center 0 0 0}",
+			"\t${4:child1Url []}",
+			"\t${5:child2Url []}",
+			"\t${6:child3Url []}",
+			"\t${7:child4Url []}",
+			"\t${8:geoOrigin <SFNode>}",
+			"\t${9:geoSystem [\"GD\",\"WE\"]}",
+			"\t${10:range 10}",
+			"\t${11:rootUrl []}",
+			"\t${12:rootNode []}",
+			"\t${13:bboxCenter 0 0 0}",
+			"\t${14:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"GeoMetadata": {
+		"prefix": "GeoMetadata",
+		"description": "",
+		"body": [
+			"GeoMetadata {",
+			"\t${1:data []}",
+			"\t${2:summary []}",
+			"\t${3:url []}",
+			"}"
+		]
+	},
+	"GeoOrigin": {
+		"prefix": "GeoOrigin",
+		"description": "",
+		"body": [
+			"GeoOrigin {",
+			"\t${1:geoCoords 0 0 0}",
+			"\t${2:geoSystem [\"GD\",\"WE\"]}",
+			"\t${3:rotateYUp <SFBool>}",
+			"\t${4:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"GeoPositionInterpolator": {
+		"prefix": "GeoPositionInterpolator",
+		"description": "",
+		"body": [
+			"GeoPositionInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:geovalue_changed <SFVec3d>}",
+			"\t${3:value_changed <SFVec3f>}",
+			"\t${4:geoOrigin <SFNode>}",
+			"\t${5:geoSystem [\"GD\",\"WE\"]}",
+			"\t${6:set_fraction <SFFloat>}",
+			"\t${7:key []}",
+			"}"
+		]
+	},
+	"GeoProximitySensor": {
+		"prefix": "GeoProximitySensor",
+		"description": "",
+		"body": [
+			"GeoProximitySensor {",
+			"\t${1:geoCenter 0 0 0}",
+			"\t${2:centerOfRotation_changed <SFVec3f>}",
+			"\t${3:geoCoord_changed <SFVec3d>}",
+			"\t${4:orientation_changed <SFRotation>}",
+			"\t${5:position_changed <SFVec3f>}",
+			"\t${6:geoOrigin <SFNode>}",
+			"\t${7:geoSystem [\"GD\",\"WE\"]}",
+			"\t${8:center 0 0 0}",
+			"\t${9:size 0 0 0}",
+			"\t${10:enterTime <SFTime>}",
+			"\t${11:exitTime <SFTime>}",
+			"}"
+		]
+	},
+	"GeoTouchSensor": {
+		"prefix": "GeoTouchSensor",
+		"description": "",
+		"body": [
+			"GeoTouchSensor {",
+			"\t${1:hitNormal_changed <SFVec3f>}",
+			"\t${2:hitPoint_changed <SFVec3f>}",
+			"\t${3:hitTexCoord_changed <SFVec2f>}",
+			"\t${4:hitGeoCoord_changed <SFVec3d>}",
+			"\t${5:geoOrigin <SFNode>}",
+			"\t${6:geoSystem [\"GD\",\"WE\"]}",
+			"\t${7:touchTime <SFTime>}",
+			"}"
+		]
+	},
+	"GeoTransform": {
+		"prefix": "GeoTransform",
+		"description": "",
+		"body": [
+			"GeoTransform {",
+			"\t${1:geoCenter 0 0 0}",
+			"\t${2:rotation 0 0 1 0}",
+			"\t${3:scale 1 1 1}",
+			"\t${4:scaleOrientation 0 0 1 0}",
+			"\t${5:translation 0 0 0}",
+			"\t${6:geoOrigin <SFNode>}",
+			"\t${7:geoSystem [\"GD\",\"WE\"]}",
+			"\t${8:addChildren [X3DChildNode]}",
+			"\t${9:removeChildren [X3DChildNode]}",
+			"\t${10:children []}",
+			"\t${11:bboxCenter 0 0 0}",
+			"\t${12:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"GeoViewpoint": {
+		"prefix": "GeoViewpoint",
+		"description": "",
+		"body": [
+			"GeoViewpoint {",
+			"\t${1:set_orientation <SFRotation>}",
+			"\t${2:set_position <SFVec3d>}",
+			"\t${3:fieldOfView <SFFloat>}",
+			"\t${4:headlight <SFBool>}",
+			"\t${5:navType [\"EXAMINE\",\"ANY\"]}",
+			"\t${6:geoOrigin <SFNode>}",
+			"\t${7:geoSystem [\"GD\",\"WE\"]}",
+			"\t${8:position 0 0 100000}",
+			"\t${9:speedFactor 1.0}",
+			"\t${10:centerOfRotation 0 0 0}",
+			"\t${11:description \"\"}",
+			"\t${12:jump <SFBool>}",
+			"\t${13:orientation 0 0 1 0}",
+			"\t${14:retainUserOffsets <SFBool>}",
+			"\t${15:cameraMatrix <SFMatrix4f>}",
+			"\t${16:cameraInverseMatrix <SFMatrix4f>}",
+			"\t${17:cameraRotationMatrix <SFMatrix3f>}",
+			"\t${18:cameraRotationInverseMatrix <SFMatrix3f>}",
+			"\t${19:cameraMatrixSendAlsoOnOffscreenRendering <SFBool>}",
+			"\t${20:direction []}",
+			"\t${21:up []}",
+			"\t${22:gravityUp 0 1 0}",
+			"}"
+		]
+	},
+	"X3DGroupingNode": {
+		"prefix": "X3DGroupingNode",
+		"description": "",
+		"body": [
+			"X3DGroupingNode {",
+			"\t${1:addChildren [X3DChildNode]}",
+			"\t${2:removeChildren [X3DChildNode]}",
+			"\t${3:children []}",
+			"\t${4:bboxCenter 0 0 0}",
+			"\t${5:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"Group": {
+		"prefix": "Group",
+		"description": "",
+		"body": [
+			"Group {",
+			"\t${1:addChildren [X3DChildNode]}",
+			"\t${2:removeChildren [X3DChildNode]}",
+			"\t${3:children []}",
+			"\t${4:bboxCenter 0 0 0}",
+			"\t${5:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"StaticGroup": {
+		"prefix": "StaticGroup",
+		"description": "",
+		"body": [
+			"StaticGroup {",
+			"\t${1:children []}",
+			"\t${2:bboxCenter 0 0 0}",
+			"\t${3:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"Switch": {
+		"prefix": "Switch",
+		"description": "",
+		"body": [
+			"Switch {",
+			"\t${1:whichChoice <SFInt32>}",
+			"\t${2:addChildren [X3DChildNode]}",
+			"\t${3:removeChildren [X3DChildNode]}",
+			"\t${4:children []}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"Transform": {
+		"prefix": "Transform",
+		"description": "",
+		"body": [
+			"Transform {",
+			"\t${1:center 0 0 0}",
+			"\t${2:rotation 0 0 1 0}",
+			"\t${3:scale 1 1 1}",
+			"\t${4:scaleOrientation 0 0 1 0}",
+			"\t${5:translation 0 0 0}",
+			"\t${6:addChildren [X3DChildNode]}",
+			"\t${7:removeChildren [X3DChildNode]}",
+			"\t${8:children []}",
+			"\t${9:bboxCenter 0 0 0}",
+			"\t${10:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"HAnimDisplacer": {
+		"prefix": "HAnimDisplacer",
+		"description": "",
+		"body": [
+			"HAnimDisplacer {",
+			"\t${1:coordIndex []}",
+			"\t${2:displacements []}",
+			"\t${3:name \"\"}",
+			"\t${4:weight 0.0}",
+			"}"
+		]
+	},
+	"HAnimHumanoid": {
+		"prefix": "HAnimHumanoid",
+		"description": "",
+		"body": [
+			"HAnimHumanoid {",
+			"\t${1:center 0 0 0}",
+			"\t${2:info []}",
+			"\t${3:joints []}",
+			"\t${4:name \"\"}",
+			"\t${5:rotation 0 0 1 0}",
+			"\t${6:scale 1 1 1}",
+			"\t${7:scaleOrientation 0 0 1 0}",
+			"\t${8:segments []}",
+			"\t${9:sites []}",
+			"\t${10:skeleton []}",
+			"\t${11:skin []}",
+			"\t${12:skinCoord <SFNode>}",
+			"\t${13:skinNormal <SFNode>}",
+			"\t${14:translation 0 0 0}",
+			"\t${15:version \"\"}",
+			"\t${16:viewpoints []}",
+			"\t${17:bboxCenter 0 0 0}",
+			"\t${18:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"HAnimJoint": {
+		"prefix": "HAnimJoint",
+		"description": "",
+		"body": [
+			"HAnimJoint {",
+			"\t${1:center 0 0 0}",
+			"\t${2:displacers []}",
+			"\t${3:limitOrientation 0 0 1 0}",
+			"\t${4:llimit []}",
+			"\t${5:name \"\"}",
+			"\t${6:rotation 0 0 1 0}",
+			"\t${7:scale 1 1 1}",
+			"\t${8:scaleOrientation 0 0 1 0}",
+			"\t${9:skinCoordIndex []}",
+			"\t${10:skinCoordWeight []}",
+			"\t${11:stiffness [000]}",
+			"\t${12:translation 0 0 0}",
+			"\t${13:ulimit []}",
+			"\t${14:addChildren [X3DChildNode]}",
+			"\t${15:removeChildren [X3DChildNode]}",
+			"\t${16:children []}",
+			"\t${17:bboxCenter 0 0 0}",
+			"\t${18:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"HAnimSegment": {
+		"prefix": "HAnimSegment",
+		"description": "",
+		"body": [
+			"HAnimSegment {",
+			"\t${1:centerOfMass 0 0 0}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:displacers []}",
+			"\t${4:mass 0}",
+			"\t${5:momentsOfInertia [000000000]}",
+			"\t${6:name \"\"}",
+			"\t${7:rotation 0 0 1 0}",
+			"\t${8:scale 1 1 1}",
+			"\t${9:translation 0 0 0}",
+			"\t${10:addChildren [X3DChildNode]}",
+			"\t${11:removeChildren [X3DChildNode]}",
+			"\t${12:children []}",
+			"\t${13:bboxCenter 0 0 0}",
+			"\t${14:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"HAnimSite": {
+		"prefix": "HAnimSite",
+		"description": "",
+		"body": [
+			"HAnimSite {",
+			"\t${1:center 0 0 0}",
+			"\t${2:name \"\"}",
+			"\t${3:rotation 0 0 1 0}",
+			"\t${4:scale 1 1 1}",
+			"\t${5:scaleOrientation 0 0 1 0}",
+			"\t${6:translation 0 0 0}",
+			"\t${7:addChildren [X3DChildNode]}",
+			"\t${8:removeChildren [X3DChildNode]}",
+			"\t${9:children []}",
+			"\t${10:bboxCenter 0 0 0}",
+			"\t${11:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"MatrixTransform": {
+		"prefix": "MatrixTransform",
+		"description": "",
+		"body": [
+			"MatrixTransform {",
+			"\t${1:matrix <SFMatrix4f>}",
+			"\t${2:addChildren [X3DChildNode]}",
+			"\t${3:removeChildren [X3DChildNode]}",
+			"\t${4:children []}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"CommonSurfaceShader": {
+		"prefix": "CommonSurfaceShader",
+		"description": "",
+		"body": [
+			"CommonSurfaceShader {",
+			"\t${1:alphaFactor 1}",
+			"\t${2:alphaTextureId <SFInt32>}",
+			"\t${3:alphaTextureCoordinatesId 0}",
+			"\t${4:alphaTextureChannelMask \"a\"}",
+			"\t${5:alphaTexture <SFNode>}",
+			"\t${6:ambientFactor 0.2 0.2 0.2}",
+			"\t${7:ambientTextureId <SFInt32>}",
+			"\t${8:ambientTextureCoordinatesId 0}",
+			"\t${9:ambientTextureChannelMask \"rgb\"}",
+			"\t${10:ambientTexture <SFNode>}",
+			"\t${11:diffuseFactor 0.8 0.8 0.8}",
+			"\t${12:diffuseTextureId <SFInt32>}",
+			"\t${13:diffuseTextureCoordinatesId 0}",
+			"\t${14:diffuseTextureChannelMask \"rgb\"}",
+			"\t${15:diffuseTexture <SFNode>}",
+			"\t${16:diffuseDisplacementTexture <SFNode>}",
+			"\t${17:displacementAxis \"y\"}",
+			"\t${18:displacementFactor 255.0}",
+			"\t${19:displacementTextureId <SFInt32>}",
+			"\t${20:displacementTextureCoordinatesId 0}",
+			"\t${21:displacementTexture <SFNode>}",
+			"\t${22:emissiveFactor 0 0 0}",
+			"\t${23:emissiveTextureId <SFInt32>}",
+			"\t${24:emissiveTextureCoordinatesId 0}",
+			"\t${25:emissiveTextureChannelMask \"rgb\"}",
+			"\t${26:emissiveTexture <SFNode>}",
+			"\t${27:environmentFactor 1 1 1}",
+			"\t${28:environmentTextureId <SFInt32>}",
+			"\t${29:environmentTextureCoordinatesId 0}",
+			"\t${30:environmentTextureChannelMask \"rgb\"}",
+			"\t${31:environmentTexture <SFNode>}",
+			"\t${32:multiDiffuseAlphaTexture <SFNode>}",
+			"\t${33:normalFormat \"UNORM\"}",
+			"\t${34:normalTextureCoordinatesId 0}",
+			"\t${35:normalTextureChannelMask \"rgb\"}",
+			"\t${36:normalScale 2 2 2}",
+			"\t${37:normalBias <SFVec3f>}",
+			"\t${38:normalTexture <SFNode>}",
+			"\t${39:normalTextureParallaxHeight 0}",
+			"\t${40:reflectionFactor 0 0 0}",
+			"\t${41:reflectionTextureId <SFInt32>}",
+			"\t${42:reflectionTextureCoordinatesId 0}",
+			"\t${43:reflectionTextureChannelMask \"rgb\"}",
+			"\t${44:reflectionTexture <SFNode>}",
+			"\t${45:shininessFactor 0.2}",
+			"\t${46:shininessTextureId <SFInt32>}",
+			"\t${47:shininessTextureCoordinatesId 0}",
+			"\t${48:shininessTextureChannelMask \"a\"}",
+			"\t${49:shininessTexture <SFNode>}",
+			"\t${50:specularFactor 0 0 0}",
+			"\t${51:specularTextureId <SFInt32>}",
+			"\t${52:specularTextureCoordinatesId 0}",
+			"\t${53:specularTextureChannelMask \"rgb\"}",
+			"\t${54:specularTexture <SFNode>}",
+			"\t${55:transmissionFactor 0 0 0}",
+			"\t${56:transmissionTextureId <SFInt32>}",
+			"\t${57:transmissionTextureCoordinatesId 0}",
+			"\t${58:transmissionTextureChannelMask \"rgb\"}",
+			"\t${59:transmissionTexture <SFNode>}",
+			"\t${60:tangentTextureCoordinatesId <SFInt32>}",
+			"\t${61:binormalTextureCoordinatesId <SFInt32>}",
+			"\t${62:invertAlphaTexture <SFBool>}",
+			"\t${63:relativeIndexOfRefraction 1}",
+			"\t${64:fresnelBlend 0}",
+			"\t${65:textureTransformEnabled [FALSEFALSEFALSEFALSEFALSEFALSEFALSEFALSE]}",
+			"\t${66:activate <SFBool>}",
+			"\t${67:isSelected <SFBool>}",
+			"\t${68:isValid <SFBool>}",
+			"\t${69:language \"\"}",
+			"}"
+		]
+	},
+	"ImageBackground": {
+		"prefix": "ImageBackground",
+		"description": "",
+		"body": [
+			"ImageBackground {",
+			"\t${1:color 1 1 1 1}",
+			"\t${2:texture <SFNode>}",
+			"}"
+		]
+	},
+	"X3DInterpolatorNode": {
+		"prefix": "X3DInterpolatorNode",
+		"description": "",
+		"body": [
+			"X3DInterpolatorNode {",
+			"\t${1:set_fraction <SFFloat>}",
+			"\t${2:key []}",
+			"}"
+		]
+	},
+	"ColorInterpolator": {
+		"prefix": "ColorInterpolator",
+		"description": "",
+		"body": [
+			"ColorInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFColor>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"CoordinateInterpolator": {
+		"prefix": "CoordinateInterpolator",
+		"description": "",
+		"body": [
+			"CoordinateInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <MFVec3f>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"CoordinateInterpolator2D": {
+		"prefix": "CoordinateInterpolator2D",
+		"description": "",
+		"body": [
+			"CoordinateInterpolator2D {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <MFVec2f>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"EaseInEaseOut": {
+		"prefix": "EaseInEaseOut",
+		"description": "",
+		"body": [
+			"EaseInEaseOut {",
+			"\t${1:set_fraction <SFFloat>}",
+			"\t${2:easeInEaseOut []}",
+			"\t${3:key []}",
+			"\t${4:modifiedFraction_changed <SFFloat>}",
+			"\t${5:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"NormalInterpolator": {
+		"prefix": "NormalInterpolator",
+		"description": "",
+		"body": [
+			"NormalInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <MFVec3f>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"OrientationInterpolator": {
+		"prefix": "OrientationInterpolator",
+		"description": "",
+		"body": [
+			"OrientationInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFRotation>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"PositionInterpolator": {
+		"prefix": "PositionInterpolator",
+		"description": "",
+		"body": [
+			"PositionInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFVec3f>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"PositionInterpolator2D": {
+		"prefix": "PositionInterpolator2D",
+		"description": "",
+		"body": [
+			"PositionInterpolator2D {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFVec2f>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"ScalarInterpolator": {
+		"prefix": "ScalarInterpolator",
+		"description": "",
+		"body": [
+			"ScalarInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:value_changed <SFFloat>}",
+			"\t${3:set_fraction <SFFloat>}",
+			"\t${4:key []}",
+			"}"
+		]
+	},
+	"SplinePositionInterpolator": {
+		"prefix": "SplinePositionInterpolator",
+		"description": "",
+		"body": [
+			"SplinePositionInterpolator {",
+			"\t${1:closed <SFBool>}",
+			"\t${2:keyValue []}",
+			"\t${3:keyVelocity []}",
+			"\t${4:normalizeVelocity <SFBool>}",
+			"\t${5:value_changed <SFVec3f>}",
+			"\t${6:set_fraction <SFFloat>}",
+			"\t${7:key []}",
+			"}"
+		]
+	},
+	"SplinePositionInterpolator2D": {
+		"prefix": "SplinePositionInterpolator2D",
+		"description": "",
+		"body": [
+			"SplinePositionInterpolator2D {",
+			"\t${1:closed <SFBool>}",
+			"\t${2:keyValue []}",
+			"\t${3:keyVelocity []}",
+			"\t${4:normalizeVelocity <SFBool>}",
+			"\t${5:value_changed <SFVec2f>}",
+			"\t${6:set_fraction <SFFloat>}",
+			"\t${7:key []}",
+			"}"
+		]
+	},
+	"SplineScalarInterpolator": {
+		"prefix": "SplineScalarInterpolator",
+		"description": "",
+		"body": [
+			"SplineScalarInterpolator {",
+			"\t${1:closed <SFBool>}",
+			"\t${2:keyValue []}",
+			"\t${3:keyVelocity []}",
+			"\t${4:normalizeVelocity <SFBool>}",
+			"\t${5:value_changed <SFFloat>}",
+			"\t${6:set_fraction <SFFloat>}",
+			"\t${7:key []}",
+			"}"
+		]
+	},
+	"SquadOrientationInterpolator": {
+		"prefix": "SquadOrientationInterpolator",
+		"description": "",
+		"body": [
+			"SquadOrientationInterpolator {",
+			"\t${1:keyValue []}",
+			"\t${2:normalizeVelocity <SFBool>}",
+			"\t${3:value_changed <SFRotation>}",
+			"\t${4:set_fraction <SFFloat>}",
+			"\t${5:key []}",
+			"}"
+		]
+	},
+	"X3DKeyDeviceSensorNode": {
+		"prefix": "X3DKeyDeviceSensorNode",
+		"description": "",
+		"body": [
+			"X3DKeyDeviceSensorNode {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"KeySensor": {
+		"prefix": "KeySensor",
+		"description": "",
+		"body": [
+			"KeySensor {",
+			"\t${1:actionKeyPress <SFInt32>}",
+			"\t${2:actionKeyRelease <SFInt32>}",
+			"\t${3:altKey <SFBool>}",
+			"\t${4:controlKey <SFBool>}",
+			"\t${5:keyPress <SFString>}",
+			"\t${6:keyRelease <SFString>}",
+			"\t${7:shiftKey <SFBool>}",
+			"}"
+		]
+	},
+	"StringSensor": {
+		"prefix": "StringSensor",
+		"description": "",
+		"body": [
+			"StringSensor {",
+			"\t${1:deletionAllowed <SFBool>}",
+			"\t${2:enteredText <SFString>}",
+			"\t${3:finalText <SFString>}",
+			"}"
+		]
+	},
+	"X3DLayerNode": {
+		"prefix": "X3DLayerNode",
+		"description": "",
+		"body": [
+			"X3DLayerNode {",
+			"\t${1:isPickable <SFBool>}",
+			"\t${2:viewport <SFNode>}",
+			"\t${3:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DViewportNode": {
+		"prefix": "X3DViewportNode",
+		"description": "",
+		"body": [
+			"X3DViewportNode {",
+			"\t${1:addChildren [X3DChildNode]}",
+			"\t${2:removeChildren [X3DChildNode]}",
+			"\t${3:children []}",
+			"\t${4:bboxCenter 0 0 0}",
+			"\t${5:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"Layer": {
+		"prefix": "Layer",
+		"description": "",
+		"body": [
+			"Layer {",
+			"\t${1:addChildren []}",
+			"\t${2:removeChildren []}",
+			"\t${3:children []}",
+			"\t${4:isPickable <SFBool>}",
+			"\t${5:viewport <SFNode>}",
+			"}"
+		]
+	},
+	"LayerSet": {
+		"prefix": "LayerSet",
+		"description": "",
+		"body": [
+			"LayerSet {",
+			"\t${1:activeLayer 0}",
+			"\t${2:layers []}",
+			"\t${3:order [0]}",
+			"\t${4:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"Viewport": {
+		"prefix": "Viewport",
+		"description": "",
+		"body": [
+			"Viewport {",
+			"\t${1:clipBoundary 0 1 0 1}",
+			"\t${2:addChildren [X3DChildNode]}",
+			"\t${3:removeChildren [X3DChildNode]}",
+			"\t${4:children []}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"X3DLayoutNode": {
+		"prefix": "X3DLayoutNode",
+		"description": "",
+		"body": [
+			"X3DLayoutNode {",
+			"}"
+		]
+	},
+	"Layout": {
+		"prefix": "Layout",
+		"description": "",
+		"body": [
+			"Layout {",
+			"\t${1:align [\"CENTER\",\"CENTER\"]}",
+			"\t${2:offset [0,0]}",
+			"\t${3:offsetUnits [\"WORLD\",\"WORLD\"]}",
+			"\t${4:scaleMode [\"NONE\",\"NONE\"]}",
+			"\t${5:size [1,1]}",
+			"\t${6:sizeUnits [\"WORLD\",\"WORLD\"]}",
+			"}"
+		]
+	},
+	"LayoutGroup": {
+		"prefix": "LayoutGroup",
+		"description": "",
+		"body": [
+			"LayoutGroup {",
+			"\t${1:layout <SFNode>}",
+			"\t${2:viewport <SFNode>}",
+			"\t${3:addChildren [X3DChildNode]}",
+			"\t${4:removeChildren [X3DChildNode]}",
+			"\t${5:children []}",
+			"\t${6:bboxCenter 0 0 0}",
+			"\t${7:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"LayoutLayer": {
+		"prefix": "LayoutLayer",
+		"description": "",
+		"body": [
+			"LayoutLayer {",
+			"\t${1:addChildren []}",
+			"\t${2:removeChildren []}",
+			"\t${3:children []}",
+			"\t${4:layout <SFNode>}",
+			"\t${5:isPickable <SFBool>}",
+			"\t${6:viewport <SFNode>}",
+			"}"
+		]
+	},
+	"ScreenFontStyle": {
+		"prefix": "ScreenFontStyle",
+		"description": "",
+		"body": [
+			"ScreenFontStyle {",
+			"\t${1:family \"SERIF\"}",
+			"\t${2:horizontal <SFBool>}",
+			"\t${3:justify \"BEGIN\"}",
+			"\t${4:language \"\"}",
+			"\t${5:leftToRight <SFBool>}",
+			"\t${6:pointSize 12.0}",
+			"\t${7:spacing 1.0}",
+			"\t${8:style \"PLAIN\"}",
+			"\t${9:topToBottom <SFBool>}",
+			"}"
+		]
+	},
+	"ScreenGroup": {
+		"prefix": "ScreenGroup",
+		"description": "",
+		"body": [
+			"ScreenGroup {",
+			"\t${1:addChildren [X3DChildNode]}",
+			"\t${2:removeChildren [X3DChildNode]}",
+			"\t${3:children []}",
+			"\t${4:bboxCenter 0 0 0}",
+			"\t${5:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"X3DLightNode": {
+		"prefix": "X3DLightNode",
+		"description": "",
+		"body": [
+			"X3DLightNode {",
+			"\t${1:ambientIntensity 0}",
+			"\t${2:color 1 1 1}",
+			"\t${3:global <SFBool>}",
+			"\t${4:intensity 1}",
+			"\t${5:on <SFBool>}",
+			"\t${6:effects []}",
+			"}"
+		]
+	},
+	"X3DPunctualLightNode": {
+		"prefix": "X3DPunctualLightNode",
+		"description": "",
+		"body": [
+			"X3DPunctualLightNode {",
+			"\t${1:shadows <SFBool>}",
+			"\t${2:shadowVolumesMain <SFBool>}",
+			"\t${3:defaultShadowMap <SFNode>}",
+			"\t${4:ambientIntensity 0}",
+			"\t${5:color 1 1 1}",
+			"\t${6:global <SFBool>}",
+			"\t${7:intensity 1}",
+			"\t${8:on <SFBool>}",
+			"\t${9:effects []}",
+			"}"
+		]
+	},
+	"DirectionalLight": {
+		"prefix": "DirectionalLight",
+		"description": "",
+		"body": [
+			"DirectionalLight {",
+			"\t${1:ambientIntensity 0}",
+			"\t${2:color 1 1 1}",
+			"\t${3:global <SFBool>}",
+			"\t${4:intensity 1}",
+			"\t${5:on <SFBool>}",
+			"\t${6:effects []}",
+			"}"
+		]
+	},
+	"PointLight": {
+		"prefix": "PointLight",
+		"description": "",
+		"body": [
+			"PointLight {",
+			"\t${1:ambientIntensity 0}",
+			"\t${2:color 1 1 1}",
+			"\t${3:global <SFBool>}",
+			"\t${4:intensity 1}",
+			"\t${5:on <SFBool>}",
+			"\t${6:effects []}",
+			"}"
+		]
+	},
+	"SpotLight": {
+		"prefix": "SpotLight",
+		"description": "",
+		"body": [
+			"SpotLight {",
+			"\t${1:attenuation 1 0 0}",
+			"\t${2:beamWidth <SFFloat>}",
+			"\t${3:cutOffAngle <SFFloat>}",
+			"\t${4:direction 0 0}",
+			"\t${5:location 0 0 0}",
+			"\t${6:radius 100}",
+			"\t${7:projectionAngle 0}",
+			"\t${8:ambientIntensity 0}",
+			"\t${9:color 1 1 1}",
+			"\t${10:global <SFBool>}",
+			"\t${11:intensity 1}",
+			"\t${12:on <SFBool>}",
+			"\t${13:effects []}",
+			"}"
+		]
+	},
+	"EnvironmentLight": {
+		"prefix": "EnvironmentLight",
+		"description": "",
+		"body": [
+			"EnvironmentLight {",
+			"\t${1:diffuseTexture <SFNode>}",
+			"\t${2:specularTexture <SFNode>}",
+			"\t${3:ambientIntensity 0}",
+			"\t${4:color 1 1 1}",
+			"\t${5:global <SFBool>}",
+			"\t${6:intensity 1}",
+			"\t${7:on <SFBool>}",
+			"\t${8:effects []}",
+			"}"
+		]
+	},
+	"X3DViewpointNode": {
+		"prefix": "X3DViewpointNode",
+		"description": "",
+		"body": [
+			"X3DViewpointNode {",
+			"\t${1:centerOfRotation 0 0 0}",
+			"\t${2:description \"\"}",
+			"\t${3:jump <SFBool>}",
+			"\t${4:orientation 0 0 1 0}",
+			"\t${5:retainUserOffsets <SFBool>}",
+			"\t${6:cameraMatrix <SFMatrix4f>}",
+			"\t${7:cameraInverseMatrix <SFMatrix4f>}",
+			"\t${8:cameraRotationMatrix <SFMatrix3f>}",
+			"\t${9:cameraRotationInverseMatrix <SFMatrix3f>}",
+			"\t${10:cameraMatrixSendAlsoOnOffscreenRendering <SFBool>}",
+			"\t${11:direction []}",
+			"\t${12:up []}",
+			"\t${13:gravityUp 0 1 0}",
+			"\t${14:set_bind <SFBool>}",
+			"\t${15:bindTime <SFTime>}",
+			"}"
+		]
+	},
+	"Billboard": {
+		"prefix": "Billboard",
+		"description": "",
+		"body": [
+			"Billboard {",
+			"\t${1:axisOfRotation 0 1 0}",
+			"\t${2:addChildren [X3DChildNode]}",
+			"\t${3:removeChildren [X3DChildNode]}",
+			"\t${4:children []}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"Collision": {
+		"prefix": "Collision",
+		"description": "",
+		"body": [
+			"Collision {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:collideTime <SFTime>}",
+			"\t${3:isActive <SFBool>}",
+			"\t${4:proxy <SFNode>}",
+			"\t${5:addChildren [X3DChildNode]}",
+			"\t${6:removeChildren [X3DChildNode]}",
+			"\t${7:children []}",
+			"\t${8:bboxCenter 0 0 0}",
+			"\t${9:bboxSize <SFVec3f>}",
+			"\t${10:enabled <SFBool>}",
+			"\t${11:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"LOD": {
+		"prefix": "LOD",
+		"description": "",
+		"body": [
+			"LOD {",
+			"\t${1:level_changed <SFInt32>}",
+			"\t${2:center 0 0 0}",
+			"\t${3:forceTransitions <SFBool>}",
+			"\t${4:range []}",
+			"\t${5:addChildren [X3DChildNode]}",
+			"\t${6:removeChildren [X3DChildNode]}",
+			"\t${7:children []}",
+			"\t${8:bboxCenter 0 0 0}",
+			"\t${9:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"NavigationInfo": {
+		"prefix": "NavigationInfo",
+		"description": "",
+		"body": [
+			"NavigationInfo {",
+			"\t${1:avatarSize [0.251.60.75]}",
+			"\t${2:headlight <SFBool>}",
+			"\t${3:speed 1.0}",
+			"\t${4:transitionTime 1.0}",
+			"\t${5:transitionType [\"LINEAR\"]}",
+			"\t${6:type [\"EXAMINE\"\"ANY\"]}",
+			"\t${7:visibilityLimit 0.0}",
+			"\t${8:transitionComplete <SFBool>}",
+			"\t${9:set_bind <SFBool>}",
+			"\t${10:bindTime <SFTime>}",
+			"}"
+		]
+	},
+	"OrthoViewpoint": {
+		"prefix": "OrthoViewpoint",
+		"description": "",
+		"body": [
+			"OrthoViewpoint {",
+			"\t${1:fieldOfView <MFFloat>}",
+			"\t${2:position 0 0 10}",
+			"\t${3:centerOfRotation 0 0 0}",
+			"\t${4:description \"\"}",
+			"\t${5:jump <SFBool>}",
+			"\t${6:orientation 0 0 1 0}",
+			"\t${7:retainUserOffsets <SFBool>}",
+			"\t${8:cameraMatrix <SFMatrix4f>}",
+			"\t${9:cameraInverseMatrix <SFMatrix4f>}",
+			"\t${10:cameraRotationMatrix <SFMatrix3f>}",
+			"\t${11:cameraRotationInverseMatrix <SFMatrix3f>}",
+			"\t${12:cameraMatrixSendAlsoOnOffscreenRendering <SFBool>}",
+			"\t${13:direction []}",
+			"\t${14:up []}",
+			"\t${15:gravityUp 0 1 0}",
+			"}"
+		]
+	},
+	"Viewpoint": {
+		"prefix": "Viewpoint",
+		"description": "",
+		"body": [
+			"Viewpoint {",
+			"\t${1:fieldOfView <SFFloat>}",
+			"\t${2:position 0 0 10}",
+			"\t${3:fieldOfViewForceVertical <SFBool>}",
+			"\t${4:centerOfRotation 0 0 0}",
+			"\t${5:description \"\"}",
+			"\t${6:jump <SFBool>}",
+			"\t${7:orientation 0 0 1 0}",
+			"\t${8:retainUserOffsets <SFBool>}",
+			"\t${9:cameraMatrix <SFMatrix4f>}",
+			"\t${10:cameraInverseMatrix <SFMatrix4f>}",
+			"\t${11:cameraRotationMatrix <SFMatrix3f>}",
+			"\t${12:cameraRotationInverseMatrix <SFMatrix3f>}",
+			"\t${13:cameraMatrixSendAlsoOnOffscreenRendering <SFBool>}",
+			"\t${14:direction []}",
+			"\t${15:up []}",
+			"\t${16:gravityUp 0 1 0}",
+			"}"
+		]
+	},
+	"ViewpointGroup": {
+		"prefix": "ViewpointGroup",
+		"description": "",
+		"body": [
+			"ViewpointGroup {",
+			"\t${1:center 0 0 0}",
+			"\t${2:children []}",
+			"\t${3:description \"\"}",
+			"\t${4:displayed <SFBool>}",
+			"\t${5:retainUserOffsets <SFBool>}",
+			"\t${6:size 0 0 0}",
+			"}"
+		]
+	},
+	"X3DNetworkSensorNode": {
+		"prefix": "X3DNetworkSensorNode",
+		"description": "",
+		"body": [
+			"X3DNetworkSensorNode {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"X3DUrlObject": {
+		"prefix": "X3DUrlObject",
+		"description": "",
+		"body": [
+			"X3DUrlObject {",
+			"\t${1:url []}",
+			"}"
+		]
+	},
+	"Anchor": {
+		"prefix": "Anchor",
+		"description": "",
+		"body": [
+			"Anchor {",
+			"\t${1:description \"\"}",
+			"\t${2:parameter []}",
+			"\t${3:url []}",
+			"\t${4:addChildren [X3DChildNode]}",
+			"\t${5:removeChildren [X3DChildNode]}",
+			"\t${6:children []}",
+			"\t${7:bboxCenter 0 0 0}",
+			"\t${8:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"Inline": {
+		"prefix": "Inline",
+		"description": "",
+		"body": [
+			"Inline {",
+			"\t${1:load <SFBool>}",
+			"\t${2:url []}",
+			"\t${3:bboxCenter 0 0 0}",
+			"\t${4:bboxSize <SFVec3f>}",
+			"\t${5:url []}",
+			"}"
+		]
+	},
+	"LoadSensor": {
+		"prefix": "LoadSensor",
+		"description": "",
+		"body": [
+			"LoadSensor {",
+			"\t${1:timeOut 0}",
+			"\t${2:watchList []}",
+			"\t${3:isLoaded <SFBool>}",
+			"\t${4:loadTime <SFTime>}",
+			"\t${5:progress <SFFloat>}",
+			"}"
+		]
+	},
+	"X3DNurbsControlCurveNode": {
+		"prefix": "X3DNurbsControlCurveNode",
+		"description": "",
+		"body": [
+			"X3DNurbsControlCurveNode {",
+			"\t${1:controlPoint []}",
+			"\t${2:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DNurbsSurfaceGeometryNode": {
+		"prefix": "X3DNurbsSurfaceGeometryNode",
+		"description": "",
+		"body": [
+			"X3DNurbsSurfaceGeometryNode {",
+			"\t${1:controlPoint []}",
+			"\t${2:texCoord []}",
+			"\t${3:uTessellation 0}",
+			"\t${4:vTessellation 0}",
+			"\t${5:weight []}",
+			"\t${6:solid <SFBool>}",
+			"\t${7:uClosed <SFBool>}",
+			"\t${8:uDimension 0}",
+			"\t${9:uKnot []}",
+			"\t${10:uOrder 3}",
+			"\t${11:vClosed <SFBool>}",
+			"\t${12:vDimension 0}",
+			"\t${13:vKnot []}",
+			"\t${14:vOrder 3}",
+			"}"
+		]
+	},
+	"X3DParametricGeometryNode": {
+		"prefix": "X3DParametricGeometryNode",
+		"description": "",
+		"body": [
+			"X3DParametricGeometryNode {",
+			"}"
+		]
+	},
+	"Contour2D": {
+		"prefix": "Contour2D",
+		"description": "",
+		"body": [
+			"Contour2D {",
+			"\t${1:addChildren [NurbsCurve2D|ContourPolyline2D]}",
+			"\t${2:removeChildren [NurbsCurve2D|ContourPolyline2D]}",
+			"\t${3:children []}",
+			"\t${4:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"ContourPolyline2D": {
+		"prefix": "ContourPolyline2D",
+		"description": "",
+		"body": [
+			"ContourPolyline2D {",
+			"\t${1:controlPoint []}",
+			"}"
+		]
+	},
+	"CoordinateDouble": {
+		"prefix": "CoordinateDouble",
+		"description": "",
+		"body": [
+			"CoordinateDouble {",
+			"\t${1:point []}",
+			"}"
+		]
+	},
+	"NurbsCurve": {
+		"prefix": "NurbsCurve",
+		"description": "",
+		"body": [
+			"NurbsCurve {",
+			"\t${1:controlPoint []}",
+			"\t${2:tessellation 0}",
+			"\t${3:weight []}",
+			"\t${4:closed <SFBool>}",
+			"\t${5:knot []}",
+			"\t${6:order 3}",
+			"}"
+		]
+	},
+	"NurbsCurve2D": {
+		"prefix": "NurbsCurve2D",
+		"description": "",
+		"body": [
+			"NurbsCurve2D {",
+			"\t${1:tessellation 0}",
+			"\t${2:weight []}",
+			"\t${3:closed <SFBool>}",
+			"\t${4:knot []}",
+			"\t${5:order 3}",
+			"\t${6:controlPoint []}",
+			"}"
+		]
+	},
+	"NurbsOrientationInterpolator": {
+		"prefix": "NurbsOrientationInterpolator",
+		"description": "",
+		"body": [
+			"NurbsOrientationInterpolator {",
+			"\t${1:set_fraction <SFFloat>}",
+			"\t${2:controlPoint []}",
+			"\t${3:knot []}",
+			"\t${4:order 3}",
+			"\t${5:weight []}",
+			"\t${6:value_changed <SFRotation>}",
+			"}"
+		]
+	},
+	"NurbsPatchSurface": {
+		"prefix": "NurbsPatchSurface",
+		"description": "",
+		"body": [
+			"NurbsPatchSurface {",
+			"\t${1:controlPoint []}",
+			"\t${2:texCoord []}",
+			"\t${3:uTessellation 0}",
+			"\t${4:vTessellation 0}",
+			"\t${5:weight []}",
+			"\t${6:solid <SFBool>}",
+			"\t${7:uClosed <SFBool>}",
+			"\t${8:uDimension 0}",
+			"\t${9:uKnot []}",
+			"\t${10:uOrder 3}",
+			"\t${11:vClosed <SFBool>}",
+			"\t${12:vDimension 0}",
+			"\t${13:vKnot []}",
+			"\t${14:vOrder 3}",
+			"}"
+		]
+	},
+	"NurbsPositionInterpolator": {
+		"prefix": "NurbsPositionInterpolator",
+		"description": "",
+		"body": [
+			"NurbsPositionInterpolator {",
+			"\t${1:set_fraction <SFFloat>}",
+			"\t${2:controlPoint []}",
+			"\t${3:knot []}",
+			"\t${4:order 3}",
+			"\t${5:weight []}",
+			"\t${6:value_changed <SFVec3f>}",
+			"}"
+		]
+	},
+	"NurbsSet": {
+		"prefix": "NurbsSet",
+		"description": "",
+		"body": [
+			"NurbsSet {",
+			"\t${1:addGeometry [X3DNurbsSurfaceGeometryNode]}",
+			"\t${2:removeGeometry [X3DNurbsSurfaceGeometryNode]}",
+			"\t${3:geometry []}",
+			"\t${4:tessellationScale 1.0}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"NurbsSurfaceInterpolator": {
+		"prefix": "NurbsSurfaceInterpolator",
+		"description": "",
+		"body": [
+			"NurbsSurfaceInterpolator {",
+			"\t${1:set_fraction <SFVec2f>}",
+			"\t${2:controlPoint []}",
+			"\t${3:weight []}",
+			"\t${4:position_changed <SFVec3f>}",
+			"\t${5:normal_changed <SFVec3f>}",
+			"\t${6:uDimension 0}",
+			"\t${7:uKnot []}",
+			"\t${8:uOrder 3}",
+			"\t${9:vDimension 0}",
+			"\t${10:vKnot []}",
+			"\t${11:vOrder 3}",
+			"}"
+		]
+	},
+	"NurbsSweptSurface": {
+		"prefix": "NurbsSweptSurface",
+		"description": "",
+		"body": [
+			"NurbsSweptSurface {",
+			"\t${1:crossSectionCurve []}",
+			"\t${2:trajectoryCurve []}",
+			"\t${3:ccw <SFBool>}",
+			"\t${4:solid <SFBool>}",
+			"}"
+		]
+	},
+	"NurbsSwungSurface": {
+		"prefix": "NurbsSwungSurface",
+		"description": "",
+		"body": [
+			"NurbsSwungSurface {",
+			"\t${1:profileCurve []}",
+			"\t${2:trajectoryCurve []}",
+			"\t${3:ccw <SFBool>}",
+			"\t${4:solid <SFBool>}",
+			"}"
+		]
+	},
+	"NurbsTextureCoordinate": {
+		"prefix": "NurbsTextureCoordinate",
+		"description": "",
+		"body": [
+			"NurbsTextureCoordinate {",
+			"\t${1:controlPoint []}",
+			"\t${2:weight []}",
+			"\t${3:uDimension 0}",
+			"\t${4:uKnot []}",
+			"\t${5:uOrder 3}",
+			"\t${6:vDimension 0}",
+			"\t${7:vKnot []}",
+			"\t${8:vOrder 3}",
+			"\t${9:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"NurbsTrimmedSurface": {
+		"prefix": "NurbsTrimmedSurface",
+		"description": "",
+		"body": [
+			"NurbsTrimmedSurface {",
+			"\t${1:addTrimmingContour [Contour2D]}",
+			"\t${2:removeTrimmingContour [Contour2D]}",
+			"\t${3:trimmingContour []}",
+			"\t${4:controlPoint []}",
+			"\t${5:texCoord []}",
+			"\t${6:uTessellation 0}",
+			"\t${7:vTessellation 0}",
+			"\t${8:weight []}",
+			"\t${9:solid <SFBool>}",
+			"\t${10:uClosed <SFBool>}",
+			"\t${11:uDimension 0}",
+			"\t${12:uKnot []}",
+			"\t${13:uOrder 3}",
+			"\t${14:vClosed <SFBool>}",
+			"\t${15:vDimension 0}",
+			"\t${16:vKnot []}",
+			"\t${17:vOrder 3}",
+			"}"
+		]
+	},
+	"X3DParticleEmitterNode": {
+		"prefix": "X3DParticleEmitterNode",
+		"description": "",
+		"body": [
+			"X3DParticleEmitterNode {",
+			"\t${1:speed 0}",
+			"\t${2:variation 0.25}",
+			"\t${3:mass 0}",
+			"\t${4:surfaceArea 0}",
+			"\t${5:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DParticlePhysicsModelNode": {
+		"prefix": "X3DParticlePhysicsModelNode",
+		"description": "",
+		"body": [
+			"X3DParticlePhysicsModelNode {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"BoundedPhysicsModel": {
+		"prefix": "BoundedPhysicsModel",
+		"description": "",
+		"body": [
+			"BoundedPhysicsModel {",
+			"\t${1:geometry <SFNode>}",
+			"\t${2:enabled <SFBool>}",
+			"}"
+		]
+	},
+	"ConeEmitter": {
+		"prefix": "ConeEmitter",
+		"description": "",
+		"body": [
+			"ConeEmitter {",
+			"\t${1:angle <SFFloat>}",
+			"\t${2:direction 0 1 0}",
+			"\t${3:position 0 0 0}",
+			"\t${4:speed 0}",
+			"\t${5:variation 0.25}",
+			"\t${6:mass 0}",
+			"\t${7:surfaceArea 0}",
+			"}"
+		]
+	},
+	"ExplosionEmitter": {
+		"prefix": "ExplosionEmitter",
+		"description": "",
+		"body": [
+			"ExplosionEmitter {",
+			"\t${1:position 0 0 0}",
+			"\t${2:speed 0}",
+			"\t${3:variation 0.25}",
+			"\t${4:mass 0}",
+			"\t${5:surfaceArea 0}",
+			"}"
+		]
+	},
+	"ForcePhysicsModel": {
+		"prefix": "ForcePhysicsModel",
+		"description": "",
+		"body": [
+			"ForcePhysicsModel {",
+			"\t${1:force 0}",
+			"\t${2:enabled <SFBool>}",
+			"}"
+		]
+	},
+	"ParticleSystem": {
+		"prefix": "ParticleSystem",
+		"description": "",
+		"body": [
+			"ParticleSystem {",
+			"\t${1:createParticles <SFBool>}",
+			"\t${2:enabled <SFBool>}",
+			"\t${3:lifetimeVariation 0.25}",
+			"\t${4:maxParticles 200}",
+			"\t${5:particleLifetime 5}",
+			"\t${6:particleSize 0.02 0.02}",
+			"\t${7:isActive <SFBool>}",
+			"\t${8:colorRamp <SFNode>}",
+			"\t${9:colorKey <MFFloat>}",
+			"\t${10:emitter <SFNode>}",
+			"\t${11:geometryType \"QUAD\"}",
+			"\t${12:physics []}",
+			"\t${13:texCoordRamp <SFNode>}",
+			"\t${14:texCoordKey []}",
+			"\t${15:appearance <SFNode>}",
+			"\t${16:geometry <SFNode>}",
+			"\t${17:bboxCenter 0 0 0}",
+			"\t${18:bboxSize <SFVec3f>}",
+			"\t${19:shading \"DEFAULT\"}",
+			"\t${20:collision \"DEFAULT\"}",
+			"}"
+		]
+	},
+	"PointEmitter": {
+		"prefix": "PointEmitter",
+		"description": "",
+		"body": [
+			"PointEmitter {",
+			"\t${1:direction 0 1 0}",
+			"\t${2:position 0 0 0}",
+			"\t${3:speed 0}",
+			"\t${4:variation 0.25}",
+			"\t${5:mass 0}",
+			"\t${6:surfaceArea 0}",
+			"}"
+		]
+	},
+	"PolylineEmitter": {
+		"prefix": "PolylineEmitter",
+		"description": "",
+		"body": [
+			"PolylineEmitter {",
+			"\t${1:set_coordinate <SFInt32>}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:direction 0 1 0}",
+			"\t${4:coordIndex <MFInt32>}",
+			"\t${5:speed 0}",
+			"\t${6:variation 0.25}",
+			"\t${7:mass 0}",
+			"\t${8:surfaceArea 0}",
+			"}"
+		]
+	},
+	"SurfaceEmitter": {
+		"prefix": "SurfaceEmitter",
+		"description": "",
+		"body": [
+			"SurfaceEmitter {",
+			"\t${1:set_coordinate <SFInt32>}",
+			"\t${2:coordIndex <MFInt32>}",
+			"\t${3:surface <SFNode>}",
+			"\t${4:speed 0}",
+			"\t${5:variation 0.25}",
+			"\t${6:mass 0}",
+			"\t${7:surfaceArea 0}",
+			"}"
+		]
+	},
+	"VolumeEmitter": {
+		"prefix": "VolumeEmitter",
+		"description": "",
+		"body": [
+			"VolumeEmitter {",
+			"\t${1:set_coordinate <SFInt32>}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:direction 0 1 0}",
+			"\t${4:coordIndex <MFInt32>}",
+			"\t${5:internal <SFBool>}",
+			"\t${6:speed 0}",
+			"\t${7:variation 0.25}",
+			"\t${8:mass 0}",
+			"\t${9:surfaceArea 0}",
+			"}"
+		]
+	},
+	"WindPhysicsModel": {
+		"prefix": "WindPhysicsModel",
+		"description": "",
+		"body": [
+			"WindPhysicsModel {",
+			"\t${1:direction 0 0 0}",
+			"\t${2:gustiness 0.1}",
+			"\t${3:speed 0.1}",
+			"\t${4:turbulence 0}",
+			"\t${5:enabled <SFBool>}",
+			"}"
+		]
+	},
+	"X3DPickableObject": {
+		"prefix": "X3DPickableObject",
+		"description": "",
+		"body": [
+			"X3DPickableObject {",
+			"\t${1:objectType \"ALL\"}",
+			"\t${2:pickable <SFBool>}",
+			"}"
+		]
+	},
+	"X3DPickSensorNode": {
+		"prefix": "X3DPickSensorNode",
+		"description": "",
+		"body": [
+			"X3DPickSensorNode {",
+			"\t${1:objectType \"ALL\"}",
+			"\t${2:pickingGeometry <SFNode>}",
+			"\t${3:pickTarget []}",
+			"\t${4:pickedGeometry <MFNode>}",
+			"\t${5:intersectionType \"BOUNDS\"}",
+			"\t${6:sortOrder \"CLOSEST\"}",
+			"\t${7:enabled <SFBool>}",
+			"\t${8:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"LinePickSensor": {
+		"prefix": "LinePickSensor",
+		"description": "",
+		"body": [
+			"LinePickSensor {",
+			"\t${1:pickedNormal <MFVec3f>}",
+			"\t${2:pickedPoint <MFVec3f>}",
+			"\t${3:pickedTextureCoordinate <MFVec3f>}",
+			"\t${4:objectType \"ALL\"}",
+			"\t${5:pickingGeometry <SFNode>}",
+			"\t${6:pickTarget []}",
+			"\t${7:pickedGeometry <MFNode>}",
+			"\t${8:intersectionType \"BOUNDS\"}",
+			"\t${9:sortOrder \"CLOSEST\"}",
+			"}"
+		]
+	},
+	"PickableGroup": {
+		"prefix": "PickableGroup",
+		"description": "",
+		"body": [
+			"PickableGroup {",
+			"\t${1:objectType \"ALL\"}",
+			"\t${2:pickable <SFBool>}",
+			"\t${3:addChildren [X3DChildNode]}",
+			"\t${4:removeChildren [X3DChildNode]}",
+			"\t${5:children []}",
+			"\t${6:bboxCenter 0 0 0}",
+			"\t${7:bboxSize <SFVec3f>}",
+			"\t${8:objectType \"ALL\"}",
+			"\t${9:pickable <SFBool>}",
+			"}"
+		]
+	},
+	"PointPickSensor": {
+		"prefix": "PointPickSensor",
+		"description": "",
+		"body": [
+			"PointPickSensor {",
+			"\t${1:pickedPoint <MFVec3f>}",
+			"\t${2:objectType \"ALL\"}",
+			"\t${3:pickingGeometry <SFNode>}",
+			"\t${4:pickTarget []}",
+			"\t${5:pickedGeometry <MFNode>}",
+			"\t${6:intersectionType \"BOUNDS\"}",
+			"\t${7:sortOrder \"CLOSEST\"}",
+			"}"
+		]
+	},
+	"PrimitivePickSensor": {
+		"prefix": "PrimitivePickSensor",
+		"description": "",
+		"body": [
+			"PrimitivePickSensor {",
+			"\t${1:objectType \"ALL\"}",
+			"\t${2:pickingGeometry <SFNode>}",
+			"\t${3:pickTarget []}",
+			"\t${4:pickedGeometry <MFNode>}",
+			"\t${5:intersectionType \"BOUNDS\"}",
+			"\t${6:sortOrder \"CLOSEST\"}",
+			"}"
+		]
+	},
+	"VolumePickSensor": {
+		"prefix": "VolumePickSensor",
+		"description": "",
+		"body": [
+			"VolumePickSensor {",
+			"\t${1:objectType \"ALL\"}",
+			"\t${2:pickingGeometry <SFNode>}",
+			"\t${3:pickTarget []}",
+			"\t${4:pickedGeometry <MFNode>}",
+			"\t${5:intersectionType \"BOUNDS\"}",
+			"\t${6:sortOrder \"CLOSEST\"}",
+			"}"
+		]
+	},
+	"X3DDragSensorNode": {
+		"prefix": "X3DDragSensorNode",
+		"description": "",
+		"body": [
+			"X3DDragSensorNode {",
+			"\t${1:autoOffset <SFBool>}",
+			"\t${2:trackPoint_changed <SFVec3f>}",
+			"\t${3:description \"\"}",
+			"\t${4:isOver <SFBool>}",
+			"}"
+		]
+	},
+	"X3DPointingDeviceSensorNode": {
+		"prefix": "X3DPointingDeviceSensorNode",
+		"description": "",
+		"body": [
+			"X3DPointingDeviceSensorNode {",
+			"\t${1:description \"\"}",
+			"\t${2:isOver <SFBool>}",
+			"\t${3:enabled <SFBool>}",
+			"\t${4:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"X3DTouchSensorNode": {
+		"prefix": "X3DTouchSensorNode",
+		"description": "",
+		"body": [
+			"X3DTouchSensorNode {",
+			"\t${1:touchTime <SFTime>}",
+			"\t${2:description \"\"}",
+			"\t${3:isOver <SFBool>}",
+			"}"
+		]
+	},
+	"CylinderSensor": {
+		"prefix": "CylinderSensor",
+		"description": "",
+		"body": [
+			"CylinderSensor {",
+			"\t${1:axisRotation 0 1 0 0}",
+			"\t${2:diskAngle <SFFloat>}",
+			"\t${3:maxAngle <SFFloat>}",
+			"\t${4:minAngle 0}",
+			"\t${5:offset 0}",
+			"\t${6:rotation_changed <SFRotation>}",
+			"\t${7:autoOffset <SFBool>}",
+			"\t${8:trackPoint_changed <SFVec3f>}",
+			"}"
+		]
+	},
+	"PlaneSensor": {
+		"prefix": "PlaneSensor",
+		"description": "",
+		"body": [
+			"PlaneSensor {",
+			"\t${1:axisRotation 0 0 1 0}",
+			"\t${2:maxPosition <SFVec2f>}",
+			"\t${3:minPosition 0 0}",
+			"\t${4:offset 0 0 0}",
+			"\t${5:translation_changed <SFVec3f>}",
+			"\t${6:autoOffset <SFBool>}",
+			"\t${7:trackPoint_changed <SFVec3f>}",
+			"}"
+		]
+	},
+	"SphereSensor": {
+		"prefix": "SphereSensor",
+		"description": "",
+		"body": [
+			"SphereSensor {",
+			"\t${1:offset 0 1 0 0}",
+			"\t${2:rotation_changed <SFRotation>}",
+			"\t${3:autoOffset <SFBool>}",
+			"\t${4:trackPoint_changed <SFVec3f>}",
+			"}"
+		]
+	},
+	"TouchSensor": {
+		"prefix": "TouchSensor",
+		"description": "",
+		"body": [
+			"TouchSensor {",
+			"\t${1:hitNormal_changed <SFVec3f>}",
+			"\t${2:hitPoint_changed <SFVec3f>}",
+			"\t${3:hitTexCoord_changed <SFVec2f>}",
+			"\t${4:touchTime <SFTime>}",
+			"}"
+		]
+	},
+	"X3DColorNode": {
+		"prefix": "X3DColorNode",
+		"description": "",
+		"body": [
+			"X3DColorNode {",
+			"\t${1:mode \"REPLACE\"}",
+			"}"
+		]
+	},
+	"X3DComposedGeometryNode": {
+		"prefix": "X3DComposedGeometryNode",
+		"description": "",
+		"body": [
+			"X3DComposedGeometryNode {",
+			"\t${1:attrib []}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:fogCoord <SFNode>}",
+			"\t${4:texCoord <SFNode>}",
+			"\t${5:ccw <SFBool>}",
+			"\t${6:colorPerVertex <SFBool>}",
+			"\t${7:normalPerVertex <SFBool>}",
+			"\t${8:solid <SFBool>}",
+			"\t${9:radianceTransfer []}",
+			"}"
+		]
+	},
+	"X3DCoordinateNode": {
+		"prefix": "X3DCoordinateNode",
+		"description": "",
+		"body": [
+			"X3DCoordinateNode {",
+			"}"
+		]
+	},
+	"X3DGeometricPropertyNode": {
+		"prefix": "X3DGeometricPropertyNode",
+		"description": "",
+		"body": [
+			"X3DGeometricPropertyNode {",
+			"\t${1:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DGeometryNode": {
+		"prefix": "X3DGeometryNode",
+		"description": "",
+		"body": [
+			"X3DGeometryNode {",
+			"\t${1:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DNormalNode": {
+		"prefix": "X3DNormalNode",
+		"description": "",
+		"body": [
+			"X3DNormalNode {",
+			"}"
+		]
+	},
+	"ClipPlane": {
+		"prefix": "ClipPlane",
+		"description": "",
+		"body": [
+			"ClipPlane {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:plane 0 1 0 0}",
+			"}"
+		]
+	},
+	"Color": {
+		"prefix": "Color",
+		"description": "",
+		"body": [
+			"Color {",
+			"\t${1:color []}",
+			"\t${2:mode \"REPLACE\"}",
+			"}"
+		]
+	},
+	"ColorRGBA": {
+		"prefix": "ColorRGBA",
+		"description": "",
+		"body": [
+			"ColorRGBA {",
+			"\t${1:color []}",
+			"\t${2:mode \"REPLACE\"}",
+			"}"
+		]
+	},
+	"Coordinate": {
+		"prefix": "Coordinate",
+		"description": "",
+		"body": [
+			"Coordinate {",
+			"\t${1:point []}",
+			"}"
+		]
+	},
+	"IndexedLineSet": {
+		"prefix": "IndexedLineSet",
+		"description": "",
+		"body": [
+			"IndexedLineSet {",
+			"\t${1:set_colorIndex <MFInt32>}",
+			"\t${2:set_coordIndex <MFInt32>}",
+			"\t${3:attrib []}",
+			"\t${4:coord <SFNode>}",
+			"\t${5:fogCoord []}",
+			"\t${6:colorPerVertex <SFBool>}",
+			"\t${7:coordIndex []}",
+			"}"
+		]
+	},
+	"IndexedTriangleFanSet": {
+		"prefix": "IndexedTriangleFanSet",
+		"description": "",
+		"body": [
+			"IndexedTriangleFanSet {",
+			"\t${1:set_index []}",
+			"\t${2:index []}",
+			"\t${3:attrib []}",
+			"\t${4:coord <SFNode>}",
+			"\t${5:fogCoord <SFNode>}",
+			"\t${6:texCoord <SFNode>}",
+			"\t${7:ccw <SFBool>}",
+			"\t${8:colorPerVertex <SFBool>}",
+			"\t${9:normalPerVertex <SFBool>}",
+			"\t${10:solid <SFBool>}",
+			"\t${11:radianceTransfer []}",
+			"}"
+		]
+	},
+	"IndexedTriangleSet": {
+		"prefix": "IndexedTriangleSet",
+		"description": "",
+		"body": [
+			"IndexedTriangleSet {",
+			"\t${1:set_index []}",
+			"\t${2:index []}",
+			"\t${3:attrib []}",
+			"\t${4:coord <SFNode>}",
+			"\t${5:fogCoord <SFNode>}",
+			"\t${6:texCoord <SFNode>}",
+			"\t${7:ccw <SFBool>}",
+			"\t${8:colorPerVertex <SFBool>}",
+			"\t${9:normalPerVertex <SFBool>}",
+			"\t${10:solid <SFBool>}",
+			"\t${11:radianceTransfer []}",
+			"}"
+		]
+	},
+	"IndexedTriangleStripSet": {
+		"prefix": "IndexedTriangleStripSet",
+		"description": "",
+		"body": [
+			"IndexedTriangleStripSet {",
+			"\t${1:set_index []}",
+			"\t${2:index []}",
+			"\t${3:attrib []}",
+			"\t${4:coord <SFNode>}",
+			"\t${5:fogCoord <SFNode>}",
+			"\t${6:texCoord <SFNode>}",
+			"\t${7:ccw <SFBool>}",
+			"\t${8:colorPerVertex <SFBool>}",
+			"\t${9:normalPerVertex <SFBool>}",
+			"\t${10:solid <SFBool>}",
+			"\t${11:radianceTransfer []}",
+			"}"
+		]
+	},
+	"LineSet": {
+		"prefix": "LineSet",
+		"description": "",
+		"body": [
+			"LineSet {",
+			"\t${1:attrib []}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:fogCoord []}",
+			"}"
+		]
+	},
+	"Normal": {
+		"prefix": "Normal",
+		"description": "",
+		"body": [
+			"Normal {",
+			"\t${1:vector []}",
+			"}"
+		]
+	},
+	"PointSet": {
+		"prefix": "PointSet",
+		"description": "",
+		"body": [
+			"PointSet {",
+			"\t${1:attrib []}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:fogCoord []}",
+			"}"
+		]
+	},
+	"TriangleFanSet": {
+		"prefix": "TriangleFanSet",
+		"description": "",
+		"body": [
+			"TriangleFanSet {",
+			"\t${1:fanCount []}",
+			"\t${2:attrib []}",
+			"\t${3:coord <SFNode>}",
+			"\t${4:fogCoord <SFNode>}",
+			"\t${5:texCoord <SFNode>}",
+			"\t${6:ccw <SFBool>}",
+			"\t${7:colorPerVertex <SFBool>}",
+			"\t${8:normalPerVertex <SFBool>}",
+			"\t${9:solid <SFBool>}",
+			"\t${10:radianceTransfer []}",
+			"}"
+		]
+	},
+	"TriangleSet": {
+		"prefix": "TriangleSet",
+		"description": "",
+		"body": [
+			"TriangleSet {",
+			"\t${1:attrib []}",
+			"\t${2:coord <SFNode>}",
+			"\t${3:fogCoord <SFNode>}",
+			"\t${4:texCoord <SFNode>}",
+			"\t${5:ccw <SFBool>}",
+			"\t${6:colorPerVertex <SFBool>}",
+			"\t${7:normalPerVertex <SFBool>}",
+			"\t${8:solid <SFBool>}",
+			"\t${9:radianceTransfer []}",
+			"}"
+		]
+	},
+	"TriangleStripSet": {
+		"prefix": "TriangleStripSet",
+		"description": "",
+		"body": [
+			"TriangleStripSet {",
+			"\t${1:stripCount []}",
+			"\t${2:attrib []}",
+			"\t${3:coord <SFNode>}",
+			"\t${4:fogCoord <SFNode>}",
+			"\t${5:texCoord <SFNode>}",
+			"\t${6:ccw <SFBool>}",
+			"\t${7:colorPerVertex <SFBool>}",
+			"\t${8:normalPerVertex <SFBool>}",
+			"\t${9:solid <SFBool>}",
+			"\t${10:radianceTransfer []}",
+			"}"
+		]
+	},
+	"X3DNBodyCollidableNode": {
+		"prefix": "X3DNBodyCollidableNode",
+		"description": "",
+		"body": [
+			"X3DNBodyCollidableNode {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:rotation 0 0 1 0}",
+			"\t${3:translation 0 0 0}",
+			"\t${4:bboxCenter 0 0 0}",
+			"\t${5:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"X3DNBodyCollisionSpaceNode": {
+		"prefix": "X3DNBodyCollisionSpaceNode",
+		"description": "",
+		"body": [
+			"X3DNBodyCollisionSpaceNode {",
+			"\t${1:enabled <SFBool>}",
+			"\t${2:bboxCenter 0 0 0}",
+			"\t${3:bboxSize <SFVec3f>}",
+			"\t${4:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DRigidJointNode": {
+		"prefix": "X3DRigidJointNode",
+		"description": "",
+		"body": [
+			"X3DRigidJointNode {",
+			"\t${1:body1 <SFNode>}",
+			"\t${2:body2 <SFNode>}",
+			"\t${3:forceOutput \"NONE\"}",
+			"\t${4:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"BallJoint": {
+		"prefix": "BallJoint",
+		"description": "",
+		"body": [
+			"BallJoint {",
+			"\t${1:anchorPoint 0 0 0}",
+			"\t${2:body1AnchorPoint <SFVec3f>}",
+			"\t${3:body2AnchorPoint <SFVec3f>}",
+			"\t${4:body1 <SFNode>}",
+			"\t${5:body2 <SFNode>}",
+			"\t${6:forceOutput \"NONE\"}",
+			"}"
+		]
+	},
+	"CollidableOffset": {
+		"prefix": "CollidableOffset",
+		"description": "",
+		"body": [
+			"CollidableOffset {",
+			"\t${1:collidable <SFNode>}",
+			"\t${2:enabled <SFBool>}",
+			"\t${3:rotation 0 0 1 0}",
+			"\t${4:translation 0 0 0}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"CollidableShape": {
+		"prefix": "CollidableShape",
+		"description": "",
+		"body": [
+			"CollidableShape {",
+			"\t${1:shape <SFNode>}",
+			"\t${2:enabled <SFBool>}",
+			"\t${3:rotation 0 0 1 0}",
+			"\t${4:translation 0 0 0}",
+			"\t${5:bboxCenter 0 0 0}",
+			"\t${6:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"CollisionCollection": {
+		"prefix": "CollisionCollection",
+		"description": "",
+		"body": [
+			"CollisionCollection {",
+			"\t${1:appliedParameters \"BOUNCE\"}",
+			"\t${2:bounce 0}",
+			"\t${3:collidables <MFNode>}",
+			"\t${4:enabled <SFBool>}",
+			"\t${5:frictionCoefficients 0 0}",
+			"\t${6:minBounceSpeed 0.1}",
+			"\t${7:slipFactors 0 0}",
+			"\t${8:softnessConstantForceMix 0.0001}",
+			"\t${9:softnessErrorCorrection 0.8}",
+			"\t${10:surfaceSpeed 0 0}",
+			"}"
+		]
+	},
+	"CollisionSensor": {
+		"prefix": "CollisionSensor",
+		"description": "",
+		"body": [
+			"CollisionSensor {",
+			"\t${1:collider <SFNode>}",
+			"\t${2:intersections <MFNode>}",
+			"\t${3:contacts <MFNode>}",
+			"\t${4:enabled <SFBool>}",
+			"\t${5:isActive <SFBool>}",
+			"}"
+		]
+	},
+	"CollisionSpace": {
+		"prefix": "CollisionSpace",
+		"description": "",
+		"body": [
+			"CollisionSpace {",
+			"\t${1:collidables <MFNode>}",
+			"\t${2:useGeometry <SFBool>}",
+			"\t${3:enabled <SFBool>}",
+			"\t${4:bboxCenter 0 0 0}",
+			"\t${5:bboxSize <SFVec3f>}",
+			"}"
+		]
+	},
+	"Contact": {
+		"prefix": "Contact",
+		"description": "",
+		"body": [
+			"Contact {",
+			"\t${1:appliedParameters \"BOUNCE\"}",
+			"\t${2:body1 <SFNode>}",
+			"\t${3:body2 <SFNode>}",
+			"\t${4:bounce 0}",
+			"\t${5:contactNormal 0 1 0}",
+			"\t${6:depth 0}",
+			"\t${7:frictionCoefficients 0 0}",
+			"\t${8:frictionDirection 0 1 0}",
+			"\t${9:geometry1 <SFNode>}",
+			"\t${10:geometry2 <SFNode>}",
+			"\t${11:minbounceSpeed 0}",
+			"\t${12:position 0 0 0}",
+			"\t${13:slipCoefficients 0 0}",
+			"\t${14:softnessConstantForceMix 0.0001}",
+			"\t${15:softnessErrorCorrection 0.8}",
+			"\t${16:surfaceSpeed 0 0}",
+			"\t${17:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"DoubleAxisHingeJoint": {
+		"prefix": "DoubleAxisHingeJoint",
+		"description": "",
+		"body": [
+			"DoubleAxisHingeJoint {",
+			"\t${1:anchorPoint 0 0 0}",
+			"\t${2:axis1 0 0 0}",
+			"\t${3:axis2 0 0 0}",
+			"\t${4:desiredAngularVelocity1 0}",
+			"\t${5:desiredAngularVelocity2 0}",
+			"\t${6:maxAngle1 <SFFloat>}",
+			"\t${7:maxTorque1 0}",
+			"\t${8:maxTorque2 0}",
+			"\t${9:minAngle1 <SFFloat>}",
+			"\t${10:stopBounce1 0}",
+			"\t${11:stopConstantForceMix1 0.001}",
+			"\t${12:stopErrorCorrection1 0.8}",
+			"\t${13:suspensionErrorCorrection 0.8}",
+			"\t${14:suspensionForce 0}",
+			"\t${15:body1AnchorPoint <SFVec3f>}",
+			"\t${16:body1Axis <SFVec3f>}",
+			"\t${17:body2AnchorPoint <SFVec3f>}",
+			"\t${18:body2Axis <SFVec3f>}",
+			"\t${19:hinge1Angle <SFFloat>}",
+			"\t${20:hinge1AngleRate <SFFloat>}",
+			"\t${21:hinge2Angle <SFFloat>}",
+			"\t${22:hinge2AngleRate <SFFloat>}",
+			"\t${23:body1 <SFNode>}",
+			"\t${24:body2 <SFNode>}",
+			"\t${25:forceOutput \"NONE\"}",
+			"}"
+		]
+	},
+	"MotorJoint": {
+		"prefix": "MotorJoint",
+		"description": "",
+		"body": [
+			"MotorJoint {",
+			"\t${1:axis1Angle 0}",
+			"\t${2:axis1Torque 0}",
+			"\t${3:axis2Angle 0}",
+			"\t${4:axis2Torque 0}",
+			"\t${5:axis3Angle 0}",
+			"\t${6:axis3Torque 0}",
+			"\t${7:enabledAxes 1}",
+			"\t${8:motor1Axis 0 0 0}",
+			"\t${9:motor2Axis 0 0 0}",
+			"\t${10:motor3Axis 0 0 0}",
+			"\t${11:stop1Bounce 0}",
+			"\t${12:stop1ErrorCorrection 0.8}",
+			"\t${13:stop2Bounce 0}",
+			"\t${14:stop2ErrorCorrection 0.8}",
+			"\t${15:stop3Bounce 0}",
+			"\t${16:stop3ErrorCorrection 0.8}",
+			"\t${17:motor1Angle <SFFloat>}",
+			"\t${18:motor1AngleRate <SFFloat>}",
+			"\t${19:motor2Angle <SFFloat>}",
+			"\t${20:motor2AngleRate <SFFloat>}",
+			"\t${21:motor3Angle <SFFloat>}",
+			"\t${22:motor3AngleRate <SFFloat>}",
+			"\t${23:autoCalc <SFBool>}",
+			"\t${24:body1 <SFNode>}",
+			"\t${25:body2 <SFNode>}",
+			"\t${26:forceOutput \"NONE\"}",
+			"}"
+		]
+	},
+	"RigidBody": {
+		"prefix": "RigidBody",
+		"description": "",
+		"body": [
+			"RigidBody {",
+			"\t${1:angularDampingFactor 0.001}",
+			"\t${2:angularVelocity 0 0 0}",
+			"\t${3:autoDamp <SFBool>}",
+			"\t${4:autoDisable <SFBool>}",
+			"\t${5:centerOfMass 0 0 0}",
+			"\t${6:disableAngularSpeed 0}",
+			"\t${7:disableLinearSpeed 0}",
+			"\t${8:disableTime 0}",
+			"\t${9:enabled <SFBool>}",
+			"\t${10:finiteRotationAxis 0 0 0}",
+			"\t${11:fixed <SFBool>}",
+			"\t${12:forces []}",
+			"\t${13:geometry []}",
+			"\t${14:inertia 1 0 0 0 1 0 0 0 1}",
+			"\t${15:linearDampingFactor 0.001}",
+			"\t${16:linearVelocity 0 0 0}",
+			"\t${17:mass 1}",
+			"\t${18:massDensityModel <SFNode>}",
+			"\t${19:orientation 0 0 1 0}",
+			"\t${20:position 0 0 0}",
+			"\t${21:torques []}",
+			"\t${22:useFiniteRotation <SFBool>}",
+			"\t${23:useGlobalGravity <SFBool>}",
+			"\t${24:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"RigidBodyCollection": {
+		"prefix": "RigidBodyCollection",
+		"description": "",
+		"body": [
+			"RigidBodyCollection {",
+			"\t${1:set_contacts []}",
+			"\t${2:autoDisable <SFBool>}",
+			"\t${3:bodies []}",
+			"\t${4:constantForceMix 0.0001}",
+			"\t${5:contactSurfaceThickness 0}",
+			"\t${6:disableAngularSpeed 0}",
+			"\t${7:disableLinearSpeed 0}",
+			"\t${8:disableTime 0}",
+			"\t${9:enabled <SFBool>}",
+			"\t${10:errorCorrection 0.8}",
+			"\t${11:gravity 0}",
+			"\t${12:iterations 10}",
+			"\t${13:joints []}",
+			"\t${14:maxCorrectionSpeed <SFFloat>}",
+			"\t${15:preferAccuracy <SFBool>}",
+			"\t${16:collider <SFNode>}",
+			"}"
+		]
+	},
+	"SingleAxisHingeJoint": {
+		"prefix": "SingleAxisHingeJoint",
+		"description": "",
+		"body": [
+			"SingleAxisHingeJoint {",
+			"\t${1:anchorPoint 0 0 0}",
+			"\t${2:axis 0 0 0}",
+			"\t${3:maxAngle <SFFloat>}",
+			"\t${4:minAngle <SFFloat>}",
+			"\t${5:stopBounce 0}",
+			"\t${6:stopErrorCorrection 0.8}",
+			"\t${7:angle <SFFloat>}",
+			"\t${8:angleRate <SFFloat>}",
+			"\t${9:body1AnchorPoint <SFVec3f>}",
+			"\t${10:body2AnchorPoint <SFVec3f>}",
+			"\t${11:body1 <SFNode>}",
+			"\t${12:body2 <SFNode>}",
+			"\t${13:forceOutput \"NONE\"}",
+			"}"
+		]
+	},
+	"SliderJoint": {
+		"prefix": "SliderJoint",
+		"description": "",
+		"body": [
+			"SliderJoint {",
+			"\t${1:axis 0 1 0}",
+			"\t${2:maxSeparation 1}",
+			"\t${3:minSeparation 0}",
+			"\t${4:stopBounce 0}",
+			"\t${5:stopErrorCorrection 1}",
+			"\t${6:separation <SFFloat>}",
+			"\t${7:separationRate <SFFloat>}",
+			"\t${8:body1 <SFNode>}",
+			"\t${9:body2 <SFNode>}",
+			"\t${10:forceOutput \"NONE\"}",
+			"}"
+		]
+	},
+	"UniversalJoint": {
+		"prefix": "UniversalJoint",
+		"description": "",
+		"body": [
+			"UniversalJoint {",
+			"\t${1:anchorPoint 0 0 0}",
+			"\t${2:axis1 0 0 0}",
+			"\t${3:axis2 0 0 0}",
+			"\t${4:stopBounce1 0}",
+			"\t${5:stop1ErrorCorrection 0.8}",
+			"\t${6:stop2Bounce 0}",
+			"\t${7:stop2ErrorCorrection 0.8}",
+			"\t${8:body1AnchorPoint <SFVec3f>}",
+			"\t${9:body1Axis <SFVec3f>}",
+			"\t${10:body2AnchorPoint <SFVec3f>}",
+			"\t${11:body2Axis <SFVec3f>}",
+			"\t${12:body1 <SFNode>}",
+			"\t${13:body2 <SFNode>}",
+			"\t${14:forceOutput \"NONE\"}",
+			"}"
+		]
+	},
+	"X3DScriptNode": {
+		"prefix": "X3DScriptNode",
+		"description": "",
+		"body": [
+			"X3DScriptNode {",
+			"\t${1:url []}",
+			"}"
+		]
+	},
+	"Script": {
+		"prefix": "Script",
+		"description": "",
+		"body": [
+			"Script {",
+			"\t${1:directOutput <SFBool>}",
+			"\t${2:mustEvaluate <SFBool>}",
+			"\t${3:url []}",
+			"}"
+		]
+	},
+	"X3DShaderNode": {
+		"prefix": "X3DShaderNode",
+		"description": "",
+		"body": [
+			"X3DShaderNode {",
+			"\t${1:activate <SFBool>}",
+			"\t${2:isSelected <SFBool>}",
+			"\t${3:isValid <SFBool>}",
+			"\t${4:language \"\"}",
+			"}"
+		]
+	},
+	"X3DVertexAttributeNode": {
+		"prefix": "X3DVertexAttributeNode",
+		"description": "",
+		"body": [
+			"X3DVertexAttributeNode {",
+			"\t${1:name \"\"}",
+			"}"
+		]
+	},
+	"ComposedShader": {
+		"prefix": "ComposedShader",
+		"description": "",
+		"body": [
+			"ComposedShader {",
+			"\t${1:parts []}",
+			"\t${2:activate <SFBool>}",
+			"\t${3:isSelected <SFBool>}",
+			"\t${4:isValid <SFBool>}",
+			"\t${5:language \"\"}",
+			"}"
+		]
+	},
+	"FloatVertexAttribute": {
+		"prefix": "FloatVertexAttribute",
+		"description": "",
+		"body": [
+			"FloatVertexAttribute {",
+			"\t${1:value []}",
+			"\t${2:numComponents 4}",
+			"\t${3:name \"\"}",
+			"}"
+		]
+	},
+	"Matrix3VertexAttribute": {
+		"prefix": "Matrix3VertexAttribute",
+		"description": "",
+		"body": [
+			"Matrix3VertexAttribute {",
+			"\t${1:value []}",
+			"\t${2:name \"\"}",
+			"}"
+		]
+	},
+	"Matrix4VertexAttribute": {
+		"prefix": "Matrix4VertexAttribute",
+		"description": "",
+		"body": [
+			"Matrix4VertexAttribute {",
+			"\t${1:value []}",
+			"\t${2:name \"\"}",
+			"}"
+		]
+	},
+	"PackagedShader": {
+		"prefix": "PackagedShader",
+		"description": "",
+		"body": [
+			"PackagedShader {",
+			"\t${1:url []}",
+			"\t${2:activate <SFBool>}",
+			"\t${3:isSelected <SFBool>}",
+			"\t${4:isValid <SFBool>}",
+			"\t${5:language \"\"}",
+			"\t${6:url []}",
+			"}"
+		]
+	},
+	"ProgramShader": {
+		"prefix": "ProgramShader",
+		"description": "",
+		"body": [
+			"ProgramShader {",
+			"\t${1:programs []}",
+			"\t${2:activate <SFBool>}",
+			"\t${3:isSelected <SFBool>}",
+			"\t${4:isValid <SFBool>}",
+			"\t${5:language \"\"}",
+			"}"
+		]
+	},
+	"ShaderPart": {
+		"prefix": "ShaderPart",
+		"description": "",
+		"body": [
+			"ShaderPart {",
+			"\t${1:url []}",
+			"\t${2:type \"VERTEX\"}",
+			"\t${3:metadata <SFNode>}",
+			"\t${4:url []}",
+			"}"
+		]
+	},
+	"ShaderProgram": {
+		"prefix": "ShaderProgram",
+		"description": "",
+		"body": [
+			"ShaderProgram {",
+			"\t${1:url []}",
+			"\t${2:type \"VERTEX\"}",
+			"\t${3:metadata <SFNode>}",
+			"\t${4:url []}",
+			"}"
+		]
+	},
+	"X3DAppearanceChildNode": {
+		"prefix": "X3DAppearanceChildNode",
+		"description": "",
+		"body": [
+			"X3DAppearanceChildNode {",
+			"\t${1:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DAppearanceNode": {
+		"prefix": "X3DAppearanceNode",
+		"description": "",
+		"body": [
+			"X3DAppearanceNode {",
+			"\t${1:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"X3DMaterialNode": {
+		"prefix": "X3DMaterialNode",
+		"description": "",
+		"body": [
+			"X3DMaterialNode {",
+			"}"
+		]
+	},
+	"X3DOneSidedMaterialNode": {
+		"prefix": "X3DOneSidedMaterialNode",
+		"description": "",
+		"body": [
+			"X3DOneSidedMaterialNode {",
+			"\t${1:emissiveColor 0 0 0}",
+			"\t${2:normalTexture <SFNode>}",
+			"}"
+		]
+	},
+	"X3DShapeNode": {
+		"prefix": "X3DShapeNode",
+		"description": "",
+		"body": [
+			"X3DShapeNode {",
+			"\t${1:appearance <SFNode>}",
+			"\t${2:geometry <SFNode>}",
+			"\t${3:bboxCenter 0 0 0}",
+			"\t${4:bboxSize <SFVec3f>}",
+			"\t${5:shading \"DEFAULT\"}",
+			"\t${6:collision \"DEFAULT\"}",
+			"}"
+		]
+	},
+	"Appearance": {
+		"prefix": "Appearance",
+		"description": "",
+		"body": [
+			"Appearance {",
+			"\t${1:fillProperties <SFNode>}",
+			"\t${2:material <SFNode>}",
+			"\t${3:backMaterial <SFNode>}",
+			"\t${4:shaders []}",
+			"\t${5:texture <SFNode>}",
+			"\t${6:textureTransform <SFNode>}",
+			"\t${7:receiveShadows []}",
+			"\t${8:normalMap <SFNode>}",
+			"}"
+		]
+	},
+	"FillProperties": {
+		"prefix": "FillProperties",
+		"description": "",
+		"body": [
+			"FillProperties {",
+			"\t${1:filled <SFBool>}",
+			"\t${2:hatchColor 1 1 1}",
+			"\t${3:hatched <SFBool>}",
+			"\t${4:hatchStyle 1}",
+			"}"
+		]
+	},
+	"LineProperties": {
+		"prefix": "LineProperties",
+		"description": "",
+		"body": [
+			"LineProperties {",
+			"\t${1:applied <SFBool>}",
+			"\t${2:linetype 1}",
+			"\t${3:linewidthScaleFactor 0}",
+			"}"
+		]
+	},
+	"Material": {
+		"prefix": "Material",
+		"description": "",
+		"body": [
+			"Material {",
+			"\t${1:ambientIntensity 0.2}",
+			"\t${2:ambientTexture <SFNode>}",
+			"\t${3:ambientTextureMapping \"\"}",
+			"\t${4:diffuseColor 0.8 0.8 0.8}",
+			"\t${5:diffuseTexture <SFNode>}",
+			"\t${6:diffuseTextureMapping \"\"}",
+			"\t${7:occlusionStrength 1}",
+			"\t${8:occlusionTexture <SFNode>}",
+			"\t${9:occlusionTextureMapping \"\"}",
+			"\t${10:shininess 0.2}",
+			"\t${11:shininessTexture <SFNode>}",
+			"\t${12:shininessTextureMapping \"\"}",
+			"\t${13:specularColor 0 0 0}",
+			"\t${14:specularTexture <SFNode>}",
+			"\t${15:specularTextureMapping \"\"}",
+			"\t${16:transparency 0}",
+			"\t${17:fogImmune <SFBool>}",
+			"\t${18:emissiveColor 0 0 0}",
+			"\t${19:normalTexture <SFNode>}",
+			"}"
+		]
+	},
+	"PhysicalMaterial": {
+		"prefix": "PhysicalMaterial",
+		"description": "",
+		"body": [
+			"PhysicalMaterial {",
+			"\t${1:baseColor 1 1 1}",
+			"\t${2:baseTexture <SFNode>}",
+			"\t${3:baseTextureMapping \"\"}",
+			"\t${4:metallic 1}",
+			"\t${5:metallicRoughnessTexture <SFNode>}",
+			"\t${6:metallicRoughnessTextureMapping \"\"}",
+			"\t${7:occlusionStrength 1}",
+			"\t${8:occlusionTexture <SFNode>}",
+			"\t${9:occlusionTextureMapping \"\"}",
+			"\t${10:roughness 1}",
+			"\t${11:transparency 0}",
+			"\t${12:emissiveColor 0 0 0}",
+			"\t${13:normalTexture <SFNode>}",
+			"}"
+		]
+	},
+	"Shape": {
+		"prefix": "Shape",
+		"description": "",
+		"body": [
+			"Shape {",
+			"\t${1:appearance <SFNode>}",
+			"\t${2:geometry <SFNode>}",
+			"\t${3:bboxCenter 0 0 0}",
+			"\t${4:bboxSize <SFVec3f>}",
+			"\t${5:shading \"DEFAULT\"}",
+			"\t${6:collision \"DEFAULT\"}",
+			"}"
+		]
+	},
+	"TwoSidedMaterial": {
+		"prefix": "TwoSidedMaterial",
+		"description": "",
+		"body": [
+			"TwoSidedMaterial {",
+			"\t${1:ambientIntensity 0.2}",
+			"\t${2:backAmbientIntensity 0.2}",
+			"\t${3:backDiffuseColor 0.8 0.8 0.8}",
+			"\t${4:backEmissiveColor 0 0 0}",
+			"\t${5:backShininess 0.2}",
+			"\t${6:backSpecularColor 0 0 0}",
+			"\t${7:backTransparency 0}",
+			"\t${8:diffuseColor 0.8 0.8 0.8}",
+			"\t${9:emissiveColor 0 0 0}",
+			"\t${10:shininess 0.2}",
+			"\t${11:separateBackColor <SFBool>}",
+			"\t${12:specularColor 0 0 0}",
+			"\t${13:transparency 0}",
+			"}"
+		]
+	},
+	"UnlitMaterial": {
+		"prefix": "UnlitMaterial",
+		"description": "",
+		"body": [
+			"UnlitMaterial {",
+			"\t${1:transparency 0}",
+			"\t${2:emissiveColor 0 0 0}",
+			"\t${3:normalTexture <SFNode>}",
+			"}"
+		]
+	},
+	"X3DSoundNode": {
+		"prefix": "X3DSoundNode",
+		"description": "",
+		"body": [
+			"X3DSoundNode {",
+			"}"
+		]
+	},
+	"X3DSoundSourceNode": {
+		"prefix": "X3DSoundSourceNode",
+		"description": "",
+		"body": [
+			"X3DSoundSourceNode {",
+			"\t${1:description \"\"}",
+			"\t${2:pitch 1.0}",
+			"\t${3:duration_changed <SFTime>}",
+			"\t${4:loop <SFBool>}",
+			"\t${5:pauseTime 0}",
+			"\t${6:resumeTime 0}",
+			"\t${7:startTime 0}",
+			"\t${8:stopTime 0}",
+			"\t${9:elapsedTime <SFTime>}",
+			"\t${10:isActive <SFBool>}",
+			"\t${11:isPaused <SFBool>}",
+			"}"
+		]
+	},
+	"AudioClip": {
+		"prefix": "AudioClip",
+		"description": "",
+		"body": [
+			"AudioClip {",
+			"\t${1:url []}",
+			"\t${2:description \"\"}",
+			"\t${3:pitch 1.0}",
+			"\t${4:duration_changed <SFTime>}",
+			"\t${5:url []}",
+			"}"
+		]
+	},
+	"Sound": {
+		"prefix": "Sound",
+		"description": "",
+		"body": [
+			"Sound {",
+			"\t${1:direction 0 0 1}",
+			"\t${2:intensity 1}",
+			"\t${3:location 0 0 0}",
+			"\t${4:maxBack 10}",
+			"\t${5:maxFront 10}",
+			"\t${6:minBack 1}",
+			"\t${7:minFront 1}",
+			"\t${8:priority 0}",
+			"\t${9:source <SFNode>}",
+			"\t${10:spatialize <SFBool>}",
+			"}"
+		]
+	},
+	"X3DFontStyleNode": {
+		"prefix": "X3DFontStyleNode",
+		"description": "",
+		"body": [
+			"X3DFontStyleNode {",
+			"\t${1:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"FontStyle": {
+		"prefix": "FontStyle",
+		"description": "",
+		"body": [
+			"FontStyle {",
+			"\t${1:family \"SERIF\"}",
+			"\t${2:horizontal <SFBool>}",
+			"\t${3:justify \"BEGIN\"}",
+			"\t${4:language \"\"}",
+			"\t${5:spacing 1.0}",
+			"\t${6:style \"PLAIN\"}",
+			"\t${7:topToBottom <SFBool>}",
+			"}"
+		]
+	},
+	"Text": {
+		"prefix": "Text",
+		"description": "",
+		"body": [
+			"Text {",
+			"\t${1:fontStyle <SFNode>}",
+			"\t${2:length []}",
+			"\t${3:maxExtent 0.0}",
+			"\t${4:maxDisplayChars <SFInt32>}",
+			"\t${5:string []}",
+			"\t${6:lineBounds <MFVec2f>}",
+			"\t${7:origin <SFVec3f>}",
+			"\t${8:textBounds <SFVec2f>}",
+			"\t${9:solid <SFBool>}",
+			"}"
+		]
+	},
+	"X3DTextureCoordinateNode": {
+		"prefix": "X3DTextureCoordinateNode",
+		"description": "",
+		"body": [
+			"X3DTextureCoordinateNode {",
+			"}"
+		]
+	},
+	"X3DTextureNode": {
+		"prefix": "X3DTextureNode",
+		"description": "",
+		"body": [
+			"X3DTextureNode {",
+			"}"
+		]
+	},
+	"X3DSingleTextureCoordinateNode": {
+		"prefix": "X3DSingleTextureCoordinateNode",
+		"description": "",
+		"body": [
+			"X3DSingleTextureCoordinateNode {",
+			"\t${1:mapping \"\"}",
+			"}"
+		]
+	},
+	"X3DSingleTextureNode": {
+		"prefix": "X3DSingleTextureNode",
+		"description": "",
+		"body": [
+			"X3DSingleTextureNode {",
+			"\t${1:effects []}",
+			"\t${2:crossOrigin \"\"}",
+			"}"
+		]
+	},
+	"X3DSingleTextureTransformNode": {
+		"prefix": "X3DSingleTextureTransformNode",
+		"description": "",
+		"body": [
+			"X3DSingleTextureTransformNode {",
+			"\t${1:mapping \"\"}",
+			"}"
+		]
+	},
+	"X3DTexture2DNode": {
+		"prefix": "X3DTexture2DNode",
+		"description": "",
+		"body": [
+			"X3DTexture2DNode {",
+			"\t${1:repeatS <SFBool>}",
+			"\t${2:repeatT <SFBool>}",
+			"\t${3:textureProperties <SFNode>}",
+			"\t${4:effects []}",
+			"\t${5:crossOrigin \"\"}",
+			"}"
+		]
+	},
+	"X3DTextureTransformNode": {
+		"prefix": "X3DTextureTransformNode",
+		"description": "",
+		"body": [
+			"X3DTextureTransformNode {",
+			"}"
+		]
+	},
+	"ImageTexture": {
+		"prefix": "ImageTexture",
+		"description": "",
+		"body": [
+			"ImageTexture {",
+			"\t${1:url []}",
+			"\t${2:flipVertically <SFBool>}",
+			"\t${3:repeatS <SFBool>}",
+			"\t${4:repeatT <SFBool>}",
+			"\t${5:textureProperties <SFNode>}",
+			"\t${6:url []}",
+			"}"
+		]
+	},
+	"MovieTexture": {
+		"prefix": "MovieTexture",
+		"description": "",
+		"body": [
+			"MovieTexture {",
+			"\t${1:description \"\"}",
+			"\t${2:loop <SFBool>}",
+			"\t${3:pauseTime 0}",
+			"\t${4:resumeTime 0}",
+			"\t${5:speed 1.0}",
+			"\t${6:startTime 0}",
+			"\t${7:stopTime 0}",
+			"\t${8:url []}",
+			"\t${9:flipVertically <SFBool>}",
+			"\t${10:duration_changed <SFTime>}",
+			"\t${11:elapsedTime <SFTime>}",
+			"\t${12:isActive <SFBool>}",
+			"\t${13:isPaused <SFBool>}",
+			"\t${14:repeatS <SFBool>}",
+			"\t${15:repeatT <SFBool>}",
+			"\t${16:textureProperties <SFNode>}",
+			"\t${17:description \"\"}",
+			"\t${18:pitch 1.0}",
+			"\t${19:duration_changed <SFTime>}",
+			"\t${20:url []}",
+			"}"
+		]
+	},
+	"MultiTexture": {
+		"prefix": "MultiTexture",
+		"description": "",
+		"body": [
+			"MultiTexture {",
+			"\t${1:alpha 1}",
+			"\t${2:color 1 1 1}",
+			"\t${3:function []}",
+			"\t${4:mode []}",
+			"\t${5:source []}",
+			"\t${6:texture []}",
+			"}"
+		]
+	},
+	"MultiTextureCoordinate": {
+		"prefix": "MultiTextureCoordinate",
+		"description": "",
+		"body": [
+			"MultiTextureCoordinate {",
+			"\t${1:texCoord <MFNode>}",
+			"}"
+		]
+	},
+	"MultiTextureTransform": {
+		"prefix": "MultiTextureTransform",
+		"description": "",
+		"body": [
+			"MultiTextureTransform {",
+			"\t${1:textureTransform <MFNode>}",
+			"}"
+		]
+	},
+	"PixelTexture": {
+		"prefix": "PixelTexture",
+		"description": "",
+		"body": [
+			"PixelTexture {",
+			"\t${1:image 0 0 0}",
+			"\t${2:repeatS <SFBool>}",
+			"\t${3:repeatT <SFBool>}",
+			"\t${4:textureProperties <SFNode>}",
+			"}"
+		]
+	},
+	"TextureCoordinate": {
+		"prefix": "TextureCoordinate",
+		"description": "",
+		"body": [
+			"TextureCoordinate {",
+			"\t${1:point []}",
+			"\t${2:mapping \"\"}",
+			"}"
+		]
+	},
+	"TextureCoordinateGenerator": {
+		"prefix": "TextureCoordinateGenerator",
+		"description": "",
+		"body": [
+			"TextureCoordinateGenerator {",
+			"\t${1:mode \"SPHERE\"}",
+			"\t${2:parameter []}",
+			"\t${3:mapping \"\"}",
+			"}"
+		]
+	},
+	"TextureProperties": {
+		"prefix": "TextureProperties",
+		"description": "",
+		"body": [
+			"TextureProperties {",
+			"\t${1:anisotropicDegree 1.0}",
+			"\t${2:borderColor 0 0 0 0}",
+			"\t${3:borderWidth 0}",
+			"\t${4:boundaryModeS \"REPEAT\"}",
+			"\t${5:boundaryModeT \"REPEAT\"}",
+			"\t${6:boundaryModeR \"REPEAT\"}",
+			"\t${7:magnificationFilter \"FASTEST\"}",
+			"\t${8:minificationFilter \"FASTEST\"}",
+			"\t${9:textureCompression \"FASTEST\"}",
+			"\t${10:texturePriority 0}",
+			"\t${11:generateMipMaps <SFBool>}",
+			"\t${12:guiTexture <SFBool>}",
+			"\t${13:metadata <SFNode>}",
+			"}"
+		]
+	},
+	"TextureTransform": {
+		"prefix": "TextureTransform",
+		"description": "",
+		"body": [
+			"TextureTransform {",
+			"\t${1:center 0 0}",
+			"\t${2:rotation 0}",
+			"\t${3:scale 1 1}",
+			"\t${4:translation 0 0}",
+			"\t${5:mapping \"\"}",
+			"}"
+		]
+	},
+	"X3DTexture3DNode": {
+		"prefix": "X3DTexture3DNode",
+		"description": "",
+		"body": [
+			"X3DTexture3DNode {",
+			"\t${1:repeatS <SFBool>}",
+			"\t${2:repeatT <SFBool>}",
+			"\t${3:repeatR <SFBool>}",
+			"\t${4:textureProperties <SFNode>}",
+			"\t${5:effects []}",
+			"\t${6:crossOrigin \"\"}",
+			"}"
+		]
+	},
+	"ComposedTexture3D": {
+		"prefix": "ComposedTexture3D",
+		"description": "",
+		"body": [
+			"ComposedTexture3D {",
+			"\t${1:texture []}",
+			"\t${2:repeatS <SFBool>}",
+			"\t${3:repeatT <SFBool>}",
+			"\t${4:repeatR <SFBool>}",
+			"\t${5:textureProperties <SFNode>}",
+			"}"
+		]
+	},
+	"ImageTexture3D": {
+		"prefix": "ImageTexture3D",
+		"description": "",
+		"body": [
+			"ImageTexture3D {",
+			"\t${1:url []}",
+			"\t${2:repeatS <SFBool>}",
+			"\t${3:repeatT <SFBool>}",
+			"\t${4:repeatR <SFBool>}",
+			"\t${5:textureProperties <SFNode>}",
+			"\t${6:url []}",
+			"}"
+		]
+	},
+	"PixelTexture3D": {
+		"prefix": "PixelTexture3D",
+		"description": "",
+		"body": [
+			"PixelTexture3D {",
+			"\t${1:image [0000]}",
+			"\t${2:repeatS <SFBool>}",
+			"\t${3:repeatT <SFBool>}",
+			"\t${4:repeatR <SFBool>}",
+			"\t${5:textureProperties <SFNode>}",
+			"}"
+		]
+	},
+	"TextureCoordinate3D": {
+		"prefix": "TextureCoordinate3D",
+		"description": "",
+		"body": [
+			"TextureCoordinate3D {",
+			"\t${1:point []}",
+			"\t${2:mapping \"\"}",
+			"}"
+		]
+	},
+	"TextureCoordinate4D": {
+		"prefix": "TextureCoordinate4D",
+		"description": "",
+		"body": [
+			"TextureCoordinate4D {",
+			"\t${1:point []}",
+			"\t${2:mapping \"\"}",
+			"}"
+		]
+	},
+	"TextureTransformMatrix3D": {
+		"prefix": "TextureTransformMatrix3D",
+		"description": "",
+		"body": [
+			"TextureTransformMatrix3D {",
+			"\t${1:matrix 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1}",
+			"\t${2:mapping \"\"}",
+			"}"
+		]
+	},
+	"TextureTransform3D": {
+		"prefix": "TextureTransform3D",
+		"description": "",
+		"body": [
+			"TextureTransform3D {",
+			"\t${1:center 0 0 0}",
+			"\t${2:rotation 0 0 1 0}",
+			"\t${3:scale 1 1 1}",
+			"\t${4:translation 0 0 0}",
+			"\t${5:mapping \"\"}",
+			"}"
+		]
+	},
+	"X3DTimeDependentNode": {
+		"prefix": "X3DTimeDependentNode",
+		"description": "",
+		"body": [
+			"X3DTimeDependentNode {",
+			"\t${1:loop <SFBool>}",
+			"\t${2:pauseTime 0}",
+			"\t${3:resumeTime 0}",
+			"\t${4:startTime 0}",
+			"\t${5:stopTime 0}",
+			"\t${6:elapsedTime <SFTime>}",
+			"\t${7:isActive <SFBool>}",
+			"\t${8:isPaused <SFBool>}",
+			"}"
+		]
+	},
+	"TimeSensor": {
+		"prefix": "TimeSensor",
+		"description": "",
+		"body": [
+			"TimeSensor {",
+			"\t${1:cycleInterval 1}",
+			"\t${2:cycleTime <SFTime>}",
+			"\t${3:fraction_changed <SFFloat>}",
+			"\t${4:time <SFTime>}",
+			"\t${5:enabled <SFBool>}",
+			"\t${6:fractionIncreasing <SFBool>}",
+			"\t${7:detectAffectedFields <SFBool>}",
+			"\t${8:loop <SFBool>}",
+			"\t${9:pauseTime 0}",
+			"\t${10:resumeTime 0}",
+			"\t${11:startTime 0}",
+			"\t${12:stopTime 0}",
+			"\t${13:elapsedTime <SFTime>}",
+			"\t${14:isActive <SFBool>}",
+			"\t${15:isPaused <SFBool>}",
+			"\t${16:enabled <SFBool>}",
+			"\t${17:isActive <SFBool>}",
+			"}"
+		]
+	}
 }

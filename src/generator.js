@@ -484,7 +484,6 @@ readFiles('./nodes-specification/').then(files => {
     snippet.prefix = keyword;
     snippet.description = '';
     snippet.body = [`${keyword}`];
-    snippet.body.push('}');
     output[keyword] = snippet;
   }
 

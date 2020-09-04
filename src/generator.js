@@ -174,7 +174,7 @@ class Parser {
         }
         case (this.inRange(c, 'a', 'z') ||
           this.inRange(c, 'A', 'Z') ||
-          this.inRange(c, '0', '9') || c === '_'):
+          this.inRange(c, '0', '9') || c === '_' || c === '-'):
           word = c;
           c = this.peekAtNextChar();
           while (this.inRange(c, 'a', 'z') ||
@@ -312,6 +312,9 @@ class Parser {
         token = this.nextToken();
         if (token.kind === TokenType.CloseBracket) {
           return;
+        }
+        if (token.kind === TokenType.Comment) {
+          token.kind = TokenType.EOL;
         }
       } while (token.kind !== TokenType.EOL);
       if (this.peekAtNextToken().kind === TokenType.CloseBracket) {

@@ -10,3 +10,7 @@ The tool follows Castle Game Engine's specification, include all X3D standard su
 ![Syntax highlight](images/1.png)
 
 ![Snippets](images/2.gif)
+
+## Release notes
+
+![CHANGELOG.md](CHANGELOG.md)

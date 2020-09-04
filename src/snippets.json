@@ -50,7 +50,7 @@
 			"\tremoveChildren ${3:[X3DChildNode]}",
 			"\tchildren ${4:[]}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"\tname ${7:\"\"}",
 			"}"
 		]
@@ -62,7 +62,7 @@
 			"CADFace {",
 			"\tshape ${1:NULL}",
 			"\tbboxCenter ${2:0 0 0}",
-			"\tbboxSize ${3:<SFVec3f>}",
+			"\tbboxSize ${3:-1 -1 -1}",
 			"\tname ${4:\"\"}",
 			"}"
 		]
@@ -78,7 +78,7 @@
 			"\tremoveChildren ${4:[X3DChildNode]}",
 			"\tchildren ${5:[]}",
 			"\tbboxCenter ${6:0 0 0}",
-			"\tbboxSize ${7:<SFVec3f>}",
+			"\tbboxSize ${7:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -97,7 +97,7 @@
 			"\tremoveChildren ${8:[X3DChildNode]}",
 			"\tchildren ${9:[]}",
 			"\tbboxCenter ${10:0 0 0}",
-			"\tbboxSize ${11:<SFVec3f>}",
+			"\tbboxSize ${11:-1 -1 -1}",
 			"\tname ${12:\"\"}",
 			"}"
 		]
@@ -108,15 +108,18 @@
 		"body": [
 			"IndexedQuadSet {",
 			"\tset_index ${1:[]}",
-			"\tattrib ${2:[]}",
-			"\tcoord ${3:NULL}",
-			"\tfogCoord ${4:NULL}",
-			"\ttexCoord ${5:NULL}",
-			"\tccw ${6:TRUE}",
-			"\tcolorPerVertex ${7:TRUE}",
-			"\tnormalPerVertex ${8:TRUE}",
-			"\tsolid ${9:TRUE}",
-			"\tradianceTransfer ${10:[]}",
+			"\tindex ${2:[]}",
+			"\tattrib ${3:[]}",
+			"\tcolor ${4:NULL}",
+			"\tcoord ${5:NULL}",
+			"\tfogCoord ${6:NULL}",
+			"\tnormal ${7:NULL}",
+			"\ttexCoord ${8:NULL}",
+			"\tccw ${9:TRUE}",
+			"\tcolorPerVertex ${10:TRUE}",
+			"\tnormalPerVertex ${11:TRUE}",
+			"\tsolid ${12:TRUE}",
+			"\tradianceTransfer ${13:[]}",
 			"}"
 		]
 	},
@@ -126,14 +129,16 @@
 		"body": [
 			"QuadSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:NULL}",
-			"\tfogCoord ${3:NULL}",
-			"\ttexCoord ${4:NULL}",
-			"\tccw ${5:TRUE}",
-			"\tcolorPerVertex ${6:TRUE}",
-			"\tnormalPerVertex ${7:TRUE}",
-			"\tsolid ${8:TRUE}",
-			"\tradianceTransfer ${9:[]}",
+			"\tcolor ${2:NULL}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:NULL}",
+			"\tnormal ${5:NULL}",
+			"\ttexCoord ${6:NULL}",
+			"\tccw ${7:TRUE}",
+			"\tcolorPerVertex ${8:TRUE}",
+			"\tnormalPerVertex ${9:TRUE}",
+			"\tsolid ${10:TRUE}",
+			"\tradianceTransfer ${11:[]}",
 			"}"
 		]
 	},
@@ -143,13 +148,19 @@
 		"body": [
 			"KambiAppearance {",
 			"\tfillProperties ${1:NULL}",
-			"\tmaterial ${2:NULL}",
-			"\tbackMaterial ${3:NULL}",
-			"\tshaders ${4:[]}",
-			"\ttexture ${5:NULL}",
-			"\ttextureTransform ${6:NULL}",
-			"\treceiveShadows ${7:[]}",
-			"\tnormalMap ${8:NULL}",
+			"\tlineProperties ${2:NULL}",
+			"\tmaterial ${3:NULL}",
+			"\tbackMaterial ${4:NULL}",
+			"\tshaders ${5:[]}",
+			"\ttexture ${6:NULL}",
+			"\ttextureTransform ${7:NULL}",
+			"\treceiveShadows ${8:[]}",
+			"\tshadowCaster ${9:TRUE}",
+			"\tnormalMap ${10:NULL}",
+			"\theightMap ${11:NULL}",
+			"\theightMapScale ${12:0.01}",
+			"\tblendMode ${13:NULL}",
+			"\teffects ${14:[]}",
 			"}"
 		]
 	},
@@ -159,11 +170,13 @@
 		"body": [
 			"GeneratedShadowMap {",
 			"\tupdate ${1:\"NONE\"}",
-			"\tlight ${2:NULL}",
-			"\tbias ${3:4.0}",
-			"\tcompareMode ${4:\"COMPARE_R_LEQUAL\"}",
-			"\teffects ${5:[]}",
-			"\tcrossOrigin ${6:\"\"}",
+			"\tsize ${2:128}",
+			"\tlight ${3:NULL}",
+			"\tscale ${4:4.0}",
+			"\tbias ${5:4.0}",
+			"\tcompareMode ${6:\"COMPARE_R_LEQUAL\"}",
+			"\teffects ${7:[]}",
+			"\tcrossOrigin ${8:\"\"}",
 			"}"
 		]
 	},
@@ -177,6 +190,7 @@
 			"\tlength ${3:[]}",
 			"\tmaxExtent ${4:0}",
 			"\tdepth ${5:0.1}",
+			"\tsolid ${6:TRUE}",
 			"}"
 		]
 	},
@@ -190,7 +204,7 @@
 			"\tload ${3:TRUE}",
 			"\turl ${4:[]}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -201,14 +215,20 @@
 			"KambiNavigationInfo {",
 			"\ttimeOriginAtLoad ${1:FALSE}",
 			"\toctreeRendering ${2:NULL}",
-			"\tavatarSize ${3:[0.251.60.75]}",
-			"\theadlight ${4:TRUE}",
-			"\tspeed ${5:1.0}",
-			"\ttransitionTime ${6:1.0}",
-			"\ttransitionType ${7:[\"LINEAR\"]}",
-			"\ttype ${8:[\"EXAMINE\"\"ANY\"]}",
-			"\tvisibilityLimit ${9:0.0}",
-			"\ttransitionComplete ${10:<SFBool>}",
+			"\toctreeDynamicCollisions ${3:NULL}",
+			"\toctreeVisibleTriangles ${4:NULL}",
+			"\toctreeStaticCollisions ${5:NULL}",
+			"\theadBobbing ${6:0.02}",
+			"\theadBobbingTime ${7:0.5}",
+			"\theadlightNode ${8:NULL}",
+			"\tavatarSize ${9:[0.251.60.75]}",
+			"\theadlight ${10:TRUE}",
+			"\tspeed ${11:1.0}",
+			"\ttransitionTime ${12:1.0}",
+			"\ttransitionType ${13:[\"LINEAR\"]}",
+			"\ttype ${14:[\"EXAMINE\"\"ANY\"]}",
+			"\tvisibilityLimit ${15:0.0}",
+			"\ttransitionComplete ${16:<SFBool>}",
 			"}"
 		]
 	},
@@ -218,8 +238,12 @@
 		"body": [
 			"KambiHeadLight {",
 			"\tambientIntensity ${1:0}",
-			"\tspotDropOffRate ${2:0}",
-			"\tspotCutOffAngle ${3:0.785398}",
+			"\tattenuation ${2:1 0 0}",
+			"\tcolor ${3:1 1 1}",
+			"\tintensity ${4:1}",
+			"\tspot ${5:FALSE}",
+			"\tspotDropOffRate ${6:0}",
+			"\tspotCutOffAngle ${7:0.785398}",
 			"}"
 		]
 	},
@@ -228,8 +252,9 @@
 		"description": "",
 		"body": [
 			"KambiOctreeProperties {",
-			"\tmaxDepth ${1:<SFInt32>}",
-			"\tmetadata ${2:NULL}",
+			"\tmaxDepth ${1:-1}",
+			"\tleafCapacity ${2:-1}",
+			"\tmetadata ${3:NULL}",
 			"}"
 		]
 	},
@@ -252,11 +277,14 @@
 			"RenderedTexture {",
 			"\tdimensions ${1:128 128 4 1 1}",
 			"\tupdate ${2:\"NONE\"}",
-			"\trepeatT ${3:TRUE}",
-			"\trepeatR ${4:TRUE}",
-			"\tdepthMap ${5:[]}",
-			"\teffects ${6:[]}",
-			"\tcrossOrigin ${7:\"\"}",
+			"\tviewpoint ${3:NULL}",
+			"\ttextureProperties ${4:NULL}",
+			"\trepeatS ${5:TRUE}",
+			"\trepeatT ${6:TRUE}",
+			"\trepeatR ${7:TRUE}",
+			"\tdepthMap ${8:[]}",
+			"\teffects ${9:[]}",
+			"\tcrossOrigin ${10:\"\"}",
 			"}"
 		]
 	},
@@ -332,11 +360,12 @@
 		"body": [
 			"Effect {",
 			"\tlanguage ${1:\"\"}",
-			"\tparts ${2:[]}",
-			"\tfieldName ${3:<fieldType>}",
+			"\tenabled ${2:TRUE}",
+			"\tparts ${3:[]}",
 			"\tfieldName ${4:<fieldType>}",
 			"\tfieldName ${5:<fieldType>}",
 			"\tfieldName ${6:<fieldType>}",
+			"\tfieldName ${7:<fieldType>}",
 			"}"
 		]
 	},
@@ -346,8 +375,9 @@
 		"body": [
 			"EffectPart {",
 			"\turl ${1:[]}",
-			"\tmetadata ${2:NULL}",
-			"\turl ${3:[]}",
+			"\ttype ${2:\"VERTEX\"}",
+			"\tmetadata ${3:NULL}",
+			"\turl ${4:[]}",
 			"}"
 		]
 	},
@@ -357,8 +387,9 @@
 		"body": [
 			"ShaderTexture {",
 			"\teffects ${1:[]}",
-			"\teffects ${2:[]}",
-			"\tcrossOrigin ${3:\"\"}",
+			"\tdefaultTexCoord ${2:\"BOUNDS2D\"}",
+			"\teffects ${3:[]}",
+			"\tcrossOrigin ${4:\"\"}",
 			"}"
 		]
 	},
@@ -368,7 +399,9 @@
 		"body": [
 			"BlendMode {",
 			"\tsrcFactor ${1:\"src_alpha\"}",
-			"\tcolorTransparency ${2:0}",
+			"\tdestFactor ${2:\"one_minus_src_alpha\"}",
+			"\tcolor ${3:1 1 1}",
+			"\tcolorTransparency ${4:0}",
 			"}"
 		]
 	},
@@ -380,6 +413,12 @@
 			"\tstatus ${1:FALSE}",
 			"\tnotStatus ${2:TRUE}",
 			"\ttoggle ${3:<XFAny>}",
+			"\tset ${4:<XFAny>}",
+			"\treset ${5:<XFAny>}",
+			"\tchanged ${6:<SFBool>}",
+			"\ton ${7:<SFBool>}",
+			"\toff ${8:<SFBool>}",
+			"\tenabled ${9:TRUE}",
 			"}"
 		]
 	},
@@ -444,6 +483,7 @@
 			"X3DBindableNode {",
 			"\tset_bind ${1:<SFBool>}",
 			"\tbindTime ${2:<SFTime>}",
+			"\tisBound ${3:<SFBool>}",
 			"}"
 		]
 	},
@@ -757,7 +797,7 @@
 			"\tremoveChildren ${85:[X3DChildNode]}",
 			"\tchildren ${86:[]}",
 			"\tbboxCenter ${87:0 0 0}",
-			"\tbboxSize ${88:<SFVec3f>}",
+			"\tbboxSize ${88:-1 -1 -1}",
 			"\tenabled ${89:TRUE}",
 			"\tisActive ${90:<SFBool>}",
 			"}"
@@ -793,7 +833,7 @@
 			"\tisStandAlone ${23:<SFBool>}",
 			"\ttimestamp ${24:<SFTime>}",
 			"\tbboxCenter ${25:0 0 0}",
-			"\tbboxSize ${26:<SFVec3f>}",
+			"\tbboxSize ${26:-1 -1 -1}",
 			"\tenabled ${27:TRUE}",
 			"\tisActive ${28:<SFBool>}",
 			"}"
@@ -829,7 +869,7 @@
 			"\tisStandAlone ${23:<SFBool>}",
 			"\ttimestamp ${24:<SFTime>}",
 			"\tbboxCenter ${25:0 0 0}",
-			"\tbboxSize ${26:<SFVec3f>}",
+			"\tbboxSize ${26:-1 -1 -1}",
 			"\tenabled ${27:TRUE}",
 			"\tisActive ${28:<SFBool>}",
 			"}"
@@ -881,7 +921,7 @@
 			"\tisStandAlone ${39:<SFBool>}",
 			"\ttimestamp ${40:<SFTime>}",
 			"\tbboxCenter ${41:0 0 0}",
-			"\tbboxSize ${42:<SFVec3f>}",
+			"\tbboxSize ${42:-1 -1 -1}",
 			"\tenabled ${43:TRUE}",
 			"\tisActive ${44:<SFBool>}",
 			"}"
@@ -894,6 +934,7 @@
 			"X3DBackgroundNode {",
 			"\tset_bind ${1:<SFBool>}",
 			"\tbindTime ${2:<SFTime>}",
+			"\tisBound ${3:<SFBool>}",
 			"}"
 		]
 	},
@@ -909,6 +950,7 @@
 			"\ttransparency ${5:0}",
 			"\tset_bind ${6:<SFBool>}",
 			"\tbindTime ${7:<SFTime>}",
+			"\tisBound ${8:<SFBool>}",
 			"}"
 		]
 	},
@@ -921,7 +963,8 @@
 			"\tfogType ${2:\"LINEAR\"}",
 			"\tvisibilityRange ${3:0}",
 			"\tvolumetric ${4:FALSE}",
-			"\tvolumetricDirection ${5:0}",
+			"\tvolumetricDirection ${5:0 -1 0}",
+			"\tvolumetricVisibilityStart ${6:0}",
 			"}"
 		]
 	},
@@ -953,14 +996,17 @@
 			"\tfogType ${2:\"LINEAR\"}",
 			"\tvisibilityRange ${3:0}",
 			"\tvolumetric ${4:FALSE}",
-			"\tvolumetricDirection ${5:0}",
-			"\tset_bind ${6:<SFBool>}",
-			"\tbindTime ${7:<SFTime>}",
-			"\tcolor ${8:1 1 1}",
-			"\tfogType ${9:\"LINEAR\"}",
-			"\tvisibilityRange ${10:0}",
-			"\tvolumetric ${11:FALSE}",
-			"\tvolumetricDirection ${12:0}",
+			"\tvolumetricDirection ${5:0 -1 0}",
+			"\tvolumetricVisibilityStart ${6:0}",
+			"\tset_bind ${7:<SFBool>}",
+			"\tbindTime ${8:<SFTime>}",
+			"\tisBound ${9:<SFBool>}",
+			"\tcolor ${10:1 1 1}",
+			"\tfogType ${11:\"LINEAR\"}",
+			"\tvisibilityRange ${12:0}",
+			"\tvolumetric ${13:FALSE}",
+			"\tvolumetricDirection ${14:0 -1 0}",
+			"\tvolumetricVisibilityStart ${15:0}",
 			"}"
 		]
 	},
@@ -983,12 +1029,14 @@
 			"\tfogType ${3:\"LINEAR\"}",
 			"\tvisibilityRange ${4:0}",
 			"\tvolumetric ${5:FALSE}",
-			"\tvolumetricDirection ${6:0}",
-			"\tcolor ${7:1 1 1}",
-			"\tfogType ${8:\"LINEAR\"}",
-			"\tvisibilityRange ${9:0}",
-			"\tvolumetric ${10:FALSE}",
-			"\tvolumetricDirection ${11:0}",
+			"\tvolumetricDirection ${6:0 -1 0}",
+			"\tvolumetricVisibilityStart ${7:0}",
+			"\tcolor ${8:1 1 1}",
+			"\tfogType ${9:\"LINEAR\"}",
+			"\tvisibilityRange ${10:0}",
+			"\tvolumetric ${11:FALSE}",
+			"\tvolumetricDirection ${12:0 -1 0}",
+			"\tvolumetricVisibilityStart ${13:0}",
 			"}"
 		]
 	},
@@ -1194,7 +1242,7 @@
 		"body": [
 			"X3DDamperNode {",
 			"\ttau ${1:0}",
-			"\ttolerance ${2:<SFFloat>}",
+			"\ttolerance ${2:-1 -1 or}",
 			"\torder ${3:0}",
 			"\tisActive ${4:<SFBool>}",
 			"}"
@@ -1220,7 +1268,7 @@
 			"\tinitialDestination ${4:0.8 0.8 0.8}",
 			"\tinitialValue ${5:0.8 0.8 0.8}",
 			"\ttau ${6:0}",
-			"\ttolerance ${7:<SFFloat>}",
+			"\ttolerance ${7:-1 -1 or}",
 			"\torder ${8:0}",
 			"}"
 		]
@@ -1236,7 +1284,7 @@
 			"\tinitialDestination ${4:0 0 0}",
 			"\tinitialValue ${5:0 0 0}",
 			"\ttau ${6:0}",
-			"\ttolerance ${7:<SFFloat>}",
+			"\ttolerance ${7:-1 -1 or}",
 			"\torder ${8:0}",
 			"}"
 		]
@@ -1266,7 +1314,7 @@
 			"\tinitialDestination ${4:0 1 0 0}",
 			"\tinitialValue ${5:0 1 0 0}",
 			"\ttau ${6:0}",
-			"\ttolerance ${7:<SFFloat>}",
+			"\ttolerance ${7:-1 -1 or}",
 			"\torder ${8:0}",
 			"}"
 		]
@@ -1310,7 +1358,7 @@
 			"\tinitialDestination ${4:0 0 0}",
 			"\tinitialValue ${5:0 0 0}",
 			"\ttau ${6:0}",
-			"\ttolerance ${7:<SFFloat>}",
+			"\ttolerance ${7:-1 -1 or}",
 			"\torder ${8:0}",
 			"}"
 		]
@@ -1326,7 +1374,7 @@
 			"\tinitialDestination ${4:0 0}",
 			"\tinitialValue ${5:0 0}",
 			"\ttau ${6:0}",
-			"\ttolerance ${7:<SFFloat>}",
+			"\ttolerance ${7:-1 -1 or}",
 			"\torder ${8:0}",
 			"}"
 		]
@@ -1356,7 +1404,7 @@
 			"\tinitialDestination ${4:[]}",
 			"\tinitialValue ${5:[]}",
 			"\ttau ${6:0}",
-			"\ttolerance ${7:<SFFloat>}",
+			"\ttolerance ${7:-1 -1 or}",
 			"\torder ${8:0}",
 			"}"
 		]
@@ -1391,7 +1439,7 @@
 		"body": [
 			"Circle2D {",
 			"\tradius ${1:1}",
-			"\tslices ${2:<SFInt32>}",
+			"\tslices ${2:-1}",
 			"}"
 		]
 	},
@@ -1453,6 +1501,7 @@
 			"\tsolid ${2:TRUE}",
 			"\tccw ${3:TRUE}",
 			"\ttexCoord ${4:NULL}",
+			"\tdivisions ${5:-1}",
 			"}"
 		]
 	},
@@ -1467,6 +1516,8 @@
 			"\tside ${4:TRUE}",
 			"\tsolid ${5:TRUE}",
 			"\ttexCoord ${6:NULL}",
+			"\tslices ${7:-1}",
+			"\tstacks ${8:-1}",
 			"}"
 		]
 	},
@@ -1482,6 +1533,8 @@
 			"\tsolid ${5:TRUE}",
 			"\ttop ${6:TRUE}",
 			"\ttexCoord ${7:NULL}",
+			"\tslices ${8:-1}",
+			"\tstacks ${9:-1}",
 			"}"
 		]
 	},
@@ -1538,20 +1591,26 @@
 		"body": [
 			"IndexedFaceSet {",
 			"\tset_colorIndex ${1:<MFInt32>}",
-			"\tconvex ${2:TRUE}",
-			"\tcoordIndex ${3:[]}",
-			"\tcreaseAngle ${4:0}",
-			"\tnormalIndex ${5:[]}",
-			"\ttexCoordIndex ${6:[]}",
-			"\tattrib ${7:[]}",
-			"\tcoord ${8:NULL}",
-			"\tfogCoord ${9:NULL}",
-			"\ttexCoord ${10:NULL}",
-			"\tccw ${11:TRUE}",
-			"\tcolorPerVertex ${12:TRUE}",
-			"\tnormalPerVertex ${13:TRUE}",
-			"\tsolid ${14:TRUE}",
-			"\tradianceTransfer ${15:[]}",
+			"\tset_coordIndex ${2:<MFInt32>}",
+			"\tset_normalIndex ${3:<MFInt32>}",
+			"\tset_texCoordIndex ${4:<MFInt32>}",
+			"\tcolorIndex ${5:[]}",
+			"\tconvex ${6:TRUE}",
+			"\tcoordIndex ${7:[]}",
+			"\tcreaseAngle ${8:0}",
+			"\tnormalIndex ${9:[]}",
+			"\ttexCoordIndex ${10:[]}",
+			"\tattrib ${11:[]}",
+			"\tcolor ${12:NULL}",
+			"\tcoord ${13:NULL}",
+			"\tfogCoord ${14:NULL}",
+			"\tnormal ${15:NULL}",
+			"\ttexCoord ${16:NULL}",
+			"\tccw ${17:TRUE}",
+			"\tcolorPerVertex ${18:TRUE}",
+			"\tnormalPerVertex ${19:TRUE}",
+			"\tsolid ${20:TRUE}",
+			"\tradianceTransfer ${21:[]}",
 			"}"
 		]
 	},
@@ -1563,6 +1622,8 @@
 			"\tradius ${1:1}",
 			"\tsolid ${2:TRUE}",
 			"\ttexCoord ${3:NULL}",
+			"\tslices ${4:-1}",
+			"\tstacks ${5:-1}",
 			"}"
 		]
 	},
@@ -1615,7 +1676,7 @@
 			"\tremoveChildren ${5:[X3DChildNode]}",
 			"\tchildren ${6:[]}",
 			"\tbboxCenter ${7:0 0 0}",
-			"\tbboxSize ${8:<SFVec3f>}",
+			"\tbboxSize ${8:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1637,7 +1698,7 @@
 			"\trootUrl ${11:[]}",
 			"\trootNode ${12:[]}",
 			"\tbboxCenter ${13:0 0 0}",
-			"\tbboxSize ${14:<SFVec3f>}",
+			"\tbboxSize ${14:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1729,7 +1790,7 @@
 			"\tremoveChildren ${9:[X3DChildNode]}",
 			"\tchildren ${10:[]}",
 			"\tbboxCenter ${11:0 0 0}",
-			"\tbboxSize ${12:<SFVec3f>}",
+			"\tbboxSize ${12:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1772,7 +1833,7 @@
 			"\tremoveChildren ${2:[X3DChildNode]}",
 			"\tchildren ${3:[]}",
 			"\tbboxCenter ${4:0 0 0}",
-			"\tbboxSize ${5:<SFVec3f>}",
+			"\tbboxSize ${5:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1785,7 +1846,7 @@
 			"\tremoveChildren ${2:[X3DChildNode]}",
 			"\tchildren ${3:[]}",
 			"\tbboxCenter ${4:0 0 0}",
-			"\tbboxSize ${5:<SFVec3f>}",
+			"\tbboxSize ${5:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1796,7 +1857,7 @@
 			"StaticGroup {",
 			"\tchildren ${1:[]}",
 			"\tbboxCenter ${2:0 0 0}",
-			"\tbboxSize ${3:<SFVec3f>}",
+			"\tbboxSize ${3:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1805,12 +1866,12 @@
 		"description": "",
 		"body": [
 			"Switch {",
-			"\twhichChoice ${1:<SFInt32>}",
+			"\twhichChoice ${1:-1}",
 			"\taddChildren ${2:[X3DChildNode]}",
 			"\tremoveChildren ${3:[X3DChildNode]}",
 			"\tchildren ${4:[]}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1828,7 +1889,7 @@
 			"\tremoveChildren ${7:[X3DChildNode]}",
 			"\tchildren ${8:[]}",
 			"\tbboxCenter ${9:0 0 0}",
-			"\tbboxSize ${10:<SFVec3f>}",
+			"\tbboxSize ${10:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1866,7 +1927,7 @@
 			"\tversion ${15:\"\"}",
 			"\tviewpoints ${16:[]}",
 			"\tbboxCenter ${17:0 0 0}",
-			"\tbboxSize ${18:<SFVec3f>}",
+			"\tbboxSize ${18:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1892,7 +1953,7 @@
 			"\tremoveChildren ${15:[X3DChildNode]}",
 			"\tchildren ${16:[]}",
 			"\tbboxCenter ${17:0 0 0}",
-			"\tbboxSize ${18:<SFVec3f>}",
+			"\tbboxSize ${18:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1914,7 +1975,7 @@
 			"\tremoveChildren ${11:[X3DChildNode]}",
 			"\tchildren ${12:[]}",
 			"\tbboxCenter ${13:0 0 0}",
-			"\tbboxSize ${14:<SFVec3f>}",
+			"\tbboxSize ${14:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1933,7 +1994,7 @@
 			"\tremoveChildren ${8:[X3DChildNode]}",
 			"\tchildren ${9:[]}",
 			"\tbboxCenter ${10:0 0 0}",
-			"\tbboxSize ${11:<SFVec3f>}",
+			"\tbboxSize ${11:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1947,7 +2008,7 @@
 			"\tremoveChildren ${3:[X3DChildNode]}",
 			"\tchildren ${4:[]}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -1957,74 +2018,79 @@
 		"body": [
 			"CommonSurfaceShader {",
 			"\talphaFactor ${1:1}",
-			"\talphaTextureId ${2:<SFInt32>}",
+			"\talphaTextureId ${2:-1}",
 			"\talphaTextureCoordinatesId ${3:0}",
 			"\talphaTextureChannelMask ${4:\"a\"}",
 			"\talphaTexture ${5:NULL}",
 			"\tambientFactor ${6:0.2 0.2 0.2}",
-			"\tambientTextureId ${7:<SFInt32>}",
+			"\tambientTextureId ${7:-1}",
 			"\tambientTextureCoordinatesId ${8:0}",
 			"\tambientTextureChannelMask ${9:\"rgb\"}",
 			"\tambientTexture ${10:NULL}",
 			"\tdiffuseFactor ${11:0.8 0.8 0.8}",
-			"\tdiffuseTextureId ${12:<SFInt32>}",
+			"\tdiffuseTextureId ${12:-1}",
 			"\tdiffuseTextureCoordinatesId ${13:0}",
 			"\tdiffuseTextureChannelMask ${14:\"rgb\"}",
 			"\tdiffuseTexture ${15:NULL}",
 			"\tdiffuseDisplacementTexture ${16:NULL}",
 			"\tdisplacementAxis ${17:\"y\"}",
 			"\tdisplacementFactor ${18:255.0}",
-			"\tdisplacementTextureId ${19:<SFInt32>}",
+			"\tdisplacementTextureId ${19:-1}",
 			"\tdisplacementTextureCoordinatesId ${20:0}",
 			"\tdisplacementTexture ${21:NULL}",
 			"\temissiveFactor ${22:0 0 0}",
-			"\temissiveTextureId ${23:<SFInt32>}",
+			"\temissiveTextureId ${23:-1}",
 			"\temissiveTextureCoordinatesId ${24:0}",
 			"\temissiveTextureChannelMask ${25:\"rgb\"}",
 			"\temissiveTexture ${26:NULL}",
 			"\tenvironmentFactor ${27:1 1 1}",
-			"\tenvironmentTextureId ${28:<SFInt32>}",
+			"\tenvironmentTextureId ${28:-1}",
 			"\tenvironmentTextureCoordinatesId ${29:0}",
 			"\tenvironmentTextureChannelMask ${30:\"rgb\"}",
 			"\tenvironmentTexture ${31:NULL}",
 			"\tmultiDiffuseAlphaTexture ${32:NULL}",
-			"\tnormalFormat ${33:\"UNORM\"}",
-			"\tnormalTextureCoordinatesId ${34:0}",
-			"\tnormalTextureChannelMask ${35:\"rgb\"}",
-			"\tnormalScale ${36:2 2 2}",
-			"\tnormalBias ${37:<SFVec3f>}",
-			"\tnormalTexture ${38:NULL}",
-			"\tnormalTextureParallaxHeight ${39:0}",
-			"\treflectionFactor ${40:0 0 0}",
-			"\treflectionTextureId ${41:<SFInt32>}",
-			"\treflectionTextureCoordinatesId ${42:0}",
-			"\treflectionTextureChannelMask ${43:\"rgb\"}",
-			"\treflectionTexture ${44:NULL}",
-			"\tshininessFactor ${45:0.2}",
-			"\tshininessTextureId ${46:<SFInt32>}",
-			"\tshininessTextureCoordinatesId ${47:0}",
-			"\tshininessTextureChannelMask ${48:\"a\"}",
-			"\tshininessTexture ${49:NULL}",
-			"\tspecularFactor ${50:0 0 0}",
-			"\tspecularTextureId ${51:<SFInt32>}",
-			"\tspecularTextureCoordinatesId ${52:0}",
-			"\tspecularTextureChannelMask ${53:\"rgb\"}",
-			"\tspecularTexture ${54:NULL}",
-			"\ttransmissionFactor ${55:0 0 0}",
-			"\ttransmissionTextureId ${56:<SFInt32>}",
-			"\ttransmissionTextureCoordinatesId ${57:0}",
-			"\ttransmissionTextureChannelMask ${58:\"rgb\"}",
-			"\ttransmissionTexture ${59:NULL}",
-			"\ttangentTextureCoordinatesId ${60:<SFInt32>}",
-			"\tbinormalTextureCoordinatesId ${61:<SFInt32>}",
-			"\tinvertAlphaTexture ${62:FALSE}",
-			"\trelativeIndexOfRefraction ${63:1}",
-			"\tfresnelBlend ${64:0}",
-			"\ttextureTransformEnabled ${65:[FALSEFALSEFALSEFALSEFALSEFALSEFALSEFALSE]}",
-			"\tactivate ${66:<SFBool>}",
-			"\tisSelected ${67:<SFBool>}",
-			"\tisValid ${68:<SFBool>}",
-			"\tlanguage ${69:\"\"}",
+			"\tmultiEmmisiveAmbientIntensityTexture ${33:NULL}",
+			"\tmultiSpecularShininessTexture ${34:NULL}",
+			"\tmultiVisibilityTexture ${35:NULL}",
+			"\tnormalFormat ${36:\"UNORM\"}",
+			"\tnormalSpace ${37:\"TANGENT\"}",
+			"\tnormalTextureId ${38:-1}",
+			"\tnormalTextureCoordinatesId ${39:0}",
+			"\tnormalTextureChannelMask ${40:\"rgb\"}",
+			"\tnormalScale ${41:2 2 2}",
+			"\tnormalBias ${42:-1 -1 -1}",
+			"\tnormalTexture ${43:NULL}",
+			"\tnormalTextureParallaxHeight ${44:0}",
+			"\treflectionFactor ${45:0 0 0}",
+			"\treflectionTextureId ${46:-1}",
+			"\treflectionTextureCoordinatesId ${47:0}",
+			"\treflectionTextureChannelMask ${48:\"rgb\"}",
+			"\treflectionTexture ${49:NULL}",
+			"\tshininessFactor ${50:0.2}",
+			"\tshininessTextureId ${51:-1}",
+			"\tshininessTextureCoordinatesId ${52:0}",
+			"\tshininessTextureChannelMask ${53:\"a\"}",
+			"\tshininessTexture ${54:NULL}",
+			"\tspecularFactor ${55:0 0 0}",
+			"\tspecularTextureId ${56:-1}",
+			"\tspecularTextureCoordinatesId ${57:0}",
+			"\tspecularTextureChannelMask ${58:\"rgb\"}",
+			"\tspecularTexture ${59:NULL}",
+			"\ttransmissionFactor ${60:0 0 0}",
+			"\ttransmissionTextureId ${61:-1}",
+			"\ttransmissionTextureCoordinatesId ${62:0}",
+			"\ttransmissionTextureChannelMask ${63:\"rgb\"}",
+			"\ttransmissionTexture ${64:NULL}",
+			"\ttangentTextureCoordinatesId ${65:-1}",
+			"\tbinormalTextureCoordinatesId ${66:-1}",
+			"\tinvertAlphaTexture ${67:FALSE}",
+			"\trelativeIndexOfRefraction ${68:1}",
+			"\tfresnelBlend ${69:0}",
+			"\ttextureTransformEnabled ${70:[FALSEFALSEFALSEFALSEFALSEFALSEFALSEFALSE]}",
+			"\tactivate ${71:<SFBool>}",
+			"\tisSelected ${72:<SFBool>}",
+			"\tisValid ${73:<SFBool>}",
+			"\tlanguage ${74:\"\"}",
 			"}"
 		]
 	},
@@ -2035,6 +2101,7 @@
 			"ImageBackground {",
 			"\tcolor ${1:1 1 1 1}",
 			"\ttexture ${2:NULL}",
+			"\ttexCoords ${3:[00,10,11,01]}",
 			"}"
 		]
 	},
@@ -2271,7 +2338,7 @@
 			"\tremoveChildren ${2:[X3DChildNode]}",
 			"\tchildren ${3:[]}",
 			"\tbboxCenter ${4:0 0 0}",
-			"\tbboxSize ${5:<SFVec3f>}",
+			"\tbboxSize ${5:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -2310,7 +2377,7 @@
 			"\tremoveChildren ${3:[X3DChildNode]}",
 			"\tchildren ${4:[]}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -2347,7 +2414,7 @@
 			"\tremoveChildren ${4:[X3DChildNode]}",
 			"\tchildren ${5:[]}",
 			"\tbboxCenter ${6:0 0 0}",
-			"\tbboxSize ${7:<SFVec3f>}",
+			"\tbboxSize ${7:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -2391,7 +2458,7 @@
 			"\tremoveChildren ${2:[X3DChildNode]}",
 			"\tchildren ${3:[]}",
 			"\tbboxCenter ${4:0 0 0}",
-			"\tbboxSize ${5:<SFVec3f>}",
+			"\tbboxSize ${5:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -2406,6 +2473,7 @@
 			"\tintensity ${4:1}",
 			"\ton ${5:TRUE}",
 			"\teffects ${6:[]}",
+			"\tshadowVolumes ${7:FALSE}",
 			"}"
 		]
 	},
@@ -2416,13 +2484,17 @@
 			"X3DPunctualLightNode {",
 			"\tshadows ${1:FALSE}",
 			"\tshadowVolumesMain ${2:FALSE}",
-			"\tdefaultShadowMap ${3:NULL}",
-			"\tambientIntensity ${4:0}",
-			"\tcolor ${5:1 1 1}",
-			"\tglobal ${6:FALSE}",
-			"\tintensity ${7:1}",
-			"\ton ${8:TRUE}",
-			"\teffects ${9:[]}",
+			"\tprojectionNear ${3:1}",
+			"\tprojectionFar ${4:100}",
+			"\tup ${5:0 1 0}",
+			"\tdefaultShadowMap ${6:NULL}",
+			"\tambientIntensity ${7:0}",
+			"\tcolor ${8:1 1 1}",
+			"\tglobal ${9:FALSE}",
+			"\tintensity ${10:1}",
+			"\ton ${11:TRUE}",
+			"\teffects ${12:[]}",
+			"\tshadowVolumes ${13:FALSE}",
 			"}"
 		]
 	},
@@ -2437,6 +2509,7 @@
 			"\tintensity ${4:1}",
 			"\ton ${5:TRUE}",
 			"\teffects ${6:[]}",
+			"\tshadowVolumes ${7:FALSE}",
 			"}"
 		]
 	},
@@ -2451,6 +2524,7 @@
 			"\tintensity ${4:1}",
 			"\ton ${5:TRUE}",
 			"\teffects ${6:[]}",
+			"\tshadowVolumes ${7:FALSE}",
 			"}"
 		]
 	},
@@ -2462,7 +2536,7 @@
 			"\tattenuation ${1:1 0 0}",
 			"\tbeamWidth ${2:<SFFloat>}",
 			"\tcutOffAngle ${3:<SFFloat>}",
-			"\tdirection ${4:0 0}",
+			"\tdirection ${4:0 0 -1}",
 			"\tlocation ${5:0 0 0}",
 			"\tradius ${6:100}",
 			"\tprojectionAngle ${7:0}",
@@ -2472,6 +2546,7 @@
 			"\tintensity ${11:1}",
 			"\ton ${12:TRUE}",
 			"\teffects ${13:[]}",
+			"\tshadowVolumes ${14:FALSE}",
 			"}"
 		]
 	},
@@ -2488,6 +2563,7 @@
 			"\tintensity ${6:1}",
 			"\ton ${7:TRUE}",
 			"\teffects ${8:[]}",
+			"\tshadowVolumes ${9:FALSE}",
 			"}"
 		]
 	},
@@ -2511,6 +2587,7 @@
 			"\tgravityUp ${13:0 1 0}",
 			"\tset_bind ${14:<SFBool>}",
 			"\tbindTime ${15:<SFTime>}",
+			"\tisBound ${16:<SFBool>}",
 			"}"
 		]
 	},
@@ -2524,7 +2601,7 @@
 			"\tremoveChildren ${3:[X3DChildNode]}",
 			"\tchildren ${4:[]}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -2541,7 +2618,7 @@
 			"\tremoveChildren ${6:[X3DChildNode]}",
 			"\tchildren ${7:[]}",
 			"\tbboxCenter ${8:0 0 0}",
-			"\tbboxSize ${9:<SFVec3f>}",
+			"\tbboxSize ${9:-1 -1 -1}",
 			"\tenabled ${10:TRUE}",
 			"\tisActive ${11:<SFBool>}",
 			"}"
@@ -2560,7 +2637,7 @@
 			"\tremoveChildren ${6:[X3DChildNode]}",
 			"\tchildren ${7:[]}",
 			"\tbboxCenter ${8:0 0 0}",
-			"\tbboxSize ${9:<SFVec3f>}",
+			"\tbboxSize ${9:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -2579,6 +2656,7 @@
 			"\ttransitionComplete ${8:<SFBool>}",
 			"\tset_bind ${9:<SFBool>}",
 			"\tbindTime ${10:<SFTime>}",
+			"\tisBound ${11:<SFBool>}",
 			"}"
 		]
 	},
@@ -2587,7 +2665,7 @@
 		"description": "",
 		"body": [
 			"OrthoViewpoint {",
-			"\tfieldOfView ${1:<MFFloat>}",
+			"\tfieldOfView ${1:-1}",
 			"\tposition ${2:0 0 10}",
 			"\tcenterOfRotation ${3:0 0 0}",
 			"\tdescription ${4:\"\"}",
@@ -2674,7 +2752,7 @@
 			"\tremoveChildren ${5:[X3DChildNode]}",
 			"\tchildren ${6:[]}",
 			"\tbboxCenter ${7:0 0 0}",
-			"\tbboxSize ${8:<SFVec3f>}",
+			"\tbboxSize ${8:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -2686,7 +2764,7 @@
 			"\tload ${1:TRUE}",
 			"\turl ${2:[]}",
 			"\tbboxCenter ${3:0 0 0}",
-			"\tbboxSize ${4:<SFVec3f>}",
+			"\tbboxSize ${4:-1 -1 -1}",
 			"\turl ${5:[]}",
 			"}"
 		]
@@ -2862,7 +2940,7 @@
 			"\tgeometry ${3:[]}",
 			"\ttessellationScale ${4:1.0}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -3017,7 +3095,7 @@
 		"description": "",
 		"body": [
 			"ForcePhysicsModel {",
-			"\tforce ${1:0}",
+			"\tforce ${1:0 -9.8 0}",
 			"\tenabled ${2:TRUE}",
 			"}"
 		]
@@ -3044,9 +3122,11 @@
 			"\tappearance ${15:NULL}",
 			"\tgeometry ${16:NULL}",
 			"\tbboxCenter ${17:0 0 0}",
-			"\tbboxSize ${18:<SFVec3f>}",
+			"\tbboxSize ${18:-1 -1 -1}",
 			"\tshading ${19:\"DEFAULT\"}",
-			"\tcollision ${20:\"DEFAULT\"}",
+			"\toctreeTriangles ${20:NULL}",
+			"\trender ${21:TRUE}",
+			"\tcollision ${22:\"DEFAULT\"}",
 			"}"
 		]
 	},
@@ -3072,7 +3152,7 @@
 			"\tset_coordinate ${1:<SFInt32>}",
 			"\tcoord ${2:NULL}",
 			"\tdirection ${3:0 1 0}",
-			"\tcoordIndex ${4:<MFInt32>}",
+			"\tcoordIndex ${4:-1}",
 			"\tspeed ${5:0}",
 			"\tvariation ${6:0.25}",
 			"\tmass ${7:0}",
@@ -3086,7 +3166,7 @@
 		"body": [
 			"SurfaceEmitter {",
 			"\tset_coordinate ${1:<SFInt32>}",
-			"\tcoordIndex ${2:<MFInt32>}",
+			"\tcoordIndex ${2:-1}",
 			"\tsurface ${3:NULL}",
 			"\tspeed ${4:0}",
 			"\tvariation ${5:0.25}",
@@ -3103,7 +3183,7 @@
 			"\tset_coordinate ${1:<SFInt32>}",
 			"\tcoord ${2:NULL}",
 			"\tdirection ${3:0 1 0}",
-			"\tcoordIndex ${4:<MFInt32>}",
+			"\tcoordIndex ${4:-1}",
 			"\tinternal ${5:TRUE}",
 			"\tspeed ${6:0}",
 			"\tvariation ${7:0.25}",
@@ -3179,7 +3259,7 @@
 			"\tremoveChildren ${4:[X3DChildNode]}",
 			"\tchildren ${5:[]}",
 			"\tbboxCenter ${6:0 0 0}",
-			"\tbboxSize ${7:<SFVec3f>}",
+			"\tbboxSize ${7:-1 -1 -1}",
 			"\tobjectType ${8:\"ALL\"}",
 			"\tpickable ${9:TRUE}",
 			"}"
@@ -3270,7 +3350,7 @@
 			"CylinderSensor {",
 			"\taxisRotation ${1:0 1 0 0}",
 			"\tdiskAngle ${2:<SFFloat>}",
-			"\tmaxAngle ${3:<SFFloat>}",
+			"\tmaxAngle ${3:-1}",
 			"\tminAngle ${4:0}",
 			"\toffset ${5:0}",
 			"\trotation_changed ${6:<SFRotation>}",
@@ -3285,7 +3365,7 @@
 		"body": [
 			"PlaneSensor {",
 			"\taxisRotation ${1:0 0 1 0}",
-			"\tmaxPosition ${2:<SFVec2f>}",
+			"\tmaxPosition ${2:-1 -1}",
 			"\tminPosition ${3:0 0}",
 			"\toffset ${4:0 0 0}",
 			"\ttranslation_changed ${5:<SFVec3f>}",
@@ -3333,14 +3413,16 @@
 		"body": [
 			"X3DComposedGeometryNode {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:NULL}",
-			"\tfogCoord ${3:NULL}",
-			"\ttexCoord ${4:NULL}",
-			"\tccw ${5:TRUE}",
-			"\tcolorPerVertex ${6:TRUE}",
-			"\tnormalPerVertex ${7:TRUE}",
-			"\tsolid ${8:TRUE}",
-			"\tradianceTransfer ${9:[]}",
+			"\tcolor ${2:NULL}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:NULL}",
+			"\tnormal ${5:NULL}",
+			"\ttexCoord ${6:NULL}",
+			"\tccw ${7:TRUE}",
+			"\tcolorPerVertex ${8:TRUE}",
+			"\tnormalPerVertex ${9:TRUE}",
+			"\tsolid ${10:TRUE}",
+			"\tradianceTransfer ${11:[]}",
 			"}"
 		]
 	},
@@ -3425,10 +3507,12 @@
 			"\tset_colorIndex ${1:<MFInt32>}",
 			"\tset_coordIndex ${2:<MFInt32>}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:NULL}",
-			"\tfogCoord ${5:[]}",
-			"\tcolorPerVertex ${6:TRUE}",
-			"\tcoordIndex ${7:[]}",
+			"\tcolor ${4:NULL}",
+			"\tcoord ${5:NULL}",
+			"\tfogCoord ${6:[]}",
+			"\tcolorIndex ${7:[]}",
+			"\tcolorPerVertex ${8:TRUE}",
+			"\tcoordIndex ${9:[]}",
 			"}"
 		]
 	},
@@ -3440,14 +3524,16 @@
 			"\tset_index ${1:[]}",
 			"\tindex ${2:[]}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:NULL}",
-			"\tfogCoord ${5:NULL}",
-			"\ttexCoord ${6:NULL}",
-			"\tccw ${7:TRUE}",
-			"\tcolorPerVertex ${8:TRUE}",
-			"\tnormalPerVertex ${9:TRUE}",
-			"\tsolid ${10:TRUE}",
-			"\tradianceTransfer ${11:[]}",
+			"\tcolor ${4:NULL}",
+			"\tcoord ${5:NULL}",
+			"\tfogCoord ${6:NULL}",
+			"\tnormal ${7:NULL}",
+			"\ttexCoord ${8:NULL}",
+			"\tccw ${9:TRUE}",
+			"\tcolorPerVertex ${10:TRUE}",
+			"\tnormalPerVertex ${11:TRUE}",
+			"\tsolid ${12:TRUE}",
+			"\tradianceTransfer ${13:[]}",
 			"}"
 		]
 	},
@@ -3459,14 +3545,16 @@
 			"\tset_index ${1:[]}",
 			"\tindex ${2:[]}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:NULL}",
-			"\tfogCoord ${5:NULL}",
-			"\ttexCoord ${6:NULL}",
-			"\tccw ${7:TRUE}",
-			"\tcolorPerVertex ${8:TRUE}",
-			"\tnormalPerVertex ${9:TRUE}",
-			"\tsolid ${10:TRUE}",
-			"\tradianceTransfer ${11:[]}",
+			"\tcolor ${4:NULL}",
+			"\tcoord ${5:NULL}",
+			"\tfogCoord ${6:NULL}",
+			"\tnormal ${7:NULL}",
+			"\ttexCoord ${8:NULL}",
+			"\tccw ${9:TRUE}",
+			"\tcolorPerVertex ${10:TRUE}",
+			"\tnormalPerVertex ${11:TRUE}",
+			"\tsolid ${12:TRUE}",
+			"\tradianceTransfer ${13:[]}",
 			"}"
 		]
 	},
@@ -3478,14 +3566,16 @@
 			"\tset_index ${1:[]}",
 			"\tindex ${2:[]}",
 			"\tattrib ${3:[]}",
-			"\tcoord ${4:NULL}",
-			"\tfogCoord ${5:NULL}",
-			"\ttexCoord ${6:NULL}",
-			"\tccw ${7:TRUE}",
-			"\tcolorPerVertex ${8:TRUE}",
-			"\tnormalPerVertex ${9:TRUE}",
-			"\tsolid ${10:TRUE}",
-			"\tradianceTransfer ${11:[]}",
+			"\tcolor ${4:NULL}",
+			"\tcoord ${5:NULL}",
+			"\tfogCoord ${6:NULL}",
+			"\tnormal ${7:NULL}",
+			"\ttexCoord ${8:NULL}",
+			"\tccw ${9:TRUE}",
+			"\tcolorPerVertex ${10:TRUE}",
+			"\tnormalPerVertex ${11:TRUE}",
+			"\tsolid ${12:TRUE}",
+			"\tradianceTransfer ${13:[]}",
 			"}"
 		]
 	},
@@ -3495,8 +3585,10 @@
 		"body": [
 			"LineSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:NULL}",
-			"\tfogCoord ${3:[]}",
+			"\tcolor ${2:NULL}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:[]}",
+			"\tvertexCount ${5:[]}",
 			"}"
 		]
 	},
@@ -3515,8 +3607,9 @@
 		"body": [
 			"PointSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:NULL}",
-			"\tfogCoord ${3:[]}",
+			"\tcolor ${2:NULL}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:[]}",
 			"}"
 		]
 	},
@@ -3527,14 +3620,16 @@
 			"TriangleFanSet {",
 			"\tfanCount ${1:[]}",
 			"\tattrib ${2:[]}",
-			"\tcoord ${3:NULL}",
-			"\tfogCoord ${4:NULL}",
-			"\ttexCoord ${5:NULL}",
-			"\tccw ${6:TRUE}",
-			"\tcolorPerVertex ${7:TRUE}",
-			"\tnormalPerVertex ${8:TRUE}",
-			"\tsolid ${9:TRUE}",
-			"\tradianceTransfer ${10:[]}",
+			"\tcolor ${3:NULL}",
+			"\tcoord ${4:NULL}",
+			"\tfogCoord ${5:NULL}",
+			"\tnormal ${6:NULL}",
+			"\ttexCoord ${7:NULL}",
+			"\tccw ${8:TRUE}",
+			"\tcolorPerVertex ${9:TRUE}",
+			"\tnormalPerVertex ${10:TRUE}",
+			"\tsolid ${11:TRUE}",
+			"\tradianceTransfer ${12:[]}",
 			"}"
 		]
 	},
@@ -3544,14 +3639,16 @@
 		"body": [
 			"TriangleSet {",
 			"\tattrib ${1:[]}",
-			"\tcoord ${2:NULL}",
-			"\tfogCoord ${3:NULL}",
-			"\ttexCoord ${4:NULL}",
-			"\tccw ${5:TRUE}",
-			"\tcolorPerVertex ${6:TRUE}",
-			"\tnormalPerVertex ${7:TRUE}",
-			"\tsolid ${8:TRUE}",
-			"\tradianceTransfer ${9:[]}",
+			"\tcolor ${2:NULL}",
+			"\tcoord ${3:NULL}",
+			"\tfogCoord ${4:NULL}",
+			"\tnormal ${5:NULL}",
+			"\ttexCoord ${6:NULL}",
+			"\tccw ${7:TRUE}",
+			"\tcolorPerVertex ${8:TRUE}",
+			"\tnormalPerVertex ${9:TRUE}",
+			"\tsolid ${10:TRUE}",
+			"\tradianceTransfer ${11:[]}",
 			"}"
 		]
 	},
@@ -3562,14 +3659,16 @@
 			"TriangleStripSet {",
 			"\tstripCount ${1:[]}",
 			"\tattrib ${2:[]}",
-			"\tcoord ${3:NULL}",
-			"\tfogCoord ${4:NULL}",
-			"\ttexCoord ${5:NULL}",
-			"\tccw ${6:TRUE}",
-			"\tcolorPerVertex ${7:TRUE}",
-			"\tnormalPerVertex ${8:TRUE}",
-			"\tsolid ${9:TRUE}",
-			"\tradianceTransfer ${10:[]}",
+			"\tcolor ${3:NULL}",
+			"\tcoord ${4:NULL}",
+			"\tfogCoord ${5:NULL}",
+			"\tnormal ${6:NULL}",
+			"\ttexCoord ${7:NULL}",
+			"\tccw ${8:TRUE}",
+			"\tcolorPerVertex ${9:TRUE}",
+			"\tnormalPerVertex ${10:TRUE}",
+			"\tsolid ${11:TRUE}",
+			"\tradianceTransfer ${12:[]}",
 			"}"
 		]
 	},
@@ -3582,7 +3681,7 @@
 			"\trotation ${2:0 0 1 0}",
 			"\ttranslation ${3:0 0 0}",
 			"\tbboxCenter ${4:0 0 0}",
-			"\tbboxSize ${5:<SFVec3f>}",
+			"\tbboxSize ${5:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -3593,7 +3692,7 @@
 			"X3DNBodyCollisionSpaceNode {",
 			"\tenabled ${1:TRUE}",
 			"\tbboxCenter ${2:0 0 0}",
-			"\tbboxSize ${3:<SFVec3f>}",
+			"\tbboxSize ${3:-1 -1 -1}",
 			"\tmetadata ${4:NULL}",
 			"}"
 		]
@@ -3634,7 +3733,7 @@
 			"\trotation ${3:0 0 1 0}",
 			"\ttranslation ${4:0 0 0}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -3648,7 +3747,7 @@
 			"\trotation ${3:0 0 1 0}",
 			"\ttranslation ${4:0 0 0}",
 			"\tbboxCenter ${5:0 0 0}",
-			"\tbboxSize ${6:<SFVec3f>}",
+			"\tbboxSize ${6:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -3692,7 +3791,7 @@
 			"\tuseGeometry ${2:FALSE}",
 			"\tenabled ${3:TRUE}",
 			"\tbboxCenter ${4:0 0 0}",
-			"\tbboxSize ${5:<SFVec3f>}",
+			"\tbboxSize ${5:-1 -1 -1}",
 			"}"
 		]
 	},
@@ -3835,10 +3934,10 @@
 			"\tdisableTime ${8:0}",
 			"\tenabled ${9:TRUE}",
 			"\terrorCorrection ${10:0.8}",
-			"\tgravity ${11:0}",
+			"\tgravity ${11:0 -9.8 0}",
 			"\titerations ${12:10}",
 			"\tjoints ${13:[]}",
-			"\tmaxCorrectionSpeed ${14:<SFFloat>}",
+			"\tmaxCorrectionSpeed ${14:-1}",
 			"\tpreferAccuracy ${15:FALSE}",
 			"\tcollider ${16:NULL}",
 			"}"
@@ -4073,7 +4172,10 @@
 		"body": [
 			"X3DOneSidedMaterialNode {",
 			"\temissiveColor ${1:0 0 0}",
-			"\tnormalTexture ${2:NULL}",
+			"\temissiveTexture ${2:NULL}",
+			"\temissiveTextureMapping ${3:\"\"}",
+			"\tnormalTexture ${4:NULL}",
+			"\tnormalTextureMapping ${5:\"\"}",
 			"}"
 		]
 	},
@@ -4085,9 +4187,11 @@
 			"\tappearance ${1:NULL}",
 			"\tgeometry ${2:NULL}",
 			"\tbboxCenter ${3:0 0 0}",
-			"\tbboxSize ${4:<SFVec3f>}",
+			"\tbboxSize ${4:-1 -1 -1}",
 			"\tshading ${5:\"DEFAULT\"}",
-			"\tcollision ${6:\"DEFAULT\"}",
+			"\toctreeTriangles ${6:NULL}",
+			"\trender ${7:TRUE}",
+			"\tcollision ${8:\"DEFAULT\"}",
 			"}"
 		]
 	},
@@ -4097,13 +4201,19 @@
 		"body": [
 			"Appearance {",
 			"\tfillProperties ${1:NULL}",
-			"\tmaterial ${2:NULL}",
-			"\tbackMaterial ${3:NULL}",
-			"\tshaders ${4:[]}",
-			"\ttexture ${5:NULL}",
-			"\ttextureTransform ${6:NULL}",
-			"\treceiveShadows ${7:[]}",
-			"\tnormalMap ${8:NULL}",
+			"\tlineProperties ${2:NULL}",
+			"\tmaterial ${3:NULL}",
+			"\tbackMaterial ${4:NULL}",
+			"\tshaders ${5:[]}",
+			"\ttexture ${6:NULL}",
+			"\ttextureTransform ${7:NULL}",
+			"\treceiveShadows ${8:[]}",
+			"\tshadowCaster ${9:TRUE}",
+			"\tnormalMap ${10:NULL}",
+			"\theightMap ${11:NULL}",
+			"\theightMapScale ${12:0.01}",
+			"\tblendMode ${13:NULL}",
+			"\teffects ${14:[]}",
 			"}"
 		]
 	},
@@ -4152,8 +4262,18 @@
 			"\tspecularTextureMapping ${15:\"\"}",
 			"\ttransparency ${16:0}",
 			"\tfogImmune ${17:FALSE}",
-			"\temissiveColor ${18:0 0 0}",
-			"\tnormalTexture ${19:NULL}",
+			"\tmirror ${18:0.0}",
+			"\treflSpecular ${19:[]}",
+			"\treflDiffuse ${20:[]}",
+			"\ttransSpecular ${21:[]}",
+			"\ttransDiffuse ${22:[]}",
+			"\treflSpecularExp ${23:1000000}",
+			"\ttransSpecularExp ${24:1000000}",
+			"\temissiveColor ${25:0 0 0}",
+			"\temissiveTexture ${26:NULL}",
+			"\temissiveTextureMapping ${27:\"\"}",
+			"\tnormalTexture ${28:NULL}",
+			"\tnormalTextureMapping ${29:\"\"}",
 			"}"
 		]
 	},
@@ -4174,7 +4294,10 @@
 			"\troughness ${10:1}",
 			"\ttransparency ${11:0}",
 			"\temissiveColor ${12:0 0 0}",
-			"\tnormalTexture ${13:NULL}",
+			"\temissiveTexture ${13:NULL}",
+			"\temissiveTextureMapping ${14:\"\"}",
+			"\tnormalTexture ${15:NULL}",
+			"\tnormalTextureMapping ${16:\"\"}",
 			"}"
 		]
 	},
@@ -4186,9 +4309,11 @@
 			"\tappearance ${1:NULL}",
 			"\tgeometry ${2:NULL}",
 			"\tbboxCenter ${3:0 0 0}",
-			"\tbboxSize ${4:<SFVec3f>}",
+			"\tbboxSize ${4:-1 -1 -1}",
 			"\tshading ${5:\"DEFAULT\"}",
-			"\tcollision ${6:\"DEFAULT\"}",
+			"\toctreeTriangles ${6:NULL}",
+			"\trender ${7:TRUE}",
+			"\tcollision ${8:\"DEFAULT\"}",
 			"}"
 		]
 	},
@@ -4220,7 +4345,10 @@
 			"UnlitMaterial {",
 			"\ttransparency ${1:0}",
 			"\temissiveColor ${2:0 0 0}",
-			"\tnormalTexture ${3:NULL}",
+			"\temissiveTexture ${3:NULL}",
+			"\temissiveTextureMapping ${4:\"\"}",
+			"\tnormalTexture ${5:NULL}",
+			"\tnormalTextureMapping ${6:\"\"}",
 			"}"
 		]
 	},
@@ -4300,9 +4428,11 @@
 			"\thorizontal ${2:TRUE}",
 			"\tjustify ${3:\"BEGIN\"}",
 			"\tlanguage ${4:\"\"}",
-			"\tspacing ${5:1.0}",
-			"\tstyle ${6:\"PLAIN\"}",
-			"\ttopToBottom ${7:TRUE}",
+			"\tleftToRight ${5:TRUE}",
+			"\tsize ${6:1.0}",
+			"\tspacing ${7:1.0}",
+			"\tstyle ${8:\"PLAIN\"}",
+			"\ttopToBottom ${9:TRUE}",
 			"}"
 		]
 	},
@@ -4314,7 +4444,7 @@
 			"\tfontStyle ${1:NULL}",
 			"\tlength ${2:[]}",
 			"\tmaxExtent ${3:0.0}",
-			"\tmaxDisplayChars ${4:<SFInt32>}",
+			"\tmaxDisplayChars ${4:-1}",
 			"\tstring ${5:[]}",
 			"\tlineBounds ${6:<MFVec2f>}",
 			"\torigin ${7:<SFVec3f>}",
@@ -4814,11 +4944,25 @@
 			"MFInt32"
 		]
 	},
+	"index": {
+		"prefix": "index",
+		"description": "",
+		"body": [
+			"index"
+		]
+	},
 	"attrib": {
 		"prefix": "attrib",
 		"description": "",
 		"body": [
 			"attrib"
+		]
+	},
+	"color": {
+		"prefix": "color",
+		"description": "",
+		"body": [
+			"color"
 		]
 	},
 	"coord": {
@@ -4833,6 +4977,13 @@
 		"description": "",
 		"body": [
 			"fogCoord"
+		]
+	},
+	"normal": {
+		"prefix": "normal",
+		"description": "",
+		"body": [
+			"normal"
 		]
 	},
 	"texCoord": {
@@ -4898,6 +5049,13 @@
 			"fillProperties"
 		]
 	},
+	"lineProperties": {
+		"prefix": "lineProperties",
+		"description": "",
+		"body": [
+			"lineProperties"
+		]
+	},
 	"material": {
 		"prefix": "material",
 		"description": "",
@@ -4940,6 +5098,13 @@
 			"receiveShadows"
 		]
 	},
+	"shadowCaster": {
+		"prefix": "shadowCaster",
+		"description": "",
+		"body": [
+			"shadowCaster"
+		]
+	},
 	"normalMap": {
 		"prefix": "normalMap",
 		"description": "",
@@ -4947,11 +5112,60 @@
 			"normalMap"
 		]
 	},
+	"heightMap": {
+		"prefix": "heightMap",
+		"description": "",
+		"body": [
+			"heightMap"
+		]
+	},
+	"heightMapScale": {
+		"prefix": "heightMapScale",
+		"description": "",
+		"body": [
+			"heightMapScale"
+		]
+	},
+	"SFFloat": {
+		"prefix": "SFFloat",
+		"description": "",
+		"body": [
+			"SFFloat"
+		]
+	},
+	"blendMode": {
+		"prefix": "blendMode",
+		"description": "",
+		"body": [
+			"blendMode"
+		]
+	},
+	"effects": {
+		"prefix": "effects",
+		"description": "",
+		"body": [
+			"effects"
+		]
+	},
 	"update": {
 		"prefix": "update",
 		"description": "",
 		"body": [
 			"update"
+		]
+	},
+	"size": {
+		"prefix": "size",
+		"description": "",
+		"body": [
+			"size"
+		]
+	},
+	"SFInt32": {
+		"prefix": "SFInt32",
+		"description": "",
+		"body": [
+			"SFInt32"
 		]
 	},
 	"light": {
@@ -4968,25 +5182,11 @@
 			"bias"
 		]
 	},
-	"SFFloat": {
-		"prefix": "SFFloat",
-		"description": "",
-		"body": [
-			"SFFloat"
-		]
-	},
 	"compareMode": {
 		"prefix": "compareMode",
 		"description": "",
 		"body": [
 			"compareMode"
-		]
-	},
-	"effects": {
-		"prefix": "effects",
-		"description": "",
-		"body": [
-			"effects"
 		]
 	},
 	"crossOrigin": {
@@ -5087,6 +5287,48 @@
 			"octreeRendering"
 		]
 	},
+	"octreeDynamicCollisions": {
+		"prefix": "octreeDynamicCollisions",
+		"description": "",
+		"body": [
+			"octreeDynamicCollisions"
+		]
+	},
+	"octreeVisibleTriangles": {
+		"prefix": "octreeVisibleTriangles",
+		"description": "",
+		"body": [
+			"octreeVisibleTriangles"
+		]
+	},
+	"octreeStaticCollisions": {
+		"prefix": "octreeStaticCollisions",
+		"description": "",
+		"body": [
+			"octreeStaticCollisions"
+		]
+	},
+	"headBobbing": {
+		"prefix": "headBobbing",
+		"description": "",
+		"body": [
+			"headBobbing"
+		]
+	},
+	"headBobbingTime": {
+		"prefix": "headBobbingTime",
+		"description": "",
+		"body": [
+			"headBobbingTime"
+		]
+	},
+	"headlightNode": {
+		"prefix": "headlightNode",
+		"description": "",
+		"body": [
+			"headlightNode"
+		]
+	},
 	"avatarSize": {
 		"prefix": "avatarSize",
 		"description": "",
@@ -5157,6 +5399,34 @@
 			"ambientIntensity"
 		]
 	},
+	"attenuation": {
+		"prefix": "attenuation",
+		"description": "",
+		"body": [
+			"attenuation"
+		]
+	},
+	"SFColor": {
+		"prefix": "SFColor",
+		"description": "",
+		"body": [
+			"SFColor"
+		]
+	},
+	"intensity": {
+		"prefix": "intensity",
+		"description": "",
+		"body": [
+			"intensity"
+		]
+	},
+	"spot": {
+		"prefix": "spot",
+		"description": "",
+		"body": [
+			"spot"
+		]
+	},
 	"spotDropOffRate": {
 		"prefix": "spotDropOffRate",
 		"description": "",
@@ -5178,11 +5448,11 @@
 			"maxDepth"
 		]
 	},
-	"SFInt32": {
-		"prefix": "SFInt32",
+	"leafCapacity": {
+		"prefix": "leafCapacity",
 		"description": "",
 		"body": [
-			"SFInt32"
+			"leafCapacity"
 		]
 	},
 	"metadata": {
@@ -5190,13 +5460,6 @@
 		"description": "",
 		"body": [
 			"metadata"
-		]
-	},
-	"size": {
-		"prefix": "size",
-		"description": "",
-		"body": [
-			"size"
 		]
 	},
 	"manifold": {
@@ -5211,6 +5474,27 @@
 		"description": "",
 		"body": [
 			"dimensions"
+		]
+	},
+	"viewpoint": {
+		"prefix": "viewpoint",
+		"description": "",
+		"body": [
+			"viewpoint"
+		]
+	},
+	"textureProperties": {
+		"prefix": "textureProperties",
+		"description": "",
+		"body": [
+			"textureProperties"
+		]
+	},
+	"repeatS": {
+		"prefix": "repeatS",
+		"description": "",
+		"body": [
+			"repeatS"
 		]
 	},
 	"repeatT": {
@@ -5353,11 +5637,25 @@
 			"fieldType"
 		]
 	},
+	"defaultTexCoord": {
+		"prefix": "defaultTexCoord",
+		"description": "",
+		"body": [
+			"defaultTexCoord"
+		]
+	},
 	"srcFactor": {
 		"prefix": "srcFactor",
 		"description": "",
 		"body": [
 			"srcFactor"
+		]
+	},
+	"destFactor": {
+		"prefix": "destFactor",
+		"description": "",
+		"body": [
+			"destFactor"
 		]
 	},
 	"colorTransparency": {
@@ -5386,6 +5684,41 @@
 		"description": "",
 		"body": [
 			"toggle"
+		]
+	},
+	"set": {
+		"prefix": "set",
+		"description": "",
+		"body": [
+			"set"
+		]
+	},
+	"reset": {
+		"prefix": "reset",
+		"description": "",
+		"body": [
+			"reset"
+		]
+	},
+	"changed": {
+		"prefix": "changed",
+		"description": "",
+		"body": [
+			"changed"
+		]
+	},
+	"on": {
+		"prefix": "on",
+		"description": "",
+		"body": [
+			"on"
+		]
+	},
+	"off": {
+		"prefix": "off",
+		"description": "",
+		"body": [
+			"off"
 		]
 	},
 	"distanceFromShape": {
@@ -5428,6 +5761,13 @@
 		"description": "",
 		"body": [
 			"bindTime"
+		]
+	},
+	"isBound": {
+		"prefix": "isBound",
+		"description": "",
+		"body": [
+			"isBound"
 		]
 	},
 	"reference": {
@@ -5512,13 +5852,6 @@
 		"description": "",
 		"body": [
 			"top"
-		]
-	},
-	"textureProperties": {
-		"prefix": "textureProperties",
-		"description": "",
-		"body": [
-			"textureProperties"
 		]
 	},
 	"address": {
@@ -6403,20 +6736,6 @@
 			"transparency"
 		]
 	},
-	"color": {
-		"prefix": "color",
-		"description": "",
-		"body": [
-			"color"
-		]
-	},
-	"SFColor": {
-		"prefix": "SFColor",
-		"description": "",
-		"body": [
-			"SFColor"
-		]
-	},
 	"fogType": {
 		"prefix": "fogType",
 		"description": "",
@@ -6443,6 +6762,13 @@
 		"description": "",
 		"body": [
 			"volumetricDirection"
+		]
+	},
+	"volumetricVisibilityStart": {
+		"prefix": "volumetricVisibilityStart",
+		"description": "",
+		"body": [
+			"volumetricVisibilityStart"
 		]
 	},
 	"backUrl": {
@@ -6795,6 +7121,13 @@
 			"vertices"
 		]
 	},
+	"divisions": {
+		"prefix": "divisions",
+		"description": "",
+		"body": [
+			"divisions"
+		]
+	},
 	"bottomRadius": {
 		"prefix": "bottomRadius",
 		"description": "",
@@ -6816,18 +7149,18 @@
 			"side"
 		]
 	},
+	"stacks": {
+		"prefix": "stacks",
+		"description": "",
+		"body": [
+			"stacks"
+		]
+	},
 	"set_height": {
 		"prefix": "set_height",
 		"description": "",
 		"body": [
 			"set_height"
-		]
-	},
-	"normal": {
-		"prefix": "normal",
-		"description": "",
-		"body": [
-			"normal"
 		]
 	},
 	"creaseAngle": {
@@ -6947,6 +7280,34 @@
 		"description": "",
 		"body": [
 			"set_colorIndex"
+		]
+	},
+	"set_coordIndex": {
+		"prefix": "set_coordIndex",
+		"description": "",
+		"body": [
+			"set_coordIndex"
+		]
+	},
+	"set_normalIndex": {
+		"prefix": "set_normalIndex",
+		"description": "",
+		"body": [
+			"set_normalIndex"
+		]
+	},
+	"set_texCoordIndex": {
+		"prefix": "set_texCoordIndex",
+		"description": "",
+		"body": [
+			"set_texCoordIndex"
+		]
+	},
+	"colorIndex": {
+		"prefix": "colorIndex",
+		"description": "",
+		"body": [
+			"colorIndex"
 		]
 	},
 	"coordIndex": {
@@ -7670,11 +8031,46 @@
 			"multiDiffuseAlphaTexture"
 		]
 	},
+	"multiEmmisiveAmbientIntensityTexture": {
+		"prefix": "multiEmmisiveAmbientIntensityTexture",
+		"description": "",
+		"body": [
+			"multiEmmisiveAmbientIntensityTexture"
+		]
+	},
+	"multiSpecularShininessTexture": {
+		"prefix": "multiSpecularShininessTexture",
+		"description": "",
+		"body": [
+			"multiSpecularShininessTexture"
+		]
+	},
+	"multiVisibilityTexture": {
+		"prefix": "multiVisibilityTexture",
+		"description": "",
+		"body": [
+			"multiVisibilityTexture"
+		]
+	},
 	"normalFormat": {
 		"prefix": "normalFormat",
 		"description": "",
 		"body": [
 			"normalFormat"
+		]
+	},
+	"normalSpace": {
+		"prefix": "normalSpace",
+		"description": "",
+		"body": [
+			"normalSpace"
+		]
+	},
+	"normalTextureId": {
+		"prefix": "normalTextureId",
+		"description": "",
+		"body": [
+			"normalTextureId"
 		]
 	},
 	"normalTextureCoordinatesId": {
@@ -7929,6 +8325,13 @@
 			"SFColorRGBA"
 		]
 	},
+	"texCoords": {
+		"prefix": "texCoords",
+		"description": "",
+		"body": [
+			"texCoords"
+		]
+	},
 	"easeInEaseOut": {
 		"prefix": "easeInEaseOut",
 		"description": "",
@@ -8174,18 +8577,11 @@
 			"global"
 		]
 	},
-	"intensity": {
-		"prefix": "intensity",
+	"shadowVolumes": {
+		"prefix": "shadowVolumes",
 		"description": "",
 		"body": [
-			"intensity"
-		]
-	},
-	"on": {
-		"prefix": "on",
-		"description": "",
-		"body": [
-			"on"
+			"shadowVolumes"
 		]
 	},
 	"shadows": {
@@ -8202,18 +8598,25 @@
 			"shadowVolumesMain"
 		]
 	},
+	"projectionNear": {
+		"prefix": "projectionNear",
+		"description": "",
+		"body": [
+			"projectionNear"
+		]
+	},
+	"projectionFar": {
+		"prefix": "projectionFar",
+		"description": "",
+		"body": [
+			"projectionFar"
+		]
+	},
 	"defaultShadowMap": {
 		"prefix": "defaultShadowMap",
 		"description": "",
 		"body": [
 			"defaultShadowMap"
-		]
-	},
-	"attenuation": {
-		"prefix": "attenuation",
-		"description": "",
-		"body": [
-			"attenuation"
 		]
 	},
 	"beamWidth": {
@@ -8622,6 +9025,20 @@
 			"shading"
 		]
 	},
+	"octreeTriangles": {
+		"prefix": "octreeTriangles",
+		"description": "",
+		"body": [
+			"octreeTriangles"
+		]
+	},
+	"render": {
+		"prefix": "render",
+		"description": "",
+		"body": [
+			"render"
+		]
+	},
 	"collision": {
 		"prefix": "collision",
 		"description": "",
@@ -8839,18 +9256,11 @@
 			"MFColorRGBA"
 		]
 	},
-	"set_coordIndex": {
-		"prefix": "set_coordIndex",
+	"vertexCount": {
+		"prefix": "vertexCount",
 		"description": "",
 		"body": [
-			"set_coordIndex"
-		]
-	},
-	"index": {
-		"prefix": "index",
-		"description": "",
-		"body": [
-			"index"
+			"vertexCount"
 		]
 	},
 	"vector": {
@@ -9623,6 +10033,20 @@
 			"emissiveColor"
 		]
 	},
+	"emissiveTextureMapping": {
+		"prefix": "emissiveTextureMapping",
+		"description": "",
+		"body": [
+			"emissiveTextureMapping"
+		]
+	},
+	"normalTextureMapping": {
+		"prefix": "normalTextureMapping",
+		"description": "",
+		"body": [
+			"normalTextureMapping"
+		]
+	},
 	"filled": {
 		"prefix": "filled",
 		"description": "",
@@ -9747,6 +10171,55 @@
 		"description": "",
 		"body": [
 			"fogImmune"
+		]
+	},
+	"mirror": {
+		"prefix": "mirror",
+		"description": "",
+		"body": [
+			"mirror"
+		]
+	},
+	"reflSpecular": {
+		"prefix": "reflSpecular",
+		"description": "",
+		"body": [
+			"reflSpecular"
+		]
+	},
+	"reflDiffuse": {
+		"prefix": "reflDiffuse",
+		"description": "",
+		"body": [
+			"reflDiffuse"
+		]
+	},
+	"transSpecular": {
+		"prefix": "transSpecular",
+		"description": "",
+		"body": [
+			"transSpecular"
+		]
+	},
+	"transDiffuse": {
+		"prefix": "transDiffuse",
+		"description": "",
+		"body": [
+			"transDiffuse"
+		]
+	},
+	"reflSpecularExp": {
+		"prefix": "reflSpecularExp",
+		"description": "",
+		"body": [
+			"reflSpecularExp"
+		]
+	},
+	"transSpecularExp": {
+		"prefix": "transSpecularExp",
+		"description": "",
+		"body": [
+			"transSpecularExp"
 		]
 	},
 	"baseColor": {
@@ -9985,13 +10458,6 @@
 		"description": "",
 		"body": [
 			"textBounds"
-		]
-	},
-	"repeatS": {
-		"prefix": "repeatS",
-		"description": "",
-		"body": [
-			"repeatS"
 		]
 	},
 	"flipVertically": {

@@ -10,15 +10,3 @@ The tool follows Castle Game Engine's specification, include all X3D standard su
 ![Syntax highlight](images/1.png)
 
 ![Snippets](images/2.gif)
-
-## Release notes
-
-## 0.0.3
-- Fix array field snippets
-- Add more keywords
-
-## 0.0.2
-- Fix missing fields for certain snippets
-
-## 0.0.1
-- Initial release

@@ -1,3 +1,6 @@
+## 0.0.4
+- Change highlight color for constants
+
 ## 0.0.3
 - Fix array field snippets
 - Add more keywords

@@ -14,11 +14,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control",
-					"match": "DEF|USE|ROUTE|TO|TRUE|FALSE|PROTO|EXTERNPROTO|PROFILE|IS|NULL"
+					"match": "\\b(DEF|USE|ROUTE|TO|PROTO|EXTERNPROTO|PROFILE|IS)\\b"
 				},
 				{
 					"name": "strong",
 					"match": "^#X3D V[\\d\\.]+ utf8"
+				},
+				{
+					"name": "constant.character",
+					"match": "\\b(TRUE|FALSE|NULL)\\b"
 				},
 				{
 					"name": "comment.line",

@@ -14,7 +14,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control",
-					"match": "DEF|USE|ROUTE|TO|TRUE|FALSE|PROTO|EXTERNPROTO|PROFILE|IS"
+					"match": "DEF|USE|ROUTE|TO|TRUE|FALSE|PROTO|EXTERNPROTO|PROFILE|IS|NULL"
 				},
 				{
 					"name": "strong",

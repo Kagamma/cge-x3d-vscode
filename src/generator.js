@@ -291,6 +291,9 @@ class Parser {
           do {
             token = this.nextToken();
             s += token.value;
+            if (this.peekAtNextToken().kind !== TokenType.CloseSquareBracket && token.kind !== TokenType.OpenSquareBracket) {
+              s += ' ';
+            }
           } while (token.kind !== TokenType.CloseSquareBracket);
           field.value = s;
         } else if (token.kind === TokenType.Word) {
@@ -424,7 +427,21 @@ const predefineSnippets = JSON.parse(`
   "DEF": {
       "prefix": "DEF",
       "body": [
-          "DEF \${1:variable}"
+          "DEF"
+      ],
+      "description": ""
+  },
+  "IS": {
+      "prefix": "IS",
+      "body": [
+          "IS"
+      ],
+      "description": ""
+  },
+  "ROUTE": {
+      "prefix": "ROUTE",
+      "body": [
+          "ROUTE"
       ],
       "description": ""
   },

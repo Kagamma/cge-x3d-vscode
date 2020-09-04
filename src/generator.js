@@ -291,7 +291,9 @@ class Parser {
           do {
             token = this.nextToken();
             s += token.value;
-            if (this.peekAtNextToken().kind !== TokenType.CloseSquareBracket && token.kind !== TokenType.OpenSquareBracket) {
+            if (this.peekAtNextToken().kind !== TokenType.CloseSquareBracket
+                && token.kind !== TokenType.OpenSquareBracket
+                && token.kind !== TokenType.CloseSquareBracket) {
               s += ' ';
             }
           } while (token.kind !== TokenType.CloseSquareBracket);

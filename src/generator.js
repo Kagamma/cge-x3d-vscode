@@ -451,7 +451,18 @@ const predefineSnippets = JSON.parse(`
       "prefix": "PROTO",
       "body": [
           "PROTO \${1:name} [",
-              "\\tinitializeOnly \${2:SFVec3f param}",
+              "\\tinitializeOnly \${2:SFVec3f param 0 0 0}",
+          "] {",
+              "\\t\${3:node}",
+          "}"
+      ],
+      "description": ""
+  },
+  "EXTERNPROTO": {
+      "prefix": "EXTERNPROTO",
+      "body": [
+          "EXTERNPROTO \${1:name} [",
+              "\\texposedField \${2:SFVec3f param}",
           "] {",
               "\\t\${3:node}",
           "}"
@@ -463,6 +474,36 @@ const predefineSnippets = JSON.parse(`
       "body": [
           "PROFILE \${1:Interchange}"
       ],
+      "description": ""
+  },
+  "initializeOnly": {
+      "prefix": "initializeOnly",
+      "body": ["initializeOnly"],
+      "description": ""
+  },
+  "inputOutput": {
+      "prefix": "inputOutput",
+      "body": ["inputOutput"],
+      "description": ""
+  },
+  "inputOnly": {
+      "prefix": "inputOnly",
+      "body": ["inputOnly"],
+      "description": ""
+  },
+  "outputOnly": {
+      "prefix": "outputOnly",
+      "body": ["outputOnly"],
+      "description": ""
+  },
+  "exposedField": {
+      "prefix": "exposedField",
+      "body": ["exposedField"],
+      "description": ""
+  },
+  "META": {
+      "prefix": "META",
+      "body": ["META"],
       "description": ""
   }
 }

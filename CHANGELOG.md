@@ -1,3 +1,6 @@
+## 0.0.5
+- Add more keywords
+
 ## 0.0.4
 - Change highlight color for constants
 

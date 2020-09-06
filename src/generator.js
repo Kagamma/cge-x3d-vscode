@@ -452,7 +452,7 @@ const predefineSnippets = JSON.parse(`
       "prefix": "PROTO",
       "body": [
           "PROTO \${1:name} [",
-              "\\tinitializeOnly \${2:SFVec3f param 0 0 0}",
+              "\\t\${2:field}",
           "] {",
               "\\t\${3:node}",
           "}"
@@ -463,7 +463,7 @@ const predefineSnippets = JSON.parse(`
       "prefix": "EXTERNPROTO",
       "body": [
           "EXTERNPROTO \${1:name} [",
-              "\\texposedField \${2:SFVec3f param}",
+            "\\t\${2:field}",
           "] {",
               "\\t\${3:node}",
           "}"

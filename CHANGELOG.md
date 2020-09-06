@@ -1,4 +1,7 @@
 ## 0.0.5
+- Modify snippets contain array fields
+
+## 0.0.5
 - Add more keywords
 
 ## 0.0.4

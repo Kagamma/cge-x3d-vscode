@@ -292,6 +292,7 @@ class Parser {
             token = this.nextToken();
             s += token.value;
             if (this.peekAtNextToken().kind !== TokenType.CloseSquareBracket
+                && this.peekAtNextToken().kind !== TokenType.Comma
                 && token.kind !== TokenType.OpenSquareBracket
                 && token.kind !== TokenType.CloseSquareBracket) {
               s += ' ';
@@ -499,6 +500,11 @@ const predefineSnippets = JSON.parse(`
   "exposedField": {
       "prefix": "exposedField",
       "body": ["exposedField"],
+      "description": ""
+  },
+  "field": {
+      "prefix": "field",
+      "body": ["field"],
       "description": ""
   },
   "META": {

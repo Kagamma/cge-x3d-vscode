@@ -532,12 +532,17 @@ readFiles('./nodes-specification/').then(files => {
     let count = 1;
     for (let j = 0; j < x3d.parents.length; j += 1) {
       const x3dRef = data[x3d.parents[j]];
+      const knownFields = {};
       if (!x3dRef) {
         console.log('Missing ', x3d.parents[j]);
         continue;
       }
       for (let i = 0; i < x3dRef.fields.length; i += 1) {
         const field = x3dRef.fields[i];
+        if (knownFields[field.name]) {
+          continue;
+        }
+        knownFields[field.name] = true;
         let s = `\t${field.name} \${${count}:${field.value ? field.value : '<' + field.type + '>' }}`;
         snippet.body.push(s);
         keywords[field.name] = true;

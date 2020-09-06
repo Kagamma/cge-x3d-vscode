@@ -31,7 +31,7 @@
 		"prefix": "PROTO",
 		"body": [
 			"PROTO ${1:name} [",
-			"\tinitializeOnly ${2:SFVec3f param 0 0 0}",
+			"\t${2:field}",
 			"] {",
 			"\t${3:node}",
 			"}"
@@ -42,7 +42,7 @@
 		"prefix": "EXTERNPROTO",
 		"body": [
 			"EXTERNPROTO ${1:name} [",
-			"\texposedField ${2:SFVec3f param}",
+			"\t${2:field}",
 			"] {",
 			"\t${3:node}",
 			"}"
@@ -437,9 +437,6 @@
 			"\tenabled ${2:TRUE}",
 			"\tparts ${3:[]}",
 			"\tfieldName ${4:<fieldType>}",
-			"\tfieldName ${5:<fieldType>}",
-			"\tfieldName ${6:<fieldType>}",
-			"\tfieldName ${7:<fieldType>}",
 			"}"
 		]
 	},

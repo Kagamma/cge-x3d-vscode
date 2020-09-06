@@ -1,3 +1,6 @@
+## 0.0.7
+- Remove duplicate fileds in snippets
+
 ## 0.0.6
 - Modify snippets contain array fields
 

@@ -2,7 +2,7 @@
     "name": "cge-x3d-vscode",
     "displayName": "X3D classic encoding (VRML) editing tool",
     "description": "X3D classic encoding (VRML) editing tool",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "publisher": "kagamma",
     "repository": {
         "type": "git",

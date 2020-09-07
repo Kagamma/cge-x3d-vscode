@@ -1,3 +1,6 @@
+## 0.0.8
+- Remove outputOnly and inputOnly fields from snippets
+
 ## 0.0.7
 - Remove duplicate fileds in snippets
 

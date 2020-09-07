@@ -261,7 +261,8 @@ class Parser {
       }
       const field = {};
       let hasDefault = false;
-      this.thisClass.fields.push(field);
+      let hasIn = false;
+      let hasOut = false;
       // type
       token = this.nextTokenExpected([TokenType.Word]);
       field.type = token.value;
@@ -272,10 +273,18 @@ class Parser {
       }
       do {
         token = this.nextToken();
-        if (token.kind === TokenType.Word && token.value === 'in') {
-          hasDefault = true;
+        if (token.kind === TokenType.Word) {
+          if (token.value === 'in') {
+            hasDefault = true;
+            hasIn = true;
+          } else if (token.value === 'out') {
+            hasOut = true;
+          }
         }
       } while (token.kind !== TokenType.CloseSquareBracket);
+      if (!((hasOut && !hasIn) || (!hasOut && hasIn))) {
+        this.thisClass.fields.push(field);
+      }
       // name
       token = this.nextTokenExpected([TokenType.Word]);
       field.name = token.value;
@@ -530,9 +539,9 @@ readFiles('./nodes-specification/').then(files => {
     snippet.description = '';
     snippet.body = [`${x3dName} {`];
     let count = 1;
+    const knownFields = {};
     for (let j = 0; j < x3d.parents.length; j += 1) {
       const x3dRef = data[x3d.parents[j]];
-      const knownFields = {};
       if (!x3dRef) {
         console.log('Missing ', x3d.parents[j]);
         continue;
